@@ -24,9 +24,13 @@ class TabBarController: UITabBarController {
     }
     
     private func configureScreens() {
-        let firstViewController = HomeScreenWireframe.configureModule()
-        firstViewController.tabBarItem = UITabBarItem(title: nil, image: #imageLiteral(resourceName: "ic_home"), tag: 0)
-        let tabBarList = [firstViewController]
+        let homeViewController = HomeScreenWireframe.configureModule()
+        homeViewController.tabBarItem = UITabBarItem(title: nil, image: #imageLiteral(resourceName: "ic_home"), tag: 0)
+        
+        let favoritesViewController = FavoritesScreenWireframe.configureModule()
+        favoritesViewController.tabBarItem = UITabBarItem(title: nil, image: #imageLiteral(resourceName: "ic_home"), tag: 0)
+        
+        let tabBarList = [homeViewController, favoritesViewController]
         viewControllers = tabBarList
     }
 }
