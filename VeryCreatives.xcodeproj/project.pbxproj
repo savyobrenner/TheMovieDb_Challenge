@@ -22,6 +22,11 @@
 		29FF13EF26E6733E009F8585 /* DomainInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF13EA26E6733E009F8585 /* DomainInterface.swift */; };
 		29FF13F026E6733E009F8585 /* PresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF13EB26E6733E009F8585 /* PresenterInterface.swift */; };
 		29FF13F126E6733E009F8585 /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF13EC26E6733E009F8585 /* BaseWireframe.swift */; };
+		29FF13FA26E6743C009F8585 /* NetworkStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF13F326E6743C009F8585 /* NetworkStatus.swift */; };
+		29FF13FB26E6743C009F8585 /* NetworkInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF13F526E6743C009F8585 /* NetworkInteractor.swift */; };
+		29FF13FC26E6743C009F8585 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF13F626E6743C009F8585 /* NetworkManager.swift */; };
+		29FF13FD26E6743C009F8585 /* ResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF13F826E6743C009F8585 /* ResponseHandler.swift */; };
+		29FF13FE26E6743C009F8585 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF13F926E6743C009F8585 /* RequestHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +47,11 @@
 		29FF13EA26E6733E009F8585 /* DomainInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomainInterface.swift; sourceTree = "<group>"; };
 		29FF13EB26E6733E009F8585 /* PresenterInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterInterface.swift; sourceTree = "<group>"; };
 		29FF13EC26E6733E009F8585 /* BaseWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
+		29FF13F326E6743C009F8585 /* NetworkStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkStatus.swift; sourceTree = "<group>"; };
+		29FF13F526E6743C009F8585 /* NetworkInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkInteractor.swift; sourceTree = "<group>"; };
+		29FF13F626E6743C009F8585 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		29FF13F826E6743C009F8585 /* ResponseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseHandler.swift; sourceTree = "<group>"; };
+		29FF13F926E6743C009F8585 /* RequestHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +84,7 @@
 		29FF13C026E66015009F8585 /* VeryCreatives */ = {
 			isa = PBXGroup;
 			children = (
+				29FF13F226E673FD009F8585 /* Network */,
 				29FF13D626E67146009F8585 /* Resources */,
 				29FF13D526E67141009F8585 /* Sources */,
 				29FF13CF26E66016009F8585 /* Info.plist */,
@@ -148,6 +159,34 @@
 				29FF13E826E6733E009F8585 /* ViewInterface.swift */,
 			);
 			path = ViperBase;
+			sourceTree = "<group>";
+		};
+		29FF13F226E673FD009F8585 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				29FF13F726E6743C009F8585 /* Helpers */,
+				29FF13F426E6743C009F8585 /* Interactor */,
+				29FF13F626E6743C009F8585 /* NetworkManager.swift */,
+				29FF13F326E6743C009F8585 /* NetworkStatus.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		29FF13F426E6743C009F8585 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				29FF13F526E6743C009F8585 /* NetworkInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		29FF13F726E6743C009F8585 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				29FF13F826E6743C009F8585 /* ResponseHandler.swift */,
+				29FF13F926E6743C009F8585 /* RequestHandler.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,10 +267,15 @@
 				29FF13E226E672DF009F8585 /* SplashScreenPresenter.swift in Sources */,
 				29FF13C226E66015009F8585 /* AppDelegate.swift in Sources */,
 				29FF13E626E672DF009F8585 /* SplashScreenWireframe.swift in Sources */,
+				29FF13FA26E6743C009F8585 /* NetworkStatus.swift in Sources */,
 				29FF13EE26E6733E009F8585 /* InteractorInterface.swift in Sources */,
 				29FF13EF26E6733E009F8585 /* DomainInterface.swift in Sources */,
+				29FF13FB26E6743C009F8585 /* NetworkInteractor.swift in Sources */,
+				29FF13FC26E6743C009F8585 /* NetworkManager.swift in Sources */,
+				29FF13FD26E6743C009F8585 /* ResponseHandler.swift in Sources */,
 				29FF13E326E672DF009F8585 /* SplashScreenViewController.swift in Sources */,
 				29FF13C426E66015009F8585 /* SceneDelegate.swift in Sources */,
+				29FF13FE26E6743C009F8585 /* RequestHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
