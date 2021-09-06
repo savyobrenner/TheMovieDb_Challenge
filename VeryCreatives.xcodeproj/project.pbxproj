@@ -10,6 +10,12 @@
 		299710A526E6769F00793EA1 /* LocalizableProjectStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2997109A26E6769F00793EA1 /* LocalizableProjectStrings.swift */; };
 		299710A626E6769F00793EA1 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2997109B26E6769F00793EA1 /* Localizable.swift */; };
 		299710AC26E676F900793EA1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 299710AE26E676F900793EA1 /* Localizable.strings */; };
+		299710B726E67B9300793EA1 /* HomeScreenInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710B126E67B9300793EA1 /* HomeScreenInterfaces.swift */; };
+		299710B826E67B9300793EA1 /* HomeScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710B226E67B9300793EA1 /* HomeScreenPresenter.swift */; };
+		299710B926E67B9300793EA1 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710B326E67B9300793EA1 /* HomeScreenViewController.swift */; };
+		299710BA26E67B9300793EA1 /* HomeScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710B426E67B9300793EA1 /* HomeScreenInteractor.swift */; };
+		299710BB26E67B9300793EA1 /* HomeScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 299710B526E67B9300793EA1 /* HomeScreenViewController.xib */; };
+		299710BC26E67B9300793EA1 /* HomeScreenWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710B626E67B9300793EA1 /* HomeScreenWireframe.swift */; };
 		29FF13C226E66015009F8585 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF13C126E66015009F8585 /* AppDelegate.swift */; };
 		29FF13C426E66015009F8585 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF13C326E66015009F8585 /* SceneDelegate.swift */; };
 		29FF13CB26E66016009F8585 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29FF13CA26E66016009F8585 /* Assets.xcassets */; };
@@ -38,6 +44,12 @@
 		2997109B26E6769F00793EA1 /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		299710AD26E676F900793EA1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		299710AF26E676FC00793EA1 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		299710B126E67B9300793EA1 /* HomeScreenInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenInterfaces.swift; sourceTree = "<group>"; };
+		299710B226E67B9300793EA1 /* HomeScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenPresenter.swift; sourceTree = "<group>"; };
+		299710B326E67B9300793EA1 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
+		299710B426E67B9300793EA1 /* HomeScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenInteractor.swift; sourceTree = "<group>"; };
+		299710B526E67B9300793EA1 /* HomeScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeScreenViewController.xib; sourceTree = "<group>"; };
+		299710B626E67B9300793EA1 /* HomeScreenWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenWireframe.swift; sourceTree = "<group>"; };
 		29FF13BE26E66015009F8585 /* VeryCreatives.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VeryCreatives.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29FF13C126E66015009F8585 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29FF13C326E66015009F8585 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +97,19 @@
 				2997109A26E6769F00793EA1 /* LocalizableProjectStrings.swift */,
 			);
 			path = Localizable;
+			sourceTree = "<group>";
+		};
+		299710B026E67B8100793EA1 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				299710B126E67B9300793EA1 /* HomeScreenInterfaces.swift */,
+				299710B226E67B9300793EA1 /* HomeScreenPresenter.swift */,
+				299710B326E67B9300793EA1 /* HomeScreenViewController.swift */,
+				299710B426E67B9300793EA1 /* HomeScreenInteractor.swift */,
+				299710B526E67B9300793EA1 /* HomeScreenViewController.xib */,
+				299710B626E67B9300793EA1 /* HomeScreenWireframe.swift */,
+			);
+			path = HomeScreen;
 			sourceTree = "<group>";
 		};
 		29FF13B526E66015009F8585 = {
@@ -156,6 +181,7 @@
 		29FF13D926E672A8009F8585 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				299710B026E67B8100793EA1 /* HomeScreen */,
 				29FF13DA26E672AE009F8585 /* SplashScreen */,
 			);
 			path = Modules;
@@ -294,6 +320,7 @@
 			files = (
 				29FF13E526E672DF009F8585 /* SplashScreenViewController.xib in Resources */,
 				299710AC26E676F900793EA1 /* Localizable.strings in Resources */,
+				299710BB26E67B9300793EA1 /* HomeScreenViewController.xib in Resources */,
 				29FF13CE26E66016009F8585 /* LaunchScreen.storyboard in Resources */,
 				29FF13CB26E66016009F8585 /* Assets.xcassets in Resources */,
 			);
@@ -352,20 +379,25 @@
 				29FF13E426E672DF009F8585 /* SplashScreenInteractor.swift in Sources */,
 				29FF13F026E6733E009F8585 /* PresenterInterface.swift in Sources */,
 				29FF13F126E6733E009F8585 /* BaseWireframe.swift in Sources */,
+				299710BA26E67B9300793EA1 /* HomeScreenInteractor.swift in Sources */,
 				29FF13ED26E6733E009F8585 /* ViewInterface.swift in Sources */,
+				299710B926E67B9300793EA1 /* HomeScreenViewController.swift in Sources */,
 				299710A526E6769F00793EA1 /* LocalizableProjectStrings.swift in Sources */,
 				29FF13E226E672DF009F8585 /* SplashScreenPresenter.swift in Sources */,
 				29FF13C226E66015009F8585 /* AppDelegate.swift in Sources */,
 				29FF13E626E672DF009F8585 /* SplashScreenWireframe.swift in Sources */,
 				29FF13FA26E6743C009F8585 /* NetworkStatus.swift in Sources */,
+				299710B826E67B9300793EA1 /* HomeScreenPresenter.swift in Sources */,
 				29FF13EE26E6733E009F8585 /* InteractorInterface.swift in Sources */,
 				29FF13EF26E6733E009F8585 /* DomainInterface.swift in Sources */,
+				299710BC26E67B9300793EA1 /* HomeScreenWireframe.swift in Sources */,
 				29FF13FB26E6743C009F8585 /* NetworkInteractor.swift in Sources */,
 				299710A626E6769F00793EA1 /* Localizable.swift in Sources */,
 				29FF13FC26E6743C009F8585 /* NetworkManager.swift in Sources */,
 				29FF13FD26E6743C009F8585 /* ResponseHandler.swift in Sources */,
 				29FF13E326E672DF009F8585 /* SplashScreenViewController.swift in Sources */,
 				29FF13C426E66015009F8585 /* SceneDelegate.swift in Sources */,
+				299710B726E67B9300793EA1 /* HomeScreenInterfaces.swift in Sources */,
 				29FF13FE26E6743C009F8585 /* RequestHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

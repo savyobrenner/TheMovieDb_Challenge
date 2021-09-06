@@ -2,7 +2,6 @@
 //  Created by Brenner on 06/09/21.
 //  Copyright © 2021 Brenner. All rights reserved.
 
-
 import Foundation
 import Alamofire
 
