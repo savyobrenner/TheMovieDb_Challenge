@@ -24,6 +24,7 @@
 		299710CB26E6921A00793EA1 /* FavoritesScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 299710C526E6921A00793EA1 /* FavoritesScreenViewController.xib */; };
 		299710CC26E6921A00793EA1 /* FavoritesScreenWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710C626E6921A00793EA1 /* FavoritesScreenWireframe.swift */; };
 		299710CF26E6939E00793EA1 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710CE26E6939E00793EA1 /* UIColor+Extensions.swift */; };
+		299710D326E69F0200793EA1 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710D226E69F0200793EA1 /* APIConfig.swift */; };
 		29FF13C226E66015009F8585 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF13C126E66015009F8585 /* AppDelegate.swift */; };
 		29FF13C426E66015009F8585 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF13C326E66015009F8585 /* SceneDelegate.swift */; };
 		29FF13CB26E66016009F8585 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29FF13CA26E66016009F8585 /* Assets.xcassets */; };
@@ -67,6 +68,7 @@
 		299710C626E6921A00793EA1 /* FavoritesScreenWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesScreenWireframe.swift; sourceTree = "<group>"; };
 		299710CE26E6939E00793EA1 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		299710D026E6957E00793EA1 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		299710D226E69F0200793EA1 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
 		29FF13BE26E66015009F8585 /* VeryCreatives.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VeryCreatives.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29FF13C126E66015009F8585 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29FF13C326E66015009F8585 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +160,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		299710D126E69EF200793EA1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				299710D226E69F0200793EA1 /* APIConfig.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		29FF13B526E66015009F8585 = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +189,7 @@
 		29FF13C026E66015009F8585 /* VeryCreatives */ = {
 			isa = PBXGroup;
 			children = (
+				299710D126E69EF200793EA1 /* Model */,
 				29FF13F226E673FD009F8585 /* Network */,
 				29FF13D626E67146009F8585 /* Resources */,
 				29FF13D526E67141009F8585 /* Sources */,
@@ -451,6 +462,7 @@
 				299710A626E6769F00793EA1 /* Localizable.swift in Sources */,
 				299710BF26E68E5A00793EA1 /* TabBarController.swift in Sources */,
 				29FF13FC26E6743C009F8585 /* NetworkManager.swift in Sources */,
+				299710D326E69F0200793EA1 /* APIConfig.swift in Sources */,
 				29FF13FD26E6743C009F8585 /* ResponseHandler.swift in Sources */,
 				29FF13E326E672DF009F8585 /* SplashScreenViewController.swift in Sources */,
 				29FF13C426E66015009F8585 /* SceneDelegate.swift in Sources */,
