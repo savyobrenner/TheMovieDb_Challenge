@@ -35,7 +35,7 @@ final class HomeScreenDomain {
 extension HomeScreenDomain: HomeScreenDomainProtocol {
     func getPopularMovies() {
         provider.getPopularMovies { (movie) in
-            //self.responsePopularMovies?.reponsePopularMoviesSuccess(data: movie)
+            self.responsePopularMovies?.reponsePopularMoviesSuccess(data: movie)
         } failureCallback: { (error) in
             self.responsePopularMovies?.reponsePopularMoviesError(error: error)
         }
