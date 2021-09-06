@@ -1,0 +1,7 @@
+// MARK: - ERROR MESSAGES
+"ErrorMessages_noConnection" = "Sem conexão com a internet.";
+"ErrorMessages_genericError" = "Não foi possível completar essa ação.";
+
+// MARK: - BASEVIEWCONTROLLERSTRINGS
+"BaseViewControllerStrings_title" = "Atenção!";
+"BaseViewControllerStrings_btn" = "OK";
