@@ -12,14 +12,12 @@ protocol HomeScreenProviderProtocol {
 }
 
 class HomeScreenProvider {
-    
-    //    private let popularMoviesRequest = PopularMoviesRequest()
-    //    private let popularTvShowsRequest = PopularTvShowsRequest()
+    private let popularMoviesRequest = PopularMoviesRequest()
 }
 
 extension HomeScreenProvider: HomeScreenProviderProtocol {
     func getPopularMovies(successCallback: @escaping (Movie?) -> Void, failureCallback: @escaping (Error?) -> Void) {
-        NetworkManager.shared.request(request: popularMoviesRequest) { (response: MovieResponse) in
+        NetworkManager.sharedInstance.request(request: popularMoviesRequest) { (response: MovieResponse) in
             
             if let error = response.error {
                 failureCallback(error)
