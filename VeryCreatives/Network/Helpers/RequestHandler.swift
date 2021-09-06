@@ -31,7 +31,7 @@ extension RequestHandler {
     }
     
     func parameters() -> [String: Any]? {
-        preconditionFailure("This method must be overridden")
+        return nil
     }
     
     func encoding() -> EncodingStrategy {

@@ -24,6 +24,7 @@ final class HomeScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.viewConfiguration()
+        presenter.viewDidLoad()
     }
     
     // MARK: - Class Configurations

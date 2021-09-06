@@ -28,8 +28,27 @@ final class HomeScreenPresenter {
         self.view = view
         self.interactor = interactor
     }
+    
+    func viewDidLoad() {
+        interactor.getPopularMovies()
+    }
 }
 
-// MARK: - Extensions
-
+// MARK: - Presenter Extension
 extension HomeScreenPresenter: HomeScreenPresenterInterface { }
+
+// MARK: - Interactor Extension
+extension HomeScreenPresenter: HomeScreenInteractorResponseProtocol {
+    func responseGetPopularMoviesSuccess(movie: Movie?) {
+        print(movie)
+    }
+    
+    func responseGetPopularMoviesError() {
+        print("Error")
+    }
+    
+    func networkingNotAvailable() {
+        print("Networking not available")
+    }
+    
+}

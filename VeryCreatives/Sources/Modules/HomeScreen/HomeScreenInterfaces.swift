@@ -19,4 +19,6 @@ protocol HomeScreenViewInterface: ViewInterface { }
 
 protocol HomeScreenPresenterInterface: PresenterInterface { }
 
-protocol HomeScreenInteractorProtocol: InteractorInterface { }
+protocol HomeScreenInteractorProtocol: InteractorInterface {
+    func getPopularMovies()
+}

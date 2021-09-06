@@ -8,22 +8,61 @@
 //
 //
 
+
 import Foundation
 
+/// Output methods
+protocol HomeScreenInteractorResponseProtocol: AnyObject {
+    func responseGetPopularMoviesSuccess(movie: Movie?)
+    func responseGetPopularMoviesError()
+    func networkingNotAvailable()
+}
+
 final class HomeScreenInteractor {
+    
+    private let domain: HomeScreenDomain
+    weak var delegate: HomeScreenInteractorResponseProtocol?
+    
+    init(domain: HomeScreenDomain) {
+      self.domain = domain
+    }
+    
 }
 
 // MARK: - Extensions
 
 extension HomeScreenInteractor: HomeScreenInteractorProtocol {
+    func getPopularMovies() {
+        self.networking.check(.getPopularMovies)
+    }
 }
 
 extension HomeScreenInteractor: NetworkInteractorResponse {
-  func networkingAvailable(_ ID: NetworkResponseType) {
+    func networkingAvailable(_ ID: NetworkResponseType) {
+        switch ID {
+        case .getPopularMovies:
+            domain.getPopularMovies()
+        default: break
+        }
+       
+    }
     
-  }
-  
-  func networkingNotAvailable(_ ID: NetworkResponseType) {
+    func networkingNotAvailable(_ ID: NetworkResponseType) {
+        delegate?.networkingNotAvailable()
+    }
+}
 
-  }
+extension HomeScreenInteractor: HomeScreenPopularMoviesResponseProtocol {
+    
+    func reponsePopularMoviesSuccess(data: Movie?) {
+        if let data = data {
+            delegate?.responseGetPopularMoviesSuccess(movie: data)
+        } else {
+            delegate?.responseGetPopularMoviesError()
+        }
+    }
+    
+    func reponsePopularMoviesError(error: Error?) {
+        delegate?.responseGetPopularMoviesError()
+    }
 }

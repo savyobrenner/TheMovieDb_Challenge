@@ -14,12 +14,20 @@ final class HomeScreenWireframe: BaseWireframe {
   // MARK: - Module setup
 
   static func configureModule() -> UIViewController {
+    
+    // setup interactor
+    let provider = HomeScreenProvider()
+    let domain = HomeScreenDomain(provider: provider)
+    let interactor = HomeScreenInteractor(domain: domain)
+    
+    domain.responsePopularMovies = interactor
+    
     let viewController = HomeScreenViewController()
     let wireframe = HomeScreenWireframe(viewController: viewController)
-    let interactor = HomeScreenInteractor()
     let presenter = HomeScreenPresenter(wireframe: wireframe, view: viewController, interactor: interactor)
     
     viewController.presenter = presenter
+    interactor.delegate = presenter
     
     return viewController
   }

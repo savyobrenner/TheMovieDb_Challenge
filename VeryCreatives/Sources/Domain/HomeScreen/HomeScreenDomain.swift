@@ -13,7 +13,7 @@ protocol HomeScreenDomainProtocol: AnyObject {
 }
 
 /// Output methods
-protocol MainScreenPopularMoviesResponseProtocol: AnyObject {
+protocol HomeScreenPopularMoviesResponseProtocol: AnyObject {
     func reponsePopularMoviesSuccess(data: Movie?)
     func reponsePopularMoviesError(error: Error?)
 }
@@ -21,7 +21,7 @@ protocol MainScreenPopularMoviesResponseProtocol: AnyObject {
 final class HomeScreenDomain {
     
     // MARK: - Response Protocol
-    weak var responsePopularMovies: MainScreenPopularMoviesResponseProtocol?
+    weak var responsePopularMovies: HomeScreenPopularMoviesResponseProtocol?
     
     // MARK: - Provider
     var provider: HomeScreenProviderProtocol!
