@@ -32,6 +32,10 @@
 		299710E426E6A4C300793EA1 /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710E326E6A4C300793EA1 /* MovieResponse.swift */; };
 		299710E626E6C2FD00793EA1 /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710E526E6C2FD00793EA1 /* UILabel+Extensions.swift */; };
 		299710E826E6C37400793EA1 /* UI+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710E726E6C37400793EA1 /* UI+Extensions.swift */; };
+		299710EC26E6CC6300793EA1 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710EA26E6CC6300793EA1 /* MovieCell.swift */; };
+		299710ED26E6CC6300793EA1 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 299710EB26E6CC6300793EA1 /* MovieCell.xib */; };
+		299710F026E6CD1500793EA1 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710EF26E6CD1500793EA1 /* RoundView.swift */; };
+		299710F226E6CDC000793EA1 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710F126E6CDC000793EA1 /* UIImageView+Extensions.swift */; };
 		29FF13C226E66015009F8585 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF13C126E66015009F8585 /* AppDelegate.swift */; };
 		29FF13C426E66015009F8585 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF13C326E66015009F8585 /* SceneDelegate.swift */; };
 		29FF13CB26E66016009F8585 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29FF13CA26E66016009F8585 /* Assets.xcassets */; };
@@ -83,6 +87,10 @@
 		299710E326E6A4C300793EA1 /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
 		299710E526E6C2FD00793EA1 /* UILabel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
 		299710E726E6C37400793EA1 /* UI+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI+Extensions.swift"; sourceTree = "<group>"; };
+		299710EA26E6CC6300793EA1 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		299710EB26E6CC6300793EA1 /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
+		299710EF26E6CD1500793EA1 /* RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
+		299710F126E6CDC000793EA1 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		29FF13BE26E66015009F8585 /* VeryCreatives.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VeryCreatives.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29FF13C126E66015009F8585 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29FF13C326E66015009F8585 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -173,6 +181,7 @@
 				299710CE26E6939E00793EA1 /* UIColor+Extensions.swift */,
 				299710E526E6C2FD00793EA1 /* UILabel+Extensions.swift */,
 				299710E726E6C37400793EA1 /* UI+Extensions.swift */,
+				299710F126E6CDC000793EA1 /* UIImageView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -245,8 +254,18 @@
 		299710E926E6C62E00793EA1 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				299710EA26E6CC6300793EA1 /* MovieCell.swift */,
+				299710EB26E6CC6300793EA1 /* MovieCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		299710EE26E6CD0A00793EA1 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				299710EF26E6CD1500793EA1 /* RoundView.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		29FF13B526E66015009F8585 = {
@@ -292,6 +311,7 @@
 		29FF13D626E67146009F8585 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				299710EE26E6CD0A00793EA1 /* CustomViews */,
 				299710CD26E6937F00793EA1 /* Extensions */,
 				29FF13D726E671E3009F8585 /* Application */,
 				2997109926E6769100793EA1 /* Localizable */,
@@ -464,6 +484,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29FF13E526E672DF009F8585 /* SplashScreenViewController.xib in Resources */,
+				299710ED26E6CC6300793EA1 /* MovieCell.xib in Resources */,
 				299710AC26E676F900793EA1 /* Localizable.strings in Resources */,
 				299710CB26E6921A00793EA1 /* FavoritesScreenViewController.xib in Resources */,
 				299710BB26E67B9300793EA1 /* HomeScreenViewController.xib in Resources */,
@@ -529,6 +550,7 @@
 				29FF13F026E6733E009F8585 /* PresenterInterface.swift in Sources */,
 				29FF13F126E6733E009F8585 /* BaseWireframe.swift in Sources */,
 				299710CC26E6921A00793EA1 /* FavoritesScreenWireframe.swift in Sources */,
+				299710F026E6CD1500793EA1 /* RoundView.swift in Sources */,
 				299710E626E6C2FD00793EA1 /* UILabel+Extensions.swift in Sources */,
 				299710BA26E67B9300793EA1 /* HomeScreenInteractor.swift in Sources */,
 				299710E826E6C37400793EA1 /* UI+Extensions.swift in Sources */,
@@ -539,6 +561,7 @@
 				29FF13E226E672DF009F8585 /* SplashScreenPresenter.swift in Sources */,
 				299710CF26E6939E00793EA1 /* UIColor+Extensions.swift in Sources */,
 				29FF13C226E66015009F8585 /* AppDelegate.swift in Sources */,
+				299710EC26E6CC6300793EA1 /* MovieCell.swift in Sources */,
 				299710DE26E6A44700793EA1 /* Movie.swift in Sources */,
 				29FF13E626E672DF009F8585 /* SplashScreenWireframe.swift in Sources */,
 				299710C726E6921A00793EA1 /* FavoritesScreenInterfaces.swift in Sources */,
@@ -555,6 +578,7 @@
 				299710D726E6A30A00793EA1 /* HomeScreenDomain.swift in Sources */,
 				299710DB26E6A39000793EA1 /* HomeScreenProvider.swift in Sources */,
 				299710D326E69F0200793EA1 /* APIConfig.swift in Sources */,
+				299710F226E6CDC000793EA1 /* UIImageView+Extensions.swift in Sources */,
 				29FF13FD26E6743C009F8585 /* ResponseHandler.swift in Sources */,
 				29FF13E326E672DF009F8585 /* SplashScreenViewController.swift in Sources */,
 				29FF13C426E66015009F8585 /* SceneDelegate.swift in Sources */,
