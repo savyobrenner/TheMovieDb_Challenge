@@ -17,7 +17,9 @@ protocol HomeScreenWireframeInterface: WireframeInterface {
 
 protocol HomeScreenViewInterface: ViewInterface { }
 
-protocol HomeScreenPresenterInterface: PresenterInterface { }
+protocol HomeScreenPresenterInterface: PresenterInterface {
+    func setupWelcomeHeader(_ title: UILabel, _ subtitle: UILabel, _ icon: UIImageView)
+}
 
 protocol HomeScreenInteractorProtocol: InteractorInterface {
     func getPopularMovies()

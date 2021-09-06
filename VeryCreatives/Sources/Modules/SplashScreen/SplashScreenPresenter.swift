@@ -17,10 +17,6 @@ final class SplashScreenPresenter {
     private let interactor: SplashScreenInteractorProtocol
     private let wireframe: SplashScreenWireframeInterface
     
-    private enum Strings {
-        static let title = ""
-    }
-    
     private enum Constants {
         static let initialAlpha: CGFloat = 0.0
         static let finalAlpha: CGFloat = 1.0
@@ -29,7 +25,6 @@ final class SplashScreenPresenter {
     }
     
     // MARK: - Lifecycle
-    
     init(wireframe: SplashScreenWireframeInterface, view: SplashScreenViewInterface, interactor: SplashScreenInteractorProtocol) {
         self.wireframe = wireframe
         self.view = view

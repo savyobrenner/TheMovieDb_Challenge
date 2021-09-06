@@ -18,7 +18,13 @@ final class HomeScreenPresenter {
     private let wireframe: HomeScreenWireframeInterface
         
     private enum Strings {
-        static let title = ""
+        static let staticName = "VeryCreatives!"
+        static let subtitle = "Welcome to our movie app :)"
+    }
+    
+    private enum Constants {
+        static let welcomeSize: CGFloat = 24.0
+        static let iconBordWidth: CGFloat = 1.0
     }
     
     // MARK: - Lifecycle
@@ -29,13 +35,25 @@ final class HomeScreenPresenter {
         self.interactor = interactor
     }
     
-    func viewDidLoad() {
-        interactor.getPopularMovies()
+    private func configureIcon(_ imageView: UIImageView) {
+        imageView.layer.borderColor = UIColor.white.cgColor
+        imageView.layer.borderWidth = Constants.iconBordWidth
+        imageView.circle()
+    }
+    
+    private func configureWelcomeLabel(_ label: UILabel) {
+        label.setBoldFontRange(changeText: Strings.staticName, size: Constants.welcomeSize)
     }
 }
 
 // MARK: - Presenter Extension
-extension HomeScreenPresenter: HomeScreenPresenterInterface { }
+extension HomeScreenPresenter: HomeScreenPresenterInterface {
+    func setupWelcomeHeader(_ title: UILabel, _ subtitle: UILabel, _ icon: UIImageView) {
+        configureIcon(icon)
+        configureWelcomeLabel(title)
+        subtitle.text = Strings.subtitle
+    }
+}
 
 // MARK: - Interactor Extension
 extension HomeScreenPresenter: HomeScreenInteractorResponseProtocol {

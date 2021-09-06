@@ -30,6 +30,8 @@
 		299710DE26E6A44700793EA1 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710DD26E6A44700793EA1 /* Movie.swift */; };
 		299710E226E6A4A700793EA1 /* PopularMoviesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710E126E6A4A700793EA1 /* PopularMoviesRequest.swift */; };
 		299710E426E6A4C300793EA1 /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710E326E6A4C300793EA1 /* MovieResponse.swift */; };
+		299710E626E6C2FD00793EA1 /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710E526E6C2FD00793EA1 /* UILabel+Extensions.swift */; };
+		299710E826E6C37400793EA1 /* UI+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710E726E6C37400793EA1 /* UI+Extensions.swift */; };
 		29FF13C226E66015009F8585 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF13C126E66015009F8585 /* AppDelegate.swift */; };
 		29FF13C426E66015009F8585 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF13C326E66015009F8585 /* SceneDelegate.swift */; };
 		29FF13CB26E66016009F8585 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29FF13CA26E66016009F8585 /* Assets.xcassets */; };
@@ -79,6 +81,8 @@
 		299710DD26E6A44700793EA1 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		299710E126E6A4A700793EA1 /* PopularMoviesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesRequest.swift; sourceTree = "<group>"; };
 		299710E326E6A4C300793EA1 /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
+		299710E526E6C2FD00793EA1 /* UILabel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
+		299710E726E6C37400793EA1 /* UI+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI+Extensions.swift"; sourceTree = "<group>"; };
 		29FF13BE26E66015009F8585 /* VeryCreatives.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VeryCreatives.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29FF13C126E66015009F8585 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29FF13C326E66015009F8585 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 		299710B026E67B8100793EA1 /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
+				299710E926E6C62E00793EA1 /* Cell */,
 				299710B126E67B9300793EA1 /* HomeScreenInterfaces.swift */,
 				299710B226E67B9300793EA1 /* HomeScreenPresenter.swift */,
 				299710B326E67B9300793EA1 /* HomeScreenViewController.swift */,
@@ -166,6 +171,8 @@
 			isa = PBXGroup;
 			children = (
 				299710CE26E6939E00793EA1 /* UIColor+Extensions.swift */,
+				299710E526E6C2FD00793EA1 /* UILabel+Extensions.swift */,
+				299710E726E6C37400793EA1 /* UI+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -233,6 +240,13 @@
 				299710E326E6A4C300793EA1 /* MovieResponse.swift */,
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		299710E926E6C62E00793EA1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		29FF13B526E66015009F8585 = {
@@ -515,7 +529,9 @@
 				29FF13F026E6733E009F8585 /* PresenterInterface.swift in Sources */,
 				29FF13F126E6733E009F8585 /* BaseWireframe.swift in Sources */,
 				299710CC26E6921A00793EA1 /* FavoritesScreenWireframe.swift in Sources */,
+				299710E626E6C2FD00793EA1 /* UILabel+Extensions.swift in Sources */,
 				299710BA26E67B9300793EA1 /* HomeScreenInteractor.swift in Sources */,
+				299710E826E6C37400793EA1 /* UI+Extensions.swift in Sources */,
 				299710E226E6A4A700793EA1 /* PopularMoviesRequest.swift in Sources */,
 				29FF13ED26E6733E009F8585 /* ViewInterface.swift in Sources */,
 				299710B926E67B9300793EA1 /* HomeScreenViewController.swift in Sources */,

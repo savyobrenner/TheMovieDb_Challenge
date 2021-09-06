@@ -12,6 +12,11 @@ import UIKit
 final class HomeScreenViewController: UIViewController {
     
     // MARK: - Outlets
+    @IBOutlet weak var welcomeLabel: UILabel!
+    @IBOutlet weak var subtitleLabel: UILabel!
+    @IBOutlet weak var icon: UIImageView!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     
     // MARK: - Class properties
     
@@ -24,7 +29,7 @@ final class HomeScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.viewConfiguration()
-        presenter.viewDidLoad()
+        presenter.setupWelcomeHeader(welcomeLabel, subtitleLabel, icon)
     }
     
     // MARK: - Class Configurations
