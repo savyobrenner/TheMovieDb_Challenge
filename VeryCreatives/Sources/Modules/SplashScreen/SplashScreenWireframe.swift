@@ -10,31 +10,36 @@
 import UIKit
 
 final class SplashScreenWireframe: BaseWireframe {
-
-  // MARK: - Module setup
-
-  static func configureModule() -> UIViewController {
-    let viewController = SplashScreenViewController()
-    let wireframe = SplashScreenWireframe(viewController: viewController)
-    let interactor = SplashScreenInteractor()
-    let presenter = SplashScreenPresenter(wireframe: wireframe, view: viewController, interactor: interactor)
     
-    viewController.presenter = presenter
+    // MARK: - Module setup
     
-    return viewController
-  }
+    static func configureModule() -> UIViewController {
+        let viewController = SplashScreenViewController()
+        let wireframe = SplashScreenWireframe(viewController: viewController)
+        let interactor = SplashScreenInteractor()
+        let presenter = SplashScreenPresenter(wireframe: wireframe, view: viewController, interactor: interactor)
+        
+        viewController.presenter = presenter
+        
+        return viewController
+    }
     
-  // MARK: - Private Routing
-
+    // MARK: - Private Routing
+    private func goToHomeScreen() {
+        let viewController = HomeScreenWireframe.configureModule()
+        let navigationController = UINavigationController(rootViewController: viewController)
+        self.present(navigationController, animated: true)
+    }
+    
 }
 
 // MARK: - Extensions
 
 extension SplashScreenWireframe: SplashScreenWireframeInterface {
-  func navigate(to option: SplashScreenNavigationOption) {
-    // switch option {
-    // case <#pattern#>:
-    //   <#code#>      
-    // }
-  }
+    func navigate(to option: SplashScreenNavigationOption) {
+        switch option {
+        case .goToHomeScreen:
+            goToHomeScreen()
+        }
+    }
 }

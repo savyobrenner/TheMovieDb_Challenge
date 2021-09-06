@@ -41,8 +41,10 @@ final class SplashScreenPresenter {
 extension SplashScreenPresenter: SplashScreenPresenterInterface {
     func startSplashAnimation(_ label: UILabel) {
         label.alpha = Constants.initialAlpha
-        UIView.animate(withDuration: Constants.animationTimeInterval, delay: Constants.delay, options: .curveEaseOut, animations: {
+        UIView.animate(withDuration: Constants.animationTimeInterval, delay: Constants.delay, options: .curveEaseOut) {
             label.alpha = Constants.finalAlpha
-        })
+        } completion: { _ in
+            self.wireframe.navigate(to: .goToHomeScreen)
+        }
     }
 }

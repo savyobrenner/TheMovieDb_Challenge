@@ -9,7 +9,9 @@
 
 import UIKit
 
-enum SplashScreenNavigationOption { }
+enum SplashScreenNavigationOption {
+    case goToHomeScreen
+}
 
 protocol SplashScreenWireframeInterface: WireframeInterface {
     func navigate(to option: SplashScreenNavigationOption)

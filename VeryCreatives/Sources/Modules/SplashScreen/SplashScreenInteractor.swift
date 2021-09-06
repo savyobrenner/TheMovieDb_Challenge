@@ -19,11 +19,11 @@ extension SplashScreenInteractor: SplashScreenInteractorProtocol {
 }
 
 extension SplashScreenInteractor: NetworkInteractorResponse {
-  func networkingAvailable(_ ID: NetworkResponseType) {
+    func networkingAvailable(_ ID: NetworkResponseType) {
+        
+    }
     
-  }
-  
-  func networkingNotAvailable(_ ID: NetworkResponseType) {
-
-  }
+    func networkingNotAvailable(_ ID: NetworkResponseType) {
+        
+    }
 }
