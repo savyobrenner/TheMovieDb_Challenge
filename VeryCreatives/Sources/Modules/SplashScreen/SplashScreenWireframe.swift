@@ -26,7 +26,7 @@ final class SplashScreenWireframe: BaseWireframe {
     
     // MARK: - Private Routing
     private func goToHomeScreen() {
-        let viewController = HomeScreenWireframe.configureModule()
+        let viewController = TabBarController()
         let navigationController = UINavigationController(rootViewController: viewController)
         self.present(navigationController, animated: true)
     }

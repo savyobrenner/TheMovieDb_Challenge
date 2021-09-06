@@ -16,6 +16,7 @@
 		299710BA26E67B9300793EA1 /* HomeScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710B426E67B9300793EA1 /* HomeScreenInteractor.swift */; };
 		299710BB26E67B9300793EA1 /* HomeScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 299710B526E67B9300793EA1 /* HomeScreenViewController.xib */; };
 		299710BC26E67B9300793EA1 /* HomeScreenWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710B626E67B9300793EA1 /* HomeScreenWireframe.swift */; };
+		299710BF26E68E5A00793EA1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710BE26E68E5A00793EA1 /* TabBarController.swift */; };
 		29FF13C226E66015009F8585 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF13C126E66015009F8585 /* AppDelegate.swift */; };
 		29FF13C426E66015009F8585 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF13C326E66015009F8585 /* SceneDelegate.swift */; };
 		29FF13CB26E66016009F8585 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29FF13CA26E66016009F8585 /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		299710B426E67B9300793EA1 /* HomeScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenInteractor.swift; sourceTree = "<group>"; };
 		299710B526E67B9300793EA1 /* HomeScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeScreenViewController.xib; sourceTree = "<group>"; };
 		299710B626E67B9300793EA1 /* HomeScreenWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenWireframe.swift; sourceTree = "<group>"; };
+		299710BE26E68E5A00793EA1 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		29FF13BE26E66015009F8585 /* VeryCreatives.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VeryCreatives.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29FF13C126E66015009F8585 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29FF13C326E66015009F8585 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,14 @@
 				299710B626E67B9300793EA1 /* HomeScreenWireframe.swift */,
 			);
 			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		299710BD26E68E3200793EA1 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				299710BE26E68E5A00793EA1 /* TabBarController.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		29FF13B526E66015009F8585 = {
@@ -181,6 +191,7 @@
 		29FF13D926E672A8009F8585 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				299710BD26E68E3200793EA1 /* TabBar */,
 				299710B026E67B8100793EA1 /* HomeScreen */,
 				29FF13DA26E672AE009F8585 /* SplashScreen */,
 			);
@@ -393,6 +404,7 @@
 				299710BC26E67B9300793EA1 /* HomeScreenWireframe.swift in Sources */,
 				29FF13FB26E6743C009F8585 /* NetworkInteractor.swift in Sources */,
 				299710A626E6769F00793EA1 /* Localizable.swift in Sources */,
+				299710BF26E68E5A00793EA1 /* TabBarController.swift in Sources */,
 				29FF13FC26E6743C009F8585 /* NetworkManager.swift in Sources */,
 				29FF13FD26E6743C009F8585 /* ResponseHandler.swift in Sources */,
 				29FF13E326E672DF009F8585 /* SplashScreenViewController.swift in Sources */,
