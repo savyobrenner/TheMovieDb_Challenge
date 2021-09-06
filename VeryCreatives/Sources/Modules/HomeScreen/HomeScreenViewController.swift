@@ -17,24 +17,28 @@ final class HomeScreenViewController: UIViewController {
     @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    
     // MARK: - Class properties
     
     // MARK: - Public properties
-    
     var presenter: HomeScreenPresenterInterface!
     
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.viewDidLoad()
         self.viewConfiguration()
-        presenter.setupWelcomeHeader(welcomeLabel, subtitleLabel, icon)
     }
     
     // MARK: - Class Configurations
-    
-    private func viewConfiguration() { }
+    private func viewConfiguration() {
+        presenter.configure(collectionView)
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
+        presenter.setupWelcomeHeader(welcomeLabel, subtitleLabel, icon)
+    }
     
     // MARK: - UIActions
     
@@ -43,5 +47,27 @@ final class HomeScreenViewController: UIViewController {
 }
 
 // MARK: - Extensions
+extension HomeScreenViewController: HomeScreenViewInterface {
+    func showLoading(hide: Bool) {
+        
+    }
+    
+    func reloadData() {
+        self.collectionView.reloadData()
+    }
+}
 
-extension HomeScreenViewController: HomeScreenViewInterface { }
+// MARK: - CollectionView Exension
+extension HomeScreenViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return presenter.numberOfItemsInSection(collectionView, section: section)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return self.presenter.cellForItemAt(collectionView, indexPath: indexPath)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.presenter.collectionView(collectionView, didSelectItemAt: indexPath)
+    }
+}

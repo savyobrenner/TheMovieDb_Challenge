@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,18 +11,18 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MovieCell" customModule="VeryCreatives" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="270" height="360"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="MovieCell" reuseIdentifier="MovieCell" id="gTV-IL-0wX" customClass="MovieCell" customModule="VeryCreatives" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="316" height="403"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="270" height="360"/>
+                <rect key="frame" x="0.0" y="0.0" width="316" height="403"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="FWx-XW-tqO" customClass="RoundView" customModule="MyCinema" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="270" height="360"/>
+                    <view contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="FWx-XW-tqO" customClass="RoundView" customModule="VeryCreatives" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="316" height="403"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0Lj-77-aK1">
-                                <rect key="frame" x="80" y="30" width="110" height="20"/>
+                                <rect key="frame" x="103" y="30" width="110" height="20"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Gh5-Bv-ggd">
                                         <rect key="frame" x="0.0" y="-0.5" width="22" height="20"/>
@@ -41,8 +42,8 @@
                                 </subviews>
                                 <color key="tintColor" systemColor="systemYellowColor"/>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movieExample" translatesAutoresizingMaskIntoConstraints="NO" id="4TT-Y1-9rt" customClass="RoundImage" customModule="MyCinema" customModuleProvider="target">
-                                <rect key="frame" x="43" y="65" width="184" height="275"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movieExample" translatesAutoresizingMaskIntoConstraints="NO" id="4TT-Y1-9rt" customClass="RoundImage" customModule="VeryCreatives" customModuleProvider="target">
+                                <rect key="frame" x="65" y="65" width="186" height="278"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="4TT-Y1-9rt" secondAttribute="height" multiplier="156:233" id="nMh-nC-yhZ"/>
                                 </constraints>
@@ -58,13 +59,24 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kyq-D1-IQm">
+                                <rect key="frame" x="20" y="353" width="276" height="40"/>
+                                <color key="tintColor" name="yellowBrand"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
                             <constraint firstItem="4TT-Y1-9rt" firstAttribute="centerX" secondItem="FWx-XW-tqO" secondAttribute="centerX" id="0kD-PR-Aja"/>
                             <constraint firstItem="4TT-Y1-9rt" firstAttribute="top" secondItem="0Lj-77-aK1" secondAttribute="bottom" constant="15" id="1Rp-XQ-dWB"/>
+                            <constraint firstAttribute="trailing" secondItem="kyq-D1-IQm" secondAttribute="trailing" constant="20" id="ITf-Px-unG"/>
                             <constraint firstItem="0Lj-77-aK1" firstAttribute="top" secondItem="FWx-XW-tqO" secondAttribute="top" constant="30" id="PQm-T5-8UY"/>
+                            <constraint firstAttribute="bottom" secondItem="kyq-D1-IQm" secondAttribute="bottom" constant="10" id="SZe-Nu-wyr"/>
+                            <constraint firstItem="kyq-D1-IQm" firstAttribute="leading" secondItem="FWx-XW-tqO" secondAttribute="leading" constant="20" id="WzG-TL-bS1"/>
+                            <constraint firstItem="kyq-D1-IQm" firstAttribute="top" secondItem="4TT-Y1-9rt" secondAttribute="bottom" constant="10" id="X0s-8K-eDU"/>
                             <constraint firstItem="0Lj-77-aK1" firstAttribute="centerX" secondItem="FWx-XW-tqO" secondAttribute="centerX" id="aWa-OQ-oRn"/>
-                            <constraint firstAttribute="bottom" secondItem="4TT-Y1-9rt" secondAttribute="bottom" constant="20" id="xj4-bn-eFh"/>
+                            <constraint firstAttribute="bottom" secondItem="4TT-Y1-9rt" secondAttribute="bottom" constant="60" id="xj4-bn-eFh"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="radius">
@@ -81,15 +93,17 @@
                 <constraint firstItem="FWx-XW-tqO" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="jUj-JY-rUm"/>
                 <constraint firstAttribute="bottom" secondItem="FWx-XW-tqO" secondAttribute="bottom" id="nqm-zo-wQ5"/>
             </constraints>
+            <size key="customSize" width="316" height="403"/>
             <connections>
                 <outlet property="coverImageView" destination="4TT-Y1-9rt" id="pPK-Sz-vgc"/>
+                <outlet property="movieTitle" destination="kyq-D1-IQm" id="o7f-X2-osJ"/>
                 <outletCollection property="stars" destination="Gh5-Bv-ggd" collectionClass="NSMutableArray" id="f42-MC-2rN"/>
                 <outletCollection property="stars" destination="AnC-G7-mYG" collectionClass="NSMutableArray" id="0FN-h5-5aD"/>
                 <outletCollection property="stars" destination="BIn-Sq-hSh" collectionClass="NSMutableArray" id="cZf-J9-udC"/>
                 <outletCollection property="stars" destination="UT2-Ii-TwC" collectionClass="NSMutableArray" id="AqH-8S-Qpk"/>
                 <outletCollection property="stars" destination="uDx-xb-KBU" collectionClass="NSMutableArray" id="GUL-B9-eSd"/>
             </connections>
-            <point key="canvasLocation" x="97" y="52"/>
+            <point key="canvasLocation" x="128.98550724637681" y="65.959821428571431"/>
         </collectionViewCell>
     </objects>
     <designables>
@@ -100,6 +114,9 @@
     <resources>
         <image name="movieExample" width="500" height="750"/>
         <image name="star" catalog="system" width="128" height="116"/>
+        <namedColor name="yellowBrand">
+            <color red="0.99215686274509807" green="0.79607843137254897" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

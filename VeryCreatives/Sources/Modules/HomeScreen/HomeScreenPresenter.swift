@@ -20,6 +20,7 @@ final class HomeScreenPresenter {
     private enum Strings {
         static let staticName = "VeryCreatives!"
         static let subtitle = "Welcome to our movie app :)"
+        static let cellIdentifier = "MovieCell"
     }
     
     private enum Constants {
@@ -27,12 +28,21 @@ final class HomeScreenPresenter {
         static let iconBordWidth: CGFloat = 1.0
     }
     
-    // MARK: - Lifecycle
+    private var movies: Movie? {
+        didSet {
+            view?.reloadData()
+        }
+    }
     
+    // MARK: - Lifecycle
     init(wireframe: HomeScreenWireframeInterface, view: HomeScreenViewInterface, interactor: HomeScreenInteractorProtocol) {
         self.wireframe = wireframe
         self.view = view
         self.interactor = interactor
+    }
+    
+    func viewDidLoad() {
+        interactor.getPopularMovies()
     }
     
     private func configureIcon(_ imageView: UIImageView) {
@@ -48,6 +58,29 @@ final class HomeScreenPresenter {
 
 // MARK: - Presenter Extension
 extension HomeScreenPresenter: HomeScreenPresenterInterface {
+    func configure(_ collectionView: UICollectionView) {
+        let nib = UINib(nibName: Strings.cellIdentifier, bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: Strings.cellIdentifier)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // requires implementation
+    }
+    
+    func numberOfItemsInSection(_ collectionView: UICollectionView, section: Int) -> Int {
+        return movies?.results?.count ?? 0
+    }
+    
+    func cellForItemAt(_ collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Strings.cellIdentifier, for: indexPath) as? MovieCell else {
+            return UICollectionViewCell()
+        }
+        let movie = self.movies?.results?[indexPath.row]
+        cell.setup(movie: movie)
+        
+        return cell
+    }
+    
     func setupWelcomeHeader(_ title: UILabel, _ subtitle: UILabel, _ icon: UIImageView) {
         configureIcon(icon)
         configureWelcomeLabel(title)
@@ -58,15 +91,15 @@ extension HomeScreenPresenter: HomeScreenPresenterInterface {
 // MARK: - Interactor Extension
 extension HomeScreenPresenter: HomeScreenInteractorResponseProtocol {
     func responseGetPopularMoviesSuccess(movie: Movie?) {
-        print(movie)
+        self.movies = movie
     }
     
     func responseGetPopularMoviesError() {
-        print("Error")
+        //TODO
     }
     
     func networkingNotAvailable() {
-        print("Networking not available")
+        //TODO
     }
     
 }

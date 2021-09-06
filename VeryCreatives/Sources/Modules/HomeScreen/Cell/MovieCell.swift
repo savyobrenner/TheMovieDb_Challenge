@@ -11,6 +11,8 @@ class MovieCell: UICollectionViewCell {
     
     @IBOutlet weak var coverImageView: RoundImage!
     @IBOutlet var stars: [UIImageView]!
+    @IBOutlet weak var movieTitle: UILabel!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,5 +24,6 @@ class MovieCell: UICollectionViewCell {
             let rate = movie.voteAverage?.rounded()
             coverImageView.setImage(path: movie.posterPath ?? "", isAPIImage: true)
             stars.updateStars(rate?.formatRating() ?? 0)
+        movieTitle.text = movie.title
     }
 }

@@ -15,10 +15,17 @@ protocol HomeScreenWireframeInterface: WireframeInterface {
     func navigate(to option: HomeScreenNavigationOption)
 }
 
-protocol HomeScreenViewInterface: ViewInterface { }
+protocol HomeScreenViewInterface: ViewInterface {
+    func showLoading(hide: Bool)
+    func reloadData()
+}
 
 protocol HomeScreenPresenterInterface: PresenterInterface {
     func setupWelcomeHeader(_ title: UILabel, _ subtitle: UILabel, _ icon: UIImageView)
+    func configure(_ collectionView: UICollectionView)
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+    func numberOfItemsInSection(_ collectionView: UICollectionView, section: Int) -> Int
+    func cellForItemAt(_ collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell
 }
 
 protocol HomeScreenInteractorProtocol: InteractorInterface {

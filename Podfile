@@ -7,5 +7,6 @@ target 'VeryCreatives' do
 
   # Pods for VeryCreatives
   pod 'Alamofire'
+  pod 'Kingfisher'
 
 end
