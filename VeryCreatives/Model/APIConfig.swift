@@ -16,17 +16,11 @@ enum BasePath {
 
 enum EndPoint {
     case getPopularMovie
-    case getPopularTVShows
     case getGenresMoviesList
-    case getGenresTvShowsList
     case getMovieDetails(contentID: Int)
     case getMovieVideos(contentID: Int)
     case getMovieCredits(contentID: Int)
     case getMovieSimilars(contentID: Int)
-    case getTvShowDetails(contentID: Int)
-    case getTvShowVideos(contentID: Int)
-    case getTvShowCredits(contentID: Int)
-    case getTvShowSimilars(contentID: Int)
     case watchNowLink(contentID: Int)
 }
 
@@ -95,12 +89,8 @@ extension EndPoint {
         switch self {
         case .getPopularMovie:
             return "/movie/popular"
-        case .getPopularTVShows:
-            return "/tv/popular"
         case .getGenresMoviesList:
             return "/genre/movie/list"
-        case .getGenresTvShowsList:
-            return "/genre/tv/list"
         case .getMovieDetails(let contentID):
             return "/movie/\(contentID)"
         case .getMovieVideos(let contentID):
@@ -111,14 +101,6 @@ extension EndPoint {
             return "/movie/\(contentID)/similar"
         case .watchNowLink(let contentID):
             return "/movie/\(contentID)"
-        case .getTvShowDetails(let contentID):
-            return "/tv/\(contentID)"
-        case .getTvShowVideos(let contentID):
-            return "/tv/\(contentID)/videos"
-        case .getTvShowCredits(let contentID):
-            return "/tv/\(contentID)/credits"
-        case .getTvShowSimilars(let contentID):
-            return "/tv/\(contentID)/similar"
         }
     }
     
