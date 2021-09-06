@@ -17,6 +17,8 @@ protocol SplashScreenWireframeInterface: WireframeInterface {
 
 protocol SplashScreenViewInterface: ViewInterface { }
 
-protocol SplashScreenPresenterInterface: PresenterInterface { }
+protocol SplashScreenPresenterInterface: PresenterInterface {
+    func startSplashAnimation(_ label: UILabel)
+}
 
 protocol SplashScreenInteractorProtocol: InteractorInterface { }

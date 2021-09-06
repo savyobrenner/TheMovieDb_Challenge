@@ -12,6 +12,7 @@ import UIKit
 final class SplashScreenViewController: UIViewController {
     
     // MARK: - Outlets
+    @IBOutlet weak var titleLabel: UILabel!
     
     // MARK: - Class properties
     
@@ -27,8 +28,9 @@ final class SplashScreenViewController: UIViewController {
     }
     
     // MARK: - Class Configurations
-    
-    private func viewConfiguration() { }
+    private func viewConfiguration() {
+        presenter.startSplashAnimation(titleLabel)
+    }
     
     // MARK: - UIActions
     
@@ -37,5 +39,4 @@ final class SplashScreenViewController: UIViewController {
 }
 
 // MARK: - Extensions
-
 extension SplashScreenViewController: SplashScreenViewInterface { }

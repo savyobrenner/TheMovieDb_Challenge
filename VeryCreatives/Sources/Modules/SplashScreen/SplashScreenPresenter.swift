@@ -16,9 +16,16 @@ final class SplashScreenPresenter {
     private weak var view: SplashScreenViewInterface?
     private let interactor: SplashScreenInteractorProtocol
     private let wireframe: SplashScreenWireframeInterface
-        
+    
     private enum Strings {
         static let title = ""
+    }
+    
+    private enum Constants {
+        static let initialAlpha: CGFloat = 0.0
+        static let finalAlpha: CGFloat = 1.0
+        static let animationTimeInterval = 1.0
+        static let delay = 0.5
     }
     
     // MARK: - Lifecycle
@@ -31,5 +38,11 @@ final class SplashScreenPresenter {
 }
 
 // MARK: - Extensions
-
-extension SplashScreenPresenter: SplashScreenPresenterInterface { }
+extension SplashScreenPresenter: SplashScreenPresenterInterface {
+    func startSplashAnimation(_ label: UILabel) {
+        label.alpha = Constants.initialAlpha
+        UIView.animate(withDuration: Constants.animationTimeInterval, delay: Constants.delay, options: .curveEaseOut, animations: {
+            label.alpha = Constants.finalAlpha
+        })
+    }
+}
