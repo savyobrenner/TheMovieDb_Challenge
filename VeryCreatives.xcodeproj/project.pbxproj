@@ -127,10 +127,10 @@
 		29FF13D626E67146009F8585 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2997109926E6769100793EA1 /* Localizable */,
-				29FF13E726E67317009F8585 /* ViperBase */,
 				29FF13D726E671E3009F8585 /* Application */,
+				2997109926E6769100793EA1 /* Localizable */,
 				29FF13D826E671F3009F8585 /* Storyboards */,
+				29FF13E726E67317009F8585 /* ViperBase */,
 				29FF13CA26E66016009F8585 /* Assets.xcassets */,
 			);
 			path = Resources;
