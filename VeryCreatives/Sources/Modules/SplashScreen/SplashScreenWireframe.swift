@@ -34,7 +34,6 @@ final class SplashScreenWireframe: BaseWireframe {
 }
 
 // MARK: - Extensions
-
 extension SplashScreenWireframe: SplashScreenWireframeInterface {
     func navigate(to option: SplashScreenNavigationOption) {
         switch option {
