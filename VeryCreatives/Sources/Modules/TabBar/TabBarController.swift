@@ -9,6 +9,11 @@ import UIKit
 
 class TabBarController: UITabBarController {
     
+    private enum Strings {
+        static let homeTitle = TabBarControllerStrings.homeTitle.localized()
+        static let favoritesTitle = TabBarControllerStrings.favoritesTitle.localized()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initialConfiguration()
@@ -16,8 +21,8 @@ class TabBarController: UITabBarController {
     }
     
     private func initialConfiguration() {
-        self.tabBar.tintColor = .black
-        self.tabBar.backgroundColor = .darkGray
+        self.tabBar.tintColor = .yellowBrand
+        self.tabBar.barTintColor = .darkBrand
         DispatchQueue.main.async {
             self.navigationController?.navigationBar.isHidden = true
         }
@@ -25,10 +30,10 @@ class TabBarController: UITabBarController {
     
     private func configureScreens() {
         let homeViewController = HomeScreenWireframe.configureModule()
-        homeViewController.tabBarItem = UITabBarItem(title: nil, image: #imageLiteral(resourceName: "ic_home"), tag: 0)
+        homeViewController.tabBarItem = UITabBarItem(title: Strings.homeTitle, image: #imageLiteral(resourceName: "ic_home"), tag: 0)
         
         let favoritesViewController = FavoritesScreenWireframe.configureModule()
-        favoritesViewController.tabBarItem = UITabBarItem(title: nil, image: #imageLiteral(resourceName: "ic_home"), tag: 0)
+        favoritesViewController.tabBarItem = UITabBarItem(title: Strings.favoritesTitle, image: #imageLiteral(resourceName: "ic_home"), tag: 0)
         
         let tabBarList = [homeViewController, favoritesViewController]
         viewControllers = tabBarList

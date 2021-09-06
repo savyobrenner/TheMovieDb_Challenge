@@ -15,3 +15,8 @@ enum BaseViewControllerStrings: String, Localizable {
     case title = "BaseViewControllerStrings_title"
     case button = "BaseViewControllerStrings_btn"
 }
+
+enum TabBarControllerStrings: String, Localizable {
+    case homeTitle = "TabBarControllerStrings_ homeTitle"
+    case favoritesTitle = "TabBarControllerStrings_ favoritesTitle"
+}

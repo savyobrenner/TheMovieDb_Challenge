@@ -66,6 +66,7 @@
 		299710C526E6921A00793EA1 /* FavoritesScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesScreenViewController.xib; sourceTree = "<group>"; };
 		299710C626E6921A00793EA1 /* FavoritesScreenWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesScreenWireframe.swift; sourceTree = "<group>"; };
 		299710CE26E6939E00793EA1 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		299710D026E6957E00793EA1 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		29FF13BE26E66015009F8585 /* VeryCreatives.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VeryCreatives.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29FF13C126E66015009F8585 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29FF13C326E66015009F8585 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -466,6 +467,7 @@
 			children = (
 				299710AD26E676F900793EA1 /* en */,
 				299710AF26E676FC00793EA1 /* pt-BR */,
+				299710D026E6957E00793EA1 /* es */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
