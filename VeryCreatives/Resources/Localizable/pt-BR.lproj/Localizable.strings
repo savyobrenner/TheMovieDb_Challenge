@@ -5,3 +5,18 @@
 // MARK: - BASEVIEWCONTROLLERSTRINGS
 "BaseViewControllerStrings_title" = "Atenção!";
 "BaseViewControllerStrings_btn" = "OK";
+
+// MARK: - TABBARCONTROLLERSTRINGS
+"TabBarControllerStrings_ homeTitle" = "Início";
+"TabBarControllerStrings_ favoritesTitle" = "Favoritos";
+
+//MARK: - HOMESCREENVIEWCONTROLLERSTRINGS
+"HomeScreenViewControllerStrings_headerSubtitle" = "Bem vindo(a) ao nosso app :)";
+
+// MARK: - MOVIEDETAILSVIEWCONTROLLERSTRINGS
+"MovieDetailsViewControllerStrings_releaseDateTitle" = "Data de Lançamento:";
+"MovieDetailsViewControllerStrings_runtimeTitle" = "Duração:";
+"MovieDetailsViewControllerStrings_descriptionTitleLable" = "Descrição";
+"MovieDetailsViewControllerStrings_watchNowButton" = "Onde Assistir";
+"MovieDetailsViewControllerStrings_warningRedirectExternalLink" = "(Irá redirecionar para um link externo)";
+"MovieDetailsViewControllerStrings_theMovieDbCredits" = "Todas as informações são providas por TheMovieDB.";
