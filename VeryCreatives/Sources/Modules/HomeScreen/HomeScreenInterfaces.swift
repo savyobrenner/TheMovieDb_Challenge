@@ -31,4 +31,5 @@ protocol HomeScreenPresenterInterface: PresenterInterface {
 
 protocol HomeScreenInteractorProtocol: InteractorInterface {
     func getPopularMovies()
+    func getTopRatedMovies()
 }

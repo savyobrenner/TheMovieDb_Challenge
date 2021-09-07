@@ -1,13 +1,13 @@
 //
-//  PopularMoviesRequest.swift
+//  TopRatedMoviesRequest.swift
 //  VeryCreatives
 //
-//  Created by Brenner on 06/09/21.
+//  Created by Brenner on 07/09/21.
 //
 
 import Foundation
 
-class PopularMoviesRequest: RequestHandler {
+class TopRatedMoviesRequest: RequestHandler {
     func path() -> String {
         return EndPoint.getPopularMovies.fullPath
     }

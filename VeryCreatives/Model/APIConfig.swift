@@ -15,7 +15,8 @@ enum BasePath {
 }
 
 enum EndPoint {
-    case getPopularMovie
+    case getPopularMovies
+    case getTopRatedMovies
     case getGenresMoviesList
     case getMovieDetails(contentID: Int)
     case getMovieVideos(contentID: Int)
@@ -87,8 +88,10 @@ extension EndPoint {
     
     private var endPoint: String {
         switch self {
-        case .getPopularMovie:
+        case .getPopularMovies:
             return "/movie/popular"
+        case .getTopRatedMovies:
+            return "/movie/top_rated"
         case .getGenresMoviesList:
             return "/genre/movie/list"
         case .getMovieDetails(let contentID):

@@ -32,12 +32,14 @@ final class HomeScreenPresenter {
         static let heightDivisionFactor:CGFloat = 3.0
     }
     
-    private var movies: Movie? {
+    private var popularMovies: Movie? {
         didSet {
             view?.reloadData()
             view?.showLoading(hide: true)
         }
     }
+    
+    private var topRatedMovies: Movie?
     
     // MARK: - Lifecycle
     init(wireframe: HomeScreenWireframeInterface, view: HomeScreenViewInterface, interactor: HomeScreenInteractorProtocol) {
@@ -49,6 +51,7 @@ final class HomeScreenPresenter {
     func viewDidLoad() {
         view?.showLoading(hide: false)
         interactor.getPopularMovies()
+        interactor.getTopRatedMovies()
     }
     
     private func configureIcon(_ imageView: UIImageView) {
@@ -86,14 +89,14 @@ extension HomeScreenPresenter: HomeScreenPresenterInterface {
     }
     
     func numberOfItemsInSection(_ collectionView: UICollectionView, section: Int) -> Int {
-        return movies?.results?.count ?? 0
+        return popularMovies?.results?.count ?? 0
     }
     
     func cellForItemAt(_ collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Strings.cellIdentifier, for: indexPath) as? MovieCell else {
             return UICollectionViewCell()
         }
-        let movie = self.movies?.results?[indexPath.row]
+        let movie = self.popularMovies?.results?[indexPath.row]
         cell.setup(movie: movie)
         
         return cell
@@ -108,11 +111,15 @@ extension HomeScreenPresenter: HomeScreenPresenterInterface {
 
 // MARK: - Interactor Extension
 extension HomeScreenPresenter: HomeScreenInteractorResponseProtocol {
-    func responseGetPopularMoviesSuccess(movie: Movie?) {
-        self.movies = movie
+    func responseGetTopRatedMoviesSuccess(movie: Movie?) {
+        self.topRatedMovies = movie
     }
     
-    func responseGetPopularMoviesError() {
+    func responseGetPopularMoviesSuccess(movie: Movie?) {
+        self.popularMovies = movie
+    }
+    
+    func responseError() {
         //TODO
     }
     

@@ -14,7 +14,8 @@ import Foundation
 /// Output methods
 protocol HomeScreenInteractorResponseProtocol: AnyObject {
     func responseGetPopularMoviesSuccess(movie: Movie?)
-    func responseGetPopularMoviesError()
+    func responseError()
+    func responseGetTopRatedMoviesSuccess(movie: Movie?)
     func networkingNotAvailable()
 }
 
@@ -32,6 +33,10 @@ final class HomeScreenInteractor {
 // MARK: - Extensions
 
 extension HomeScreenInteractor: HomeScreenInteractorProtocol {
+    func getTopRatedMovies() {
+        self.networking.check(.getTopRatedMovies)
+    }
+    
     func getPopularMovies() {
         self.networking.check(.getPopularMovies)
     }
@@ -42,6 +47,8 @@ extension HomeScreenInteractor: NetworkInteractorResponse {
         switch ID {
         case .getPopularMovies:
             domain.getPopularMovies()
+        case .getTopRatedMovies:
+            domain.getTopRatedMovies()
         default: break
         }
        
@@ -58,11 +65,25 @@ extension HomeScreenInteractor: HomeScreenPopularMoviesResponseProtocol {
         if let data = data {
             delegate?.responseGetPopularMoviesSuccess(movie: data)
         } else {
-            delegate?.responseGetPopularMoviesError()
+            delegate?.responseError()
         }
     }
     
     func reponsePopularMoviesError(error: Error?) {
-        delegate?.responseGetPopularMoviesError()
+        delegate?.responseError()
+    }
+}
+
+extension HomeScreenInteractor: HomeScreenTopRatedMoviesResponseProtocol {
+    func reponseTopRatedMoviesSuccess(data: Movie?) {
+        if let data = data {
+            delegate?.responseGetTopRatedMoviesSuccess(movie: data)
+        } else {
+            delegate?.responseError()
+        }
+    }
+    
+    func reponseTopRatedMoviesError(error: Error?) {
+        delegate?.responseError()
     }
 }

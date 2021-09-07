@@ -21,6 +21,7 @@ final class HomeScreenWireframe: BaseWireframe {
     let interactor = HomeScreenInteractor(domain: domain)
     
     domain.responsePopularMovies = interactor
+    domain.respondeTopRatedMovies = interactor
     
     let viewController = HomeScreenViewController()
     let wireframe = HomeScreenWireframe(viewController: viewController)

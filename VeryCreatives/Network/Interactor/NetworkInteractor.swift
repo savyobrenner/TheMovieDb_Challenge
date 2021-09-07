@@ -6,6 +6,7 @@ import Foundation
 enum NetworkResponseType {
     case none
     case getPopularMovies
+    case getTopRatedMovies
 }
 
 protocol NetworkInteractorProtocols {
