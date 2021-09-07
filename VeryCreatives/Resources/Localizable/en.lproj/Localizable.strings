@@ -12,3 +12,11 @@
 
 //MARK: - HOMESCREENVIEWCONTROLLERSTRINGS
 "HomeScreenViewControllerStrings_headerSubtitle" = "Welcome to our movie app :)";
+
+// MARK: - MOVIEDETAILSVIEWCONTROLLERSTRINGS
+"MovieDetailsViewControllerStrings_releaseDateTitle" = "Release Date:";
+"MovieDetailsViewControllerStrings_runtimeTitle" = "Runtime:";
+"MovieDetailsViewControllerStrings_descriptionTitleLable" = "Description";
+"MovieDetailsViewControllerStrings_watchNowButton" = "Ways to Watch";
+"MovieDetailsViewControllerStrings_warningRedirectExternalLink" = "(Redirect to an external link)";
+"MovieDetailsViewControllerStrings_theMovieDbCredits" = "All informations is powered by TheMovieDB.";

@@ -8,6 +8,7 @@
 //
 
 import UIKit
+import youtube_ios_player_helper
 
 final class MovieDetailViewController: UIViewController {
     
@@ -31,7 +32,7 @@ final class MovieDetailViewController: UIViewController {
     @IBOutlet var genresLabel: [UILabel]!
     
     // UIView
-   // @IBOutlet weak var videoPlayer: YTPlayerView!
+    @IBOutlet weak var videoPlayer: YTPlayerView!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var coverImage: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -49,7 +50,7 @@ final class MovieDetailViewController: UIViewController {
     }
     
     private var watchNowLink: String?
-        
+    
     // MARK: - Public properties
     var presenter: MovieDetailPresenterInterface!
     
@@ -79,13 +80,53 @@ final class MovieDetailViewController: UIViewController {
         openExternalLinks(link: presenter.getWatchNowLink())
     }
     
-    
     // MARK: - Class Methods
     
 }
 
 // MARK: - Extensions
 extension MovieDetailViewController: MovieDetailViewInterface {
+    func showLoading(hide: Bool) {
+        self.fullScreenLoading(hide: hide)
+    }
+    
+    func loadGenres(_ genres: [String]) {
+        genresLabel.updateGenres(genres)
+    }
+    
+    func loadInformations(movie: MovieDetail) {
+        guard let rate = movie.voteAverage, let coverImagePath = movie.backdropPath else { return }
+        
+        self.starsImageView.updateStars(rate.rounded().formatRating())
+        self.coverImage.setImage(path: coverImagePath, isAPIImage: true)
+        
+        self.titleLabel.text = movie.title
+        self.votingRate.text = String(rate)
+        self.descriptionLabel.text = movie.overview
+        self.releaseDate.text = movie.releaseDate?.formatDate()
+        self.runtime.text = String(movie.runtime ?? 0) + " min"
+        
+        presenter.updateScrollViewHeight(descriptionLabel, scrollViewHeight)
+    }
+    
+    func getVideoId(_ videoId: String) {
+        let playerConfigurations =
+            ["playsinline":"1",
+             "rel":"0",
+             "fs" : "0",
+             "controls":"1"]
+        videoPlayer.load(withVideoId: videoId, playerVars: playerConfigurations)
+    }
+    
+    func loadLanguage(releaseDate: String, runtime: String, description: String, watchNow: String, warningExternalLinks: String, theMovieDbCredits: String) {
+        self.releaseDateTitle.text = releaseDate
+        self.runtimeTitle.text = runtime
+        self.descriptionTitleLable.text = description
+        self.watchNowButton.setTitle(watchNow, for: .normal)
+        self.warningRedirectExternalLink.text = warningExternalLinks
+        self.theMovieDbCredits.text = theMovieDbCredits
+    }
+    
     func layoutIfNeeded() {
         self.view?.layoutIfNeeded()
     }

@@ -12,13 +12,17 @@ import UIKit
 final class MovieDetailPresenter {
     
     // MARK: - Private properties
-    
     private weak var view: MovieDetailViewInterface?
     private let interactor: MovieDetailInteractorProtocol
     private let wireframe: MovieDetailWireframeInterface
         
     private enum Strings {
-        static let title = ""
+        static let releaseDateTitle = MovieDetailsViewControllerStrings.releaseDateTitle.localized()
+        static let runtimeTitle = MovieDetailsViewControllerStrings.runtimeTitle.localized()
+        static let descriptionTitleLable = MovieDetailsViewControllerStrings.descriptionTitleLable.localized()
+        static let watchNowButton = MovieDetailsViewControllerStrings.watchNowButton.localized()
+        static let warningRedirectExternalLink = MovieDetailsViewControllerStrings.warningRedirectExternalLink.localized()
+        static let theMovieDbCredits = MovieDetailsViewControllerStrings.theMovieDbCredits.localized()
     }
     
     private enum Constants {
@@ -26,8 +30,27 @@ final class MovieDetailPresenter {
         static let baseLabelLineHeight = 17
     }
     
-    // MARK: - Lifecycle
+    private var movieDetails: MovieDetail? {
+        didSet {
+            guard let movieDetails = movieDetails else { return }
+            checkIfRequestIsDone()
+            view?.loadInformations(movie: movieDetails)
+        }
+    }
     
+    private var movieGenresList: GenresList? {
+        didSet {
+            checkIfRequestIsDone()
+        }
+    }
+    
+    private var movieVideos: MovieVideo? {
+        didSet {
+            view?.getVideoId(getTrailerVideoId(movieVideos))
+        }
+    }
+    
+    // MARK: - Lifecycle
     init(wireframe: MovieDetailWireframeInterface, view: MovieDetailViewInterface, interactor: MovieDetailInteractorProtocol) {
         self.wireframe = wireframe
         self.view = view
@@ -36,6 +59,52 @@ final class MovieDetailPresenter {
     
     func viewDidLoad() {
         
+    }
+    
+    private func loadLanguage() {
+        view?.loadLanguage(releaseDate: Strings.releaseDateTitle,
+                           runtime: Strings.runtimeTitle,
+                           description: Strings.descriptionTitleLable,
+                           watchNow: Strings.watchNowButton,
+                           warningExternalLinks: Strings.warningRedirectExternalLink,
+                           theMovieDbCredits: Strings.theMovieDbCredits)
+    }
+    
+    private func getTrailerVideoId(_ movieVideo: MovieVideo?) -> String {
+        guard let movieVideo = movieVideo, let Id = movieVideo.results.first?.key else { return "" }
+        return Id
+    }
+    
+    func checkIfRequestIsDone() {
+        if let movieDetails = movieDetails, movieGenresList != nil {
+            view?.loadGenres(getGenreName(movieDetails.genres))
+            view?.showLoading(hide: true)
+        }
+    }
+    
+    private func getGenreName(_ genres: [Genre]?) -> [String] {
+        guard let genres = genres else { return [""] }
+        var formattedGenre: [String] = []
+        var validator: Bool?
+        var i = 0
+        for id in genres {
+            validator = self.movieGenresList?.genres.contains(where: { genre in
+                if genre.id == id.id, let name = genre.name {
+                    formattedGenre.append(name)
+                    return true
+                } else {
+                    return false
+                }
+            })
+            
+            i += 1
+        }
+        
+        if validator ?? false {
+            return formattedGenre
+        } else {
+            return [""]
+        }
     }
 }
 
@@ -63,6 +132,6 @@ extension MovieDetailPresenter: MovieDetailPresenterInterface {
     }
     
     func getWatchNowLink() -> String {
-        return ""
+        return EndPoint.watchNowLink(contentID: movieDetails?.id ?? 0).fullPath
     }
 }

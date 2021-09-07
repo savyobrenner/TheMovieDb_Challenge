@@ -24,3 +24,13 @@ enum TabBarControllerStrings: String, Localizable {
 enum HomeScreenViewControllerStrings: String, Localizable {
     case headerSubtitle = "HomeScreenViewControllerStrings_headerSubtitle"
 }
+
+enum MovieDetailsViewControllerStrings: String, Localizable {
+    case releaseDateTitle = "MovieDetailsViewControllerStrings_releaseDateTitle"
+    case runtimeTitle = "MovieDetailsViewControllerStrings_runtimeTitle"
+    case descriptionTitleLable = "MovieDetailsViewControllerStrings_descriptionTitleLable"
+    case watchNowButton = "MovieDetailsViewControllerStrings_watchNowButton"
+    case warningRedirectExternalLink = "MovieDetailsViewControllerStrings_warningRedirectExternalLink"
+    case theMovieDbCredits = "MovieDetailsViewControllerStrings_theMovieDbCredits"
+}
+

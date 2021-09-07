@@ -8,5 +8,6 @@ target 'VeryCreatives' do
   # Pods for VeryCreatives
   pod 'Alamofire'
   pod 'Kingfisher'
+  pod 'youtube-ios-player-helper'
 
 end

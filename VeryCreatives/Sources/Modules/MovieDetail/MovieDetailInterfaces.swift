@@ -17,6 +17,11 @@ protocol MovieDetailWireframeInterface: WireframeInterface {
 
 protocol MovieDetailViewInterface: ViewInterface {
     func layoutIfNeeded()
+    func showLoading(hide: Bool)
+    func loadGenres(_ genres: [String])
+    func loadInformations(movie: MovieDetail)
+    func getVideoId(_ videoId: String)
+    func loadLanguage(releaseDate: String, runtime: String, description: String, watchNow: String, warningExternalLinks: String, theMovieDbCredits: String)
 }
 
 protocol MovieDetailPresenterInterface: PresenterInterface {
