@@ -84,10 +84,21 @@ final class MovieDetailsPresenter {
         return Id
     }
     
-    func checkIfRequestIsDone() {
+    private func checkIfRequestIsDone() {
         if let movieDetails = movieDetails, movieGenresList != nil {
             view?.loadGenres(getGenreName(movieDetails.genres))
             view?.showLoading(hide: true)
+        }
+    }
+    
+    private func checkIfItIsFavorited() -> Bool {
+        if let favoritesMovies = UserDefaults.standard.getMovieDetailsObject() {
+            let validator = favoritesMovies.contains { movie in
+                movie.id == movieDetails?.id ?? 0
+            }
+            return validator
+        } else {
+            return false
         }
     }
     
@@ -119,6 +130,20 @@ final class MovieDetailsPresenter {
 
 // MARK: - Extensions
 extension MovieDetailsPresenter: MovieDetailsPresenterInterface {
+    func checkIfItsFavorited(_ button: UIButton) {
+        view?.updateFavoriteButton(isFavorited: checkIfItIsFavorited())
+    }
+    
+    func saveToFavorites() {
+        guard let object = movieDetails else { return }
+        if checkIfItIsFavorited() {
+            UserDefaults.standard.removeMovieDetailsObject(object)
+        } else {
+            UserDefaults.standard.saveMovie([object])
+        }
+        view?.updateFavoriteButton(isFavorited: checkIfItIsFavorited())
+    }
+    
     func updateScrollViewHeight(_ label: UILabel, _ constraint: NSLayoutConstraint) {
         let descriptionLabelSize = label.numberOfVisibleLines
         let baseHeight = UIDevice.current.userInterfaceIdiom == .phone ? Constants.iPhoneBaseScrollViewHeight : Constants.iPadBaseScrollViewHeight

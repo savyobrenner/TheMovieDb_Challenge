@@ -22,12 +22,15 @@ protocol MovieDetailsViewInterface: ViewInterface {
     func loadInformations(movie: MovieDetails)
     func getVideoId(_ videoId: String)
     func loadLanguage(releaseDate: String, runtime: String, description: String, watchNow: String, warningExternalLinks: String, theMovieDbCredits: String)
+    func updateFavoriteButton(isFavorited: Bool)
 }
 
 protocol MovieDetailsPresenterInterface: PresenterInterface {
+    func checkIfItsFavorited(_ button: UIButton)
     func getWatchNowLink() -> String
     func animateScreenWhenScrool(_ isScrolling: Bool, _ constraint: NSLayoutConstraint)
     func updateScrollViewHeight(_ label: UILabel, _ constraint: NSLayoutConstraint)
+    func saveToFavorites()
 }
 
 protocol MovieDetailsInteractorProtocol: InteractorInterface {

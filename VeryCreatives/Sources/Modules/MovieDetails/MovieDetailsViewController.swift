@@ -26,6 +26,8 @@ final class MovieDetailsViewController: UIViewController {
     @IBOutlet weak var watchNowButton: UIButton!
     @IBOutlet weak var warningRedirectExternalLink: UILabel!
     @IBOutlet weak var theMovieDbCredits: UILabel!
+    @IBOutlet weak var favoriteButton: RoundButton!
+    
     
     // Collections
     @IBOutlet var starsImageView: [UIImageView]!
@@ -78,12 +80,24 @@ final class MovieDetailsViewController: UIViewController {
         openExternalLinks(link: presenter.getWatchNowLink())
     }
     
+    @IBAction func saveToFavorites(_ sender: UIButton) {
+        presenter.saveToFavorites()
+    }
+    
+    
     // MARK: - Class Methods
     
 }
 
 // MARK: - Extensions
 extension MovieDetailsViewController: MovieDetailsViewInterface {
+    func updateFavoriteButton(isFavorited: Bool) {
+        let imageName = isFavorited ? "heart.fill" : "heart"
+        let tintColor = isFavorited ? UIColor.red : UIColor.black
+        favoriteButton.tintColor = tintColor
+        favoriteButton.setImage(UIImage(systemName: imageName), for: .normal)
+    }
+    
     func showLoading(hide: Bool) {
         self.fullScreenLoading(hide: hide)
     }
@@ -105,6 +119,7 @@ extension MovieDetailsViewController: MovieDetailsViewInterface {
         self.runtime.text = String(movie.runtime ?? 0) + " min"
         
         presenter.updateScrollViewHeight(descriptionLabel, scrollViewHeight)
+        presenter.checkIfItsFavorited(favoriteButton)
     }
     
     func getVideoId(_ videoId: String) {

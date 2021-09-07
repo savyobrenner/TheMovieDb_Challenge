@@ -8,15 +8,7 @@
 import Foundation
 
 struct Movie: Codable {
-    let page, totalResults, totalPages: Int?
     let results: [MovieResult]?
-
-    enum CodingKeys: String, CodingKey {
-        case page
-        case totalResults = "total_results"
-        case totalPages = "total_pages"
-        case results
-    }
 }
 
 struct MovieResult: Codable {
@@ -25,9 +17,7 @@ struct MovieResult: Codable {
     let video: Bool?
     let posterPath: String?
     let id: Int?
-    let adult: Bool?
     let backdropPath: String?
-    let originalTitle: String?
     let genreIDS: [Int]?
     let title: String?
     let voteAverage: Double?
@@ -38,9 +28,8 @@ struct MovieResult: Codable {
         case voteCount = "vote_count"
         case video
         case posterPath = "poster_path"
-        case id, adult
+        case id
         case backdropPath = "backdrop_path"
-        case originalTitle = "original_title"
         case genreIDS = "genre_ids"
         case title
         case voteAverage = "vote_average"

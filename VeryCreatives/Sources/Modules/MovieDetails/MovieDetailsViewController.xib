@@ -23,6 +23,7 @@
                 <outlet property="coverImage" destination="O9p-TE-eLu" id="g7c-Hu-JIz"/>
                 <outlet property="descriptionLabel" destination="SSe-VZ-PTI" id="J4a-b1-1Ue"/>
                 <outlet property="descriptionTitleLable" destination="6yH-hz-pXH" id="gUz-2D-R3a"/>
+                <outlet property="favoriteButton" destination="wXR-es-jz7" id="yqC-ns-6hT"/>
                 <outlet property="imageTopConstraint" destination="fpV-Dp-cBM" id="5M4-8g-xBH"/>
                 <outlet property="maskImageView" destination="C4F-tt-JRB" id="RZk-uR-kxU"/>
                 <outlet property="releaseDate" destination="Vpp-PZ-f59" id="NZI-Qe-RD5"/>
@@ -371,6 +372,9 @@
                             <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="saveToFavorites:" destination="-1" eventType="touchUpInside" id="Q7V-Zt-KLX"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="LtE-be-ogL"/>
