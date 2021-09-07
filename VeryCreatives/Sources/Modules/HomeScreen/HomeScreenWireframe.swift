@@ -35,7 +35,7 @@ final class HomeScreenWireframe: BaseWireframe {
     
   // MARK: - Private Routing
     private func goToDetail(_ contentID: Int) {
-        let viewController = MovieDetailWireframe.configureModule(contentID: contentID)
+        let viewController = MovieDetailsWireframe.configureModule(contentID: contentID)
         self.present(viewController, animated: true)
     }
 }

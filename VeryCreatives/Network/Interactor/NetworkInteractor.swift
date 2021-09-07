@@ -7,6 +7,9 @@ enum NetworkResponseType {
     case none
     case getPopularMovies
     case getTopRatedMovies
+    case getMovieGenreList
+    case getMovieDetails
+    case getMovieVideos
 }
 
 protocol NetworkInteractorProtocols {

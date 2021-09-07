@@ -1,5 +1,5 @@
 //
-//  MovieDetailInterfaces.swift
+//  MovieDetailsInterfaces.swift
 //  VeryCreatives
 //
 //  Created by Brenner on 07/09/21.
@@ -9,25 +9,29 @@
 
 import UIKit
 
-enum MovieDetailNavigationOption { }
+enum MovieDetailsNavigationOption { }
 
-protocol MovieDetailWireframeInterface: WireframeInterface {
-    func navigate(to option: MovieDetailNavigationOption)
+protocol MovieDetailsWireframeInterface: WireframeInterface {
+    func navigate(to option: MovieDetailsNavigationOption)
 }
 
-protocol MovieDetailViewInterface: ViewInterface {
+protocol MovieDetailsViewInterface: ViewInterface {
     func layoutIfNeeded()
     func showLoading(hide: Bool)
     func loadGenres(_ genres: [String])
-    func loadInformations(movie: MovieDetail)
+    func loadInformations(movie: MovieDetails)
     func getVideoId(_ videoId: String)
     func loadLanguage(releaseDate: String, runtime: String, description: String, watchNow: String, warningExternalLinks: String, theMovieDbCredits: String)
 }
 
-protocol MovieDetailPresenterInterface: PresenterInterface {
+protocol MovieDetailsPresenterInterface: PresenterInterface {
     func getWatchNowLink() -> String
     func animateScreenWhenScrool(_ isScrolling: Bool, _ constraint: NSLayoutConstraint)
     func updateScrollViewHeight(_ label: UILabel, _ constraint: NSLayoutConstraint)
 }
 
-protocol MovieDetailInteractorProtocol: InteractorInterface { }
+protocol MovieDetailsInteractorProtocol: InteractorInterface {
+    func getMovieDetails()
+    func getMovieGenres()
+    func getMovieVideos()
+}

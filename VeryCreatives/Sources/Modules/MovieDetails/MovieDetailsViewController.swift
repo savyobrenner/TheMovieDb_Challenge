@@ -1,5 +1,5 @@
 //
-//  MovieDetailViewController.swift
+//  MovieDetailsViewController.swift
 //  VeryCreatives
 //
 //  Created by Brenner on 07/09/21.
@@ -10,7 +10,7 @@
 import UIKit
 import youtube_ios_player_helper
 
-final class MovieDetailViewController: UIViewController {
+final class MovieDetailsViewController: UIViewController {
     
     // MARK: - Outlets
     
@@ -52,7 +52,7 @@ final class MovieDetailViewController: UIViewController {
     private var watchNowLink: String?
     
     // MARK: - Public properties
-    var presenter: MovieDetailPresenterInterface!
+    var presenter: MovieDetailsPresenterInterface!
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -85,7 +85,7 @@ final class MovieDetailViewController: UIViewController {
 }
 
 // MARK: - Extensions
-extension MovieDetailViewController: MovieDetailViewInterface {
+extension MovieDetailsViewController: MovieDetailsViewInterface {
     func showLoading(hide: Bool) {
         self.fullScreenLoading(hide: hide)
     }
@@ -94,7 +94,7 @@ extension MovieDetailViewController: MovieDetailViewInterface {
         genresLabel.updateGenres(genres)
     }
     
-    func loadInformations(movie: MovieDetail) {
+    func loadInformations(movie: MovieDetails) {
         guard let rate = movie.voteAverage, let coverImagePath = movie.backdropPath else { return }
         
         self.starsImageView.updateStars(rate.rounded().formatRating())
@@ -132,7 +132,7 @@ extension MovieDetailViewController: MovieDetailViewInterface {
     }
 }
 
-extension MovieDetailViewController: UIScrollViewDelegate {
+extension MovieDetailsViewController: UIScrollViewDelegate {
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         isScrolling = true
     }

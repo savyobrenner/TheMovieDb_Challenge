@@ -1,5 +1,5 @@
 //
-//  MovieDetailPresenter.swift
+//  MovieDetailsPresenter.swift
 //  VeryCreatives
 //
 //  Created by Brenner on 07/09/21.
@@ -9,12 +9,12 @@
 
 import UIKit
 
-final class MovieDetailPresenter {
+final class MovieDetailsPresenter {
     
     // MARK: - Private properties
-    private weak var view: MovieDetailViewInterface?
-    private let interactor: MovieDetailInteractorProtocol
-    private let wireframe: MovieDetailWireframeInterface
+    private weak var view: MovieDetailsViewInterface?
+    private let interactor: MovieDetailsInteractorProtocol
+    private let wireframe: MovieDetailsWireframeInterface
         
     private enum Strings {
         static let releaseDateTitle = MovieDetailsViewControllerStrings.releaseDateTitle.localized()
@@ -26,11 +26,11 @@ final class MovieDetailPresenter {
     }
     
     private enum Constants {
-        static let baseScrollViewHeight = 1000
+        static let baseScrollViewHeight = 800
         static let baseLabelLineHeight = 17
     }
     
-    private var movieDetails: MovieDetail? {
+    private var movieDetails: MovieDetails? {
         didSet {
             guard let movieDetails = movieDetails else { return }
             checkIfRequestIsDone()
@@ -51,14 +51,22 @@ final class MovieDetailPresenter {
     }
     
     // MARK: - Lifecycle
-    init(wireframe: MovieDetailWireframeInterface, view: MovieDetailViewInterface, interactor: MovieDetailInteractorProtocol) {
+    init(wireframe: MovieDetailsWireframeInterface, view: MovieDetailsViewInterface, interactor: MovieDetailsInteractorProtocol) {
         self.wireframe = wireframe
         self.view = view
         self.interactor = interactor
     }
     
     func viewDidLoad() {
-        
+        loadLanguage()
+        makeRequests()
+    }
+    
+    private func makeRequests() {
+        view?.showLoading(hide: false)
+        interactor.getMovieDetails()
+        interactor.getMovieGenres()
+        interactor.getMovieVideos()
     }
     
     private func loadLanguage() {
@@ -109,8 +117,7 @@ final class MovieDetailPresenter {
 }
 
 // MARK: - Extensions
-
-extension MovieDetailPresenter: MovieDetailPresenterInterface {
+extension MovieDetailsPresenter: MovieDetailsPresenterInterface {
     func updateScrollViewHeight(_ label: UILabel, _ constraint: NSLayoutConstraint) {
         let descriptionLabelSize = label.numberOfVisibleLines
         constraint.constant = CGFloat(Constants.baseScrollViewHeight + (descriptionLabelSize * Constants.baseLabelLineHeight))
@@ -133,5 +140,27 @@ extension MovieDetailPresenter: MovieDetailPresenterInterface {
     
     func getWatchNowLink() -> String {
         return EndPoint.watchNowLink(contentID: movieDetails?.id ?? 0).fullPath
+    }
+}
+
+extension MovieDetailsPresenter: MovieDetailsInteractorResponseProtocol {
+    func responseGetMovieVideos(movieVideos: MovieVideo?) {
+        self.movieVideos = movieVideos
+    }
+    
+    func responseGetMovieGenres(genres: GenresList?) {
+        self.movieGenresList = genres
+    }
+    
+    func responseGetMovieDetailsSuccess(movie: MovieDetails?) {
+        self.movieDetails = movie
+    }
+    
+    func responseGetMovieDetailsError() {
+        //TODO
+    }
+    
+    func networkingNotAvailable() {
+        //TODO
     }
 }
