@@ -26,6 +26,7 @@ protocol HomeScreenPresenterInterface: PresenterInterface {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     func numberOfItemsInSection(_ collectionView: UICollectionView, section: Int) -> Int
     func cellForItemAt(_ collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize 
 }
 
 protocol HomeScreenInteractorProtocol: InteractorInterface {

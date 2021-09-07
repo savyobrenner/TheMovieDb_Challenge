@@ -26,11 +26,16 @@ final class HomeScreenPresenter {
     private enum Constants {
         static let welcomeSize: CGFloat = 24.0
         static let iconBordWidth: CGFloat = 1.0
+        static let staticHeight: CGFloat = 350.0
+        static let widthCompensation: CGFloat = 20.0
+        static let widthDivisionFactor: CGFloat = 2.0
+        static let heightDivisionFactor:CGFloat = 3.0
     }
     
     private var movies: Movie? {
         didSet {
             view?.reloadData()
+            view?.showLoading(hide: true)
         }
     }
     
@@ -42,6 +47,7 @@ final class HomeScreenPresenter {
     }
     
     func viewDidLoad() {
+        view?.showLoading(hide: false)
         interactor.getPopularMovies()
     }
     
@@ -58,6 +64,18 @@ final class HomeScreenPresenter {
 
 // MARK: - Presenter Extension
 extension HomeScreenPresenter: HomeScreenPresenterInterface {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        // Define cell width
+        let screenWidth = UIScreen.main.bounds.width
+        let widthDesired = CGFloat(screenWidth / Constants.widthDivisionFactor - Constants.widthCompensation)
+        
+        // Define cell height
+        let screenHeight = UIScreen.main.bounds.height
+        let heightDesired = CGFloat(screenHeight / Constants.heightDivisionFactor)
+        
+        return CGSize(width: widthDesired, height: heightDesired)
+    }
+    
     func configure(_ collectionView: UICollectionView) {
         let nib = UINib(nibName: Strings.cellIdentifier, bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: Strings.cellIdentifier)

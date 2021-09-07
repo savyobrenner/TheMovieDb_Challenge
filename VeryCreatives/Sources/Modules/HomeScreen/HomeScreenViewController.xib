@@ -97,7 +97,7 @@
                     </constraints>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="L5x-VW-KIa">
-                    <rect key="frame" x="20" y="224" width="374" height="618"/>
+                    <rect key="frame" x="0.0" y="224" width="414" height="638"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="qE4-jY-Ivi">
                         <size key="itemSize" width="180" height="350"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -109,13 +109,13 @@
             <viewLayoutGuide key="safeArea" id="s64-SJ-djE"/>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="L5x-VW-KIa" firstAttribute="leading" secondItem="s64-SJ-djE" secondAttribute="leading" constant="20" id="26S-IB-0eO"/>
+                <constraint firstItem="L5x-VW-KIa" firstAttribute="leading" secondItem="s64-SJ-djE" secondAttribute="leading" id="26S-IB-0eO"/>
                 <constraint firstItem="L5x-VW-KIa" firstAttribute="top" secondItem="hly-ls-Blb" secondAttribute="bottom" constant="100" id="6t8-Js-JG5"/>
                 <constraint firstItem="hly-ls-Blb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="OzW-RI-Ium"/>
                 <constraint firstItem="hly-ls-Blb" firstAttribute="top" secondItem="s64-SJ-djE" secondAttribute="top" id="Sas-v9-g6M"/>
                 <constraint firstItem="s64-SJ-djE" firstAttribute="trailing" secondItem="hly-ls-Blb" secondAttribute="trailing" id="XoR-eT-dXP"/>
-                <constraint firstItem="s64-SJ-djE" firstAttribute="trailing" secondItem="L5x-VW-KIa" secondAttribute="trailing" constant="20" id="buU-wB-bL4"/>
-                <constraint firstItem="s64-SJ-djE" firstAttribute="bottom" secondItem="L5x-VW-KIa" secondAttribute="bottom" constant="20" id="tAY-o5-iYq"/>
+                <constraint firstItem="s64-SJ-djE" firstAttribute="trailing" secondItem="L5x-VW-KIa" secondAttribute="trailing" id="buU-wB-bL4"/>
+                <constraint firstItem="s64-SJ-djE" firstAttribute="bottom" secondItem="L5x-VW-KIa" secondAttribute="bottom" id="tAY-o5-iYq"/>
             </constraints>
             <point key="canvasLocation" x="-538" y="-36"/>
         </view>

@@ -115,7 +115,7 @@
         <image name="movieExample" width="500" height="750"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <namedColor name="yellowBrand">
-            <color red="0.99215686274509807" green="0.79607843137254897" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.99199998378753662" green="0.79600000381469727" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

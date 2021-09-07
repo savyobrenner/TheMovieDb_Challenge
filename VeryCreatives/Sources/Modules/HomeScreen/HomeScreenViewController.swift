@@ -49,7 +49,7 @@ final class HomeScreenViewController: UIViewController {
 // MARK: - Extensions
 extension HomeScreenViewController: HomeScreenViewInterface {
     func showLoading(hide: Bool) {
-        
+        self.fullScreenLoading(hide: hide)
     }
     
     func reloadData() {
@@ -58,16 +58,20 @@ extension HomeScreenViewController: HomeScreenViewInterface {
 }
 
 // MARK: - CollectionView Exension
-extension HomeScreenViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension HomeScreenViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return presenter.numberOfItemsInSection(collectionView, section: section)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return self.presenter.cellForItemAt(collectionView, indexPath: indexPath)
+        return presenter.cellForItemAt(collectionView, indexPath: indexPath)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.presenter.collectionView(collectionView, didSelectItemAt: indexPath)
+        presenter.collectionView(collectionView, didSelectItemAt: indexPath)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return presenter.collectionView(collectionView, layout: collectionViewLayout, sizeForItemAt: indexPath)
     }
 }
