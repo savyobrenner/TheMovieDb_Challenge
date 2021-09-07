@@ -18,7 +18,7 @@ extension UserDefaults {
         }
     }
     
-    func saveMovie(_ object: [MovieDetails], forKey key: String = Keys.favoriteMovie.description) {
+    func saveMovie(_ object: [FavoriteMovie], forKey key: String = Keys.favoriteMovie.description) {
         
         var objects = getMovieDetailsObject(forKey: key) ?? []
         objects.append(contentsOf: object)
@@ -30,19 +30,19 @@ extension UserDefaults {
         }
     }
     
-    func getMovieDetailsObject(forKey key: String = Keys.favoriteMovie.description) -> [MovieDetails]? {
+    func getMovieDetailsObject(forKey key: String = Keys.favoriteMovie.description) -> [FavoriteMovie]? {
         if let object = UserDefaults.standard.object(forKey: key) as? Data {
             let decoder = JSONDecoder()
-            if let decodedObject = try? decoder.decode([MovieDetails].self, from: object) {
+            if let decodedObject = try? decoder.decode([FavoriteMovie].self, from: object) {
                 return decodedObject
             }
         }
         return nil
     }
     
-    func removeMovieDetailsObject(_ object: MovieDetails, forKey key: String = Keys.favoriteMovie.description) {
+    func removeMovieDetailsObject(_ object: FavoriteMovie, forKey key: String = Keys.favoriteMovie.description) {
         let objects = getMovieDetailsObject(forKey: key)?.filter({ movieDetail in
-            object.id != movieDetail.id
+            object.movieDetails?.id != movieDetail.movieDetails?.id
         }) ?? []
        
         let encoder = JSONEncoder()

@@ -30,7 +30,7 @@ final class FavoritesScreenPresenter {
         static let heightDivisionFactor:CGFloat = 3.0
     }
     
-    private var movies: [MovieDetails]? {
+    private var movies: [FavoriteMovie]? {
         didSet {
             view?.reloadData()
         }
@@ -82,7 +82,7 @@ extension FavoritesScreenPresenter: FavoritesScreenPresenterInterface {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Strings.cellIdentifier, for: indexPath) as? MovieCell else {
             return UICollectionViewCell()
         }
-        let movie = movies?[indexPath.row]
+        let movie = movies?[indexPath.row].movieDetails
         cell.setup(movie: movie)
         
         return cell

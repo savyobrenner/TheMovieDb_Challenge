@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		290F6C9926E81993002BEA9E /* FavoriteMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290F6C9826E81993002BEA9E /* FavoriteMovie.swift */; };
 		296A0ECE26E7E162003172EB /* MovieDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296A0ECD26E7E162003172EB /* MovieDetails.swift */; };
 		296A0ED026E7E35A003172EB /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296A0ECF26E7E35A003172EB /* UserDefaults+Extensions.swift */; };
 		297C376326E799620012E6F3 /* MovieDetailsInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C375D26E799620012E6F3 /* MovieDetailsInterfaces.swift */; };
@@ -81,6 +82,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		290F6C9826E81993002BEA9E /* FavoriteMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMovie.swift; sourceTree = "<group>"; };
 		296A0ECD26E7E162003172EB /* MovieDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetails.swift; sourceTree = "<group>"; };
 		296A0ECF26E7E35A003172EB /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
 		297C375D26E799620012E6F3 /* MovieDetailsInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsInterfaces.swift; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 				296A0ECD26E7E162003172EB /* MovieDetails.swift */,
 				299710DD26E6A44700793EA1 /* Movie.swift */,
 				297C376E26E79A9C0012E6F3 /* MovieVideo.swift */,
+				290F6C9826E81993002BEA9E /* FavoriteMovie.swift */,
 			);
 			path = Movie;
 			sourceTree = "<group>";
@@ -667,6 +670,7 @@
 				297C377126E79B020012E6F3 /* MovieGenreListRequest.swift in Sources */,
 				297C376526E799620012E6F3 /* MovieDetailsViewController.swift in Sources */,
 				299710DE26E6A44700793EA1 /* Movie.swift in Sources */,
+				290F6C9926E81993002BEA9E /* FavoriteMovie.swift in Sources */,
 				29FF13E626E672DF009F8585 /* SplashScreenWireframe.swift in Sources */,
 				29C0D9B126E7A9B5006A3733 /* String+Extensions.swift in Sources */,
 				299710C726E6921A00793EA1 /* FavoritesScreenInterfaces.swift in Sources */,

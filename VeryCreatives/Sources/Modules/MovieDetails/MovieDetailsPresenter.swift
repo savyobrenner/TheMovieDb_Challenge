@@ -51,11 +51,14 @@ final class MovieDetailsPresenter {
         }
     }
     
+    private var favoriteData: Bool
+    
     // MARK: - Lifecycle
-    init(wireframe: MovieDetailsWireframeInterface, view: MovieDetailsViewInterface, interactor: MovieDetailsInteractorProtocol) {
+    init(wireframe: MovieDetailsWireframeInterface, view: MovieDetailsViewInterface, interactor: MovieDetailsInteractorProtocol, favoriteData: Bool) {
         self.wireframe = wireframe
         self.view = view
         self.interactor = interactor
+        self.favoriteData = favoriteData
     }
     
     func viewDidLoad() {
@@ -65,9 +68,15 @@ final class MovieDetailsPresenter {
     
     private func makeRequests() {
         view?.showLoading(hide: false)
-        interactor.getMovieDetails()
-        interactor.getMovieGenres()
-        interactor.getMovieVideos()
+        if !favoriteData {
+            interactor.getMovieDetails()
+            interactor.getMovieGenres()
+            interactor.getMovieVideos()
+        }
+    }
+    
+    private func loadFavoriteData() {
+        
     }
     
     private func loadLanguage() {
@@ -93,8 +102,9 @@ final class MovieDetailsPresenter {
     
     private func checkIfItIsFavorited() -> Bool {
         if let favoritesMovies = UserDefaults.standard.getMovieDetailsObject() {
-            let validator = favoritesMovies.contains { movie in
-                movie.id == movieDetails?.id ?? 0
+            let currentModel = FavoriteMovie(movieDetails: movieDetails, movieVideo: movieVideos, movieGenres: movieGenresList)
+            let validator = favoritesMovies.contains { (favorite) in
+                favorite == currentModel
             }
             return validator
         } else {
@@ -135,7 +145,7 @@ extension MovieDetailsPresenter: MovieDetailsPresenterInterface {
     }
     
     func saveToFavorites() {
-        guard let object = movieDetails else { return }
+        let object = FavoriteMovie(movieDetails: movieDetails, movieVideo: movieVideos, movieGenres: movieGenresList)
         if checkIfItIsFavorited() {
             UserDefaults.standard.removeMovieDetailsObject(object)
         } else {
