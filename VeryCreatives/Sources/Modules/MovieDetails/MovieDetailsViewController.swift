@@ -106,11 +106,17 @@ extension MovieDetailsViewController: MovieDetailsViewInterface {
         genresLabel.updateGenres(genres)
     }
     
-    func loadInformations(movie: MovieDetails) {
+    func loadInformations(movie: MovieDetails, isFavoriteMovie: Bool) {
         guard let rate = movie.voteAverage, let coverImagePath = movie.backdropPath else { return }
         
         self.starsImageView.updateStars(rate.rounded().formatRating())
-        self.coverImage.setImage(path: coverImagePath, isAPIImage: true)
+        
+        if isFavoriteMovie {
+            guard let imageViewData = UserDefaults.standard.loadImage(movie.posterPath) else { return }
+            self.coverImage.image = UIImage(data: imageViewData)
+        } else {
+            self.coverImage.setImage(path: coverImagePath, isAPIImage: true)
+        }
         
         self.titleLabel.text = movie.title
         self.votingRate.text = String(rate)

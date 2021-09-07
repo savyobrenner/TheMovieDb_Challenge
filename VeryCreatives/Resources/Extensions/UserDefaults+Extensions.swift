@@ -18,6 +18,22 @@ extension UserDefaults {
         }
     }
     
+    func saveImage(_ path: String?) {
+        // Create URL
+        guard let path = path, let url = URL(string: BasePath.getImagesTheMovieDBAPI + path) else { return }
+
+        // Fetch Image Data
+        if let data = try? Data(contentsOf: url) {
+            // Create Image and Update Image View
+            UserDefaults.standard.set(data, forKey: path)
+        }
+    }
+    
+    func loadImage(_ path: String?) -> Data? {
+        guard let path = path, let data = UserDefaults.standard.data(forKey: path) else { return nil }
+        return data
+    }
+    
     func saveMovie(_ object: [FavoriteMovie], forKey key: String = Keys.favoriteMovie.description) {
         
         var objects = getMovieDetailsObject(forKey: key) ?? []

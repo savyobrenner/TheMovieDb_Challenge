@@ -35,7 +35,7 @@ final class MovieDetailsPresenter {
         didSet {
             guard let movieDetails = movieDetails else { return }
             checkIfRequestIsDone()
-            view?.loadInformations(movie: movieDetails)
+            view?.loadInformations(movie: movieDetails, isFavoriteMovie: favoriteData)
         }
     }
     
@@ -52,18 +52,21 @@ final class MovieDetailsPresenter {
     }
     
     private var favoriteData: Bool
+    private var favoriteMovie: FavoriteMovie?
     
     // MARK: - Lifecycle
-    init(wireframe: MovieDetailsWireframeInterface, view: MovieDetailsViewInterface, interactor: MovieDetailsInteractorProtocol, favoriteData: Bool) {
+    init(wireframe: MovieDetailsWireframeInterface, view: MovieDetailsViewInterface, interactor: MovieDetailsInteractorProtocol, favoriteData: Bool, favoriteMovie: FavoriteMovie?) {
         self.wireframe = wireframe
         self.view = view
         self.interactor = interactor
         self.favoriteData = favoriteData
+        self.favoriteMovie = favoriteMovie
     }
     
     func viewDidLoad() {
         loadLanguage()
         makeRequests()
+        loadFavoriteData()
     }
     
     private func makeRequests() {
@@ -76,7 +79,9 @@ final class MovieDetailsPresenter {
     }
     
     private func loadFavoriteData() {
-        
+        self.movieDetails = favoriteMovie?.movieDetails
+        self.movieVideos = favoriteMovie?.movieVideo
+        self.movieGenresList = favoriteMovie?.movieGenres
     }
     
     private func loadLanguage() {
@@ -147,8 +152,12 @@ extension MovieDetailsPresenter: MovieDetailsPresenterInterface {
     func saveToFavorites() {
         let object = FavoriteMovie(movieDetails: movieDetails, movieVideo: movieVideos, movieGenres: movieGenresList)
         if checkIfItIsFavorited() {
+            UserDefaults.standard.removeObject(forKey: movieDetails?.posterPath ?? "")
+            UserDefaults.standard.removeObject(forKey: movieDetails?.backdropPath ?? "")
             UserDefaults.standard.removeMovieDetailsObject(object)
         } else {
+            UserDefaults.standard.saveImage(movieDetails?.posterPath)
+            UserDefaults.standard.saveImage(movieDetails?.backdropPath)
             UserDefaults.standard.saveMovie([object])
         }
         view?.updateFavoriteButton(isFavorited: checkIfItIsFavorited())

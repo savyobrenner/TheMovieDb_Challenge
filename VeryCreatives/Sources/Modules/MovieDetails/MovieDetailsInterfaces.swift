@@ -19,7 +19,7 @@ protocol MovieDetailsViewInterface: ViewInterface {
     func layoutIfNeeded()
     func showLoading(hide: Bool)
     func loadGenres(_ genres: [String])
-    func loadInformations(movie: MovieDetails)
+    func loadInformations(movie: MovieDetails, isFavoriteMovie: Bool)
     func getVideoId(_ videoId: String)
     func loadLanguage(releaseDate: String, runtime: String, description: String, watchNow: String, warningExternalLinks: String, theMovieDbCredits: String)
     func updateFavoriteButton(isFavorited: Bool)

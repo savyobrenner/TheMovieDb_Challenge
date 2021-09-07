@@ -13,7 +13,7 @@ final class MovieDetailsWireframe: BaseWireframe {
 
   // MARK: - Module setup
 
-    static func configureModule(contentID: Int, favoriteData: Bool = false) -> UIViewController {
+    static func configureModule(contentID: Int, favoriteData: Bool = false, favoriteMovie: FavoriteMovie? = nil) -> UIViewController {
     // setup interactor
     let provider = MovieDetailsProvider(contentID: contentID)
     let domain = MovieDetailsDomain(provider: provider)
@@ -24,7 +24,7 @@ final class MovieDetailsWireframe: BaseWireframe {
     //setup presenter + viewcontroller
     let viewController = MovieDetailsViewController()
     let wireframe = MovieDetailsWireframe(viewController: viewController)
-        let presenter = MovieDetailsPresenter(wireframe: wireframe, view: viewController, interactor: interactor, favoriteData: favoriteData)
+        let presenter = MovieDetailsPresenter(wireframe: wireframe, view: viewController, interactor: interactor, favoriteData: favoriteData, favoriteMovie: favoriteMovie)
     
     interactor.delegate = presenter
     viewController.presenter = presenter
