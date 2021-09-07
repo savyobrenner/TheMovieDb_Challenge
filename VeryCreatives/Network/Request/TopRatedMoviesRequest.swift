@@ -9,7 +9,7 @@ import Foundation
 
 class TopRatedMoviesRequest: RequestHandler {
     func path() -> String {
-        return EndPoint.getPopularMovies.fullPath
+        return EndPoint.getTopRatedMovies.fullPath
     }
     
     func httpMethod() -> RequestMethod {

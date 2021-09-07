@@ -53,7 +53,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="posterExample" translatesAutoresizingMaskIntoConstraints="NO" id="O9p-TE-eLu">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O9p-TE-eLu">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="231.5"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="O9p-TE-eLu" secondAttribute="height" multiplier="247:138" id="zXV-mN-l8D"/>
@@ -425,7 +425,6 @@
     <resources>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="heart" catalog="system" width="128" height="109"/>
-        <image name="posterExample" width="500" height="281"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <namedColor name="darkBrand">
             <color red="0.16099999845027924" green="0.20000000298023224" blue="0.2199999988079071" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

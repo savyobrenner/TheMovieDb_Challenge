@@ -20,6 +20,7 @@ extension UIImageView {
         
         let url = URL(string: fullPath)
         self.kf.indicatorType = .activity
+        (self.kf.indicator?.view as? UIActivityIndicatorView)?.color = .yellowBrand
         DispatchQueue.main.async {
             self.kf.setImage(with: url, options: [.transition(.fade(0.2))])
         }

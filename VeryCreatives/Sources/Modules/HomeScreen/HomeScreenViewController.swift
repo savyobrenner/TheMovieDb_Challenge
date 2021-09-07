@@ -16,6 +16,7 @@ final class HomeScreenViewController: UIViewController {
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var optionsSegmentedControl: UISegmentedControl!
     
     // MARK: - Class properties
     
@@ -38,10 +39,15 @@ final class HomeScreenViewController: UIViewController {
         collectionView.dataSource = self
         
         presenter.setupWelcomeHeader(welcomeLabel, subtitleLabel, icon)
+        presenter.setupSegmentedControl(optionsSegmentedControl)
     }
     
     // MARK: - UIActions
-    
+    @IBAction func sortMovies(_ sender: UISegmentedControl) {
+        let validator = sender.selectedSegmentIndex == 0 ? true : false
+        presenter.sortMovies(isPopularMovies: validator)
+    }
+
     // MARK: - Class Methods
     
 }

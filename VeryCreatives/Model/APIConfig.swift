@@ -10,7 +10,7 @@ import Alamofire
 
 enum BasePath {
     static let theMovieDBAPI = "http://api.themoviedb.org/3"
-    static let getImagesTheMovieDBAPI = "https://image.tmdb.org/t/p/w500/"
+    static let getImagesTheMovieDBAPI = UIDevice.current.userInterfaceIdiom == .phone ?  "https://image.tmdb.org/t/p/w500/" : "https://image.tmdb.org/t/p/w780/"
     static let theMovieDBWebSite = "https://www.themoviedb.org"
 }
 

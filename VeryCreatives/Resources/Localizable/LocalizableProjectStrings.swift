@@ -23,6 +23,9 @@ enum TabBarControllerStrings: String, Localizable {
 
 enum HomeScreenViewControllerStrings: String, Localizable {
     case headerSubtitle = "HomeScreenViewControllerStrings_headerSubtitle"
+    case welcomeTitle = "HomeScreenViewControllerStrings_welcomeTitle"
+    case popularMoviesTitle = "HomeScreenViewControllerStrings_popularMoviesTitle"
+    case topRatedMoviesTitle = "HomeScreenViewControllerStrings_topRatedMoviesTitle"
 }
 
 enum MovieDetailsViewControllerStrings: String, Localizable {

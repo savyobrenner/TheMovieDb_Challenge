@@ -49,8 +49,6 @@ final class MovieDetailsViewController: UIViewController {
         }
     }
     
-    private var watchNowLink: String?
-    
     // MARK: - Public properties
     var presenter: MovieDetailsPresenterInterface!
     

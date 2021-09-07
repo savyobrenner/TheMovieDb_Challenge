@@ -19,8 +19,11 @@ final class HomeScreenPresenter {
         
     private enum Strings {
         static let staticName = "VeryCreatives!"
-        static let subtitle = HomeScreenViewControllerStrings.headerSubtitle.localized()
         static let cellIdentifier = "MovieCell"
+        static let welcomeTitle = HomeScreenViewControllerStrings.welcomeTitle.localized().replacingOccurrences(of: "%@", with: Strings.staticName)
+        static let subtitle = HomeScreenViewControllerStrings.headerSubtitle.localized()
+        static let popularMovies = HomeScreenViewControllerStrings.popularMoviesTitle.localized()
+        static let topRatedMovies = HomeScreenViewControllerStrings.topRatedMoviesTitle.localized()
     }
     
     private enum Constants {
@@ -44,6 +47,12 @@ final class HomeScreenPresenter {
         }
     }
     
+    private var isPopularMovies = true {
+        didSet {
+            view?.reloadData()
+        }
+    }
+    
     // MARK: - Lifecycle
     init(wireframe: HomeScreenWireframeInterface, view: HomeScreenViewInterface, interactor: HomeScreenInteractorProtocol) {
         self.wireframe = wireframe
@@ -64,6 +73,7 @@ final class HomeScreenPresenter {
     }
     
     private func configureWelcomeLabel(_ label: UILabel) {
+        label.text = Strings.welcomeTitle
         label.setBoldFontRange(changeText: Strings.staticName, size: Constants.welcomeSize)
     }
     
@@ -77,6 +87,15 @@ final class HomeScreenPresenter {
 
 // MARK: - Presenter Extension
 extension HomeScreenPresenter: HomeScreenPresenterInterface {
+    func sortMovies(isPopularMovies: Bool) {
+        self.isPopularMovies = isPopularMovies
+    }
+    
+    func setupSegmentedControl(_ segmentedControl: UISegmentedControl) {
+        segmentedControl.setTitle(Strings.popularMovies, forSegmentAt: 0)
+        segmentedControl.setTitle(Strings.topRatedMovies, forSegmentAt: 1)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         // Define cell width
         let screenWidth = UIScreen.main.bounds.width
@@ -95,19 +114,19 @@ extension HomeScreenPresenter: HomeScreenPresenterInterface {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let contentID = popularMovies?.results?[indexPath.row].id else { return }
+        guard let contentID = isPopularMovies ? popularMovies?.results?[indexPath.row].id : topRatedMovies?.results?[indexPath.row].id else { return }
         wireframe.navigate(to: .goToDetail(contentID: contentID))
     }
     
     func numberOfItemsInSection(_ collectionView: UICollectionView, section: Int) -> Int {
-        return popularMovies?.results?.count ?? 0
+        return  isPopularMovies ? popularMovies?.results?.count ?? 0 : topRatedMovies?.results?.count ?? 0
     }
     
     func cellForItemAt(_ collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Strings.cellIdentifier, for: indexPath) as? MovieCell else {
             return UICollectionViewCell()
         }
-        let movie = self.popularMovies?.results?[indexPath.row]
+        let movie =  isPopularMovies ? popularMovies?.results?[indexPath.row] : topRatedMovies?.results?[indexPath.row]
         cell.setup(movie: movie)
         
         return cell

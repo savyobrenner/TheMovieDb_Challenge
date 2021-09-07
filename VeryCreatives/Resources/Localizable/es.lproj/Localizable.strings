@@ -12,6 +12,9 @@
 
 //MARK: - HOMESCREENVIEWCONTROLLERSTRINGS
 "HomeScreenViewControllerStrings_headerSubtitle" = "Bienvenido a nuestra aplicación :)";
+"HomeScreenViewControllerStrings_welcomeTitle" = "Hola, %@";
+"HomeScreenViewControllerStrings_popularMoviesTitle" = "Películas Populares";
+"HomeScreenViewControllerStrings_topRatedMoviesTitle" = "Películas Mejor Calificadas";
 
 // MARK: - MOVIEDETAILSVIEWCONTROLLERSTRINGS
 "MovieDetailsViewControllerStrings_releaseDateTitle" = "Fecha de Lanzamiento:";

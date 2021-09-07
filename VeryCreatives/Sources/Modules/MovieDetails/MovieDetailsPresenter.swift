@@ -26,7 +26,8 @@ final class MovieDetailsPresenter {
     }
     
     private enum Constants {
-        static let baseScrollViewHeight = 800
+        static let iPhoneBaseScrollViewHeight = 800
+        static let iPadBaseScrollViewHeight = 1000
         static let baseLabelLineHeight = 17
     }
     
@@ -120,7 +121,8 @@ final class MovieDetailsPresenter {
 extension MovieDetailsPresenter: MovieDetailsPresenterInterface {
     func updateScrollViewHeight(_ label: UILabel, _ constraint: NSLayoutConstraint) {
         let descriptionLabelSize = label.numberOfVisibleLines
-        constraint.constant = CGFloat(Constants.baseScrollViewHeight + (descriptionLabelSize * Constants.baseLabelLineHeight))
+        let baseHeight = UIDevice.current.userInterfaceIdiom == .phone ? Constants.iPhoneBaseScrollViewHeight : Constants.iPadBaseScrollViewHeight
+        constraint.constant = CGFloat(baseHeight + (descriptionLabelSize * Constants.baseLabelLineHeight))
     }
     
     func animateScreenWhenScrool(_ isScrolling: Bool, _ constraint: NSLayoutConstraint) {

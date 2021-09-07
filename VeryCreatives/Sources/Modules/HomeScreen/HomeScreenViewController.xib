@@ -3,7 +3,9 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -16,6 +18,7 @@
             <connections>
                 <outlet property="collectionView" destination="L5x-VW-KIa" id="e1G-4T-bri"/>
                 <outlet property="icon" destination="1y9-V3-5xf" id="mLo-qk-TH9"/>
+                <outlet property="optionsSegmentedControl" destination="IpD-XC-l4s" id="9Xu-wR-Bhe"/>
                 <outlet property="subtitleLabel" destination="AHS-QF-L4A" id="zFa-r6-E4S"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="welcomeLabel" destination="uXO-W4-HbN" id="Jmc-sf-kqR"/>
@@ -105,15 +108,30 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IpD-XC-l4s">
+                    <rect key="frame" x="40" y="183" width="334" height="32"/>
+                    <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                    <segments>
+                        <segment title="Popular Movies"/>
+                        <segment title="Top Rated Movies"/>
+                    </segments>
+                    <color key="selectedSegmentTintColor" name="yellowBrand"/>
+                    <connections>
+                        <action selector="sortMovies:" destination="-1" eventType="valueChanged" id="AnC-ac-TAS"/>
+                    </connections>
+                </segmentedControl>
             </subviews>
             <viewLayoutGuide key="safeArea" id="s64-SJ-djE"/>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="L5x-VW-KIa" firstAttribute="leading" secondItem="s64-SJ-djE" secondAttribute="leading" id="26S-IB-0eO"/>
                 <constraint firstItem="L5x-VW-KIa" firstAttribute="top" secondItem="hly-ls-Blb" secondAttribute="bottom" constant="100" id="6t8-Js-JG5"/>
+                <constraint firstItem="IpD-XC-l4s" firstAttribute="leading" secondItem="s64-SJ-djE" secondAttribute="leading" constant="40" id="8Tr-WB-fHA"/>
+                <constraint firstItem="L5x-VW-KIa" firstAttribute="top" secondItem="IpD-XC-l4s" secondAttribute="bottom" constant="10" id="GBq-Ef-8th"/>
                 <constraint firstItem="hly-ls-Blb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="OzW-RI-Ium"/>
                 <constraint firstItem="hly-ls-Blb" firstAttribute="top" secondItem="s64-SJ-djE" secondAttribute="top" id="Sas-v9-g6M"/>
                 <constraint firstItem="s64-SJ-djE" firstAttribute="trailing" secondItem="hly-ls-Blb" secondAttribute="trailing" id="XoR-eT-dXP"/>
+                <constraint firstItem="s64-SJ-djE" firstAttribute="trailing" secondItem="IpD-XC-l4s" secondAttribute="trailing" constant="40" id="aUF-II-FUk"/>
                 <constraint firstItem="s64-SJ-djE" firstAttribute="trailing" secondItem="L5x-VW-KIa" secondAttribute="trailing" id="buU-wB-bL4"/>
                 <constraint firstItem="s64-SJ-djE" firstAttribute="bottom" secondItem="L5x-VW-KIa" secondAttribute="bottom" id="tAY-o5-iYq"/>
             </constraints>
@@ -122,5 +140,11 @@
     </objects>
     <resources>
         <image name="veryCreativesIcon" width="225" height="225"/>
+        <namedColor name="yellowBrand">
+            <color red="0.99199998378753662" green="0.79600000381469727" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
