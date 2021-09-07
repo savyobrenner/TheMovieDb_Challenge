@@ -21,7 +21,7 @@ protocol MovieDetailsViewInterface: ViewInterface {
     func loadGenres(_ genres: [String])
     func loadInformations(movie: MovieDetails, isFavoriteMovie: Bool)
     func getVideoId(_ videoId: String)
-    func loadLanguage(releaseDate: String, runtime: String, description: String, watchNow: String, warningExternalLinks: String, theMovieDbCredits: String)
+    func loadLanguage(releaseDate: String, runtime: String, description: String, watchNow: String, warningExternalLinks: String, theMovieDbCredits: String, trailerMessage: String)
     func updateFavoriteButton(isFavorited: Bool)
 }
 

@@ -28,6 +28,10 @@ class TabBarController: UITabBarController {
         }
     }
     
+    private func hasInternetConnection() -> Bool {
+        return NetworkStatus.shared.isInternetAvailable()
+    }
+    
     private func configureScreens() {
         let homeViewController = HomeScreenWireframe.configureModule()
         homeViewController.tabBarItem = UITabBarItem(title: Strings.homeTitle, image: #imageLiteral(resourceName: "ic_home"), tag: 0)
@@ -35,7 +39,10 @@ class TabBarController: UITabBarController {
         let favoritesViewController = FavoritesScreenWireframe.configureModule()
         favoritesViewController.tabBarItem = UITabBarItem(title: Strings.favoritesTitle, image: UIImage(systemName: "heart"), tag: 0)
         
-        let tabBarList = [homeViewController, favoritesViewController]
+        let tabBarList = hasInternetConnection()
+            ? [homeViewController, favoritesViewController]
+            : [favoritesViewController, homeViewController]
+        
         viewControllers = tabBarList
     }
 }

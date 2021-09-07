@@ -33,6 +33,7 @@ final class FavoritesScreenPresenter {
     private var movies: [FavoriteMovie]? {
         didSet {
             view?.reloadData()
+            view?.showLoading(hide: true)
         }
     }
     // MARK: - Lifecycle
@@ -45,6 +46,10 @@ final class FavoritesScreenPresenter {
     
     func viewDidAppear(animated: Bool) {
         view?.updateEmptyView(hasFavorites(), text: Strings.emptyStateText)
+    }
+    
+    func viewDidLoad() {
+        view?.showLoading(hide: false)
     }
     
     private func configureIcon(_ imageView: UIImageView) {
@@ -71,7 +76,8 @@ extension FavoritesScreenPresenter: FavoritesScreenPresenterInterface {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //TODO
+        guard let favoriteMovie = movies?[indexPath.row] else { return }
+        wireframe.navigate(to: .goToMovieDetail(favoriteMovie: favoriteMovie))
     }
     
     func numberOfItemsInSection(_ collectionView: UICollectionView, section: Int) -> Int {

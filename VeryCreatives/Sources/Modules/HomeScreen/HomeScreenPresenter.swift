@@ -24,6 +24,9 @@ final class HomeScreenPresenter {
         static let subtitle = HomeScreenViewControllerStrings.headerSubtitle.localized()
         static let popularMovies = HomeScreenViewControllerStrings.popularMoviesTitle.localized()
         static let topRatedMovies = HomeScreenViewControllerStrings.topRatedMoviesTitle.localized()
+        static let genericErrorText = HomeScreenViewControllerStrings.genericErrorText.localized()
+        static let buttonTitle = HomeScreenViewControllerStrings.buttonTitle.localized()
+        static let networkNotAvailableText = HomeScreenViewControllerStrings.networkNotAvailableText.localized()
     }
     
     private enum Constants {
@@ -86,6 +89,10 @@ final class HomeScreenPresenter {
 
 // MARK: - Presenter Extension
 extension HomeScreenPresenter: HomeScreenPresenterInterface {
+    func tryAgainAction() {
+        viewDidLoad()
+    }
+    
     func sortMovies(isPopularMovies: Bool) {
         self.isPopularMovies = isPopularMovies
     }
@@ -149,11 +156,11 @@ extension HomeScreenPresenter: HomeScreenInteractorResponseProtocol {
     }
     
     func responseError() {
-        //TODO
+        view?.showErrorScreen(text: Strings.genericErrorText, buttonTitle: Strings.buttonTitle)
     }
     
     func networkingNotAvailable() {
-        //TODO
+        view?.showErrorScreen(text: Strings.networkNotAvailableText, buttonTitle: Strings.buttonTitle)
     }
     
 }

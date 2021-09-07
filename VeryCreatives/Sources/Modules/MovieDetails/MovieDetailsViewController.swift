@@ -27,6 +27,8 @@ final class MovieDetailsViewController: UIViewController {
     @IBOutlet weak var warningRedirectExternalLink: UILabel!
     @IBOutlet weak var theMovieDbCredits: UILabel!
     @IBOutlet weak var favoriteButton: RoundButton!
+    @IBOutlet weak var trailerMessageLabel: UILabel!
+    
     
     
     // Collections
@@ -112,9 +114,11 @@ extension MovieDetailsViewController: MovieDetailsViewInterface {
         self.starsImageView.updateStars(rate.rounded().formatRating())
         
         if isFavoriteMovie {
-            guard let imageViewData = UserDefaults.standard.loadImage(movie.posterPath) else { return }
+            guard let imageViewData = UserDefaults.standard.loadImage(coverImagePath) else { return }
+            self.trailerMessageLabel.isHidden = false
             self.coverImage.image = UIImage(data: imageViewData)
         } else {
+            self.trailerMessageLabel.isHidden = true
             self.coverImage.setImage(path: coverImagePath, isAPIImage: true)
         }
         
@@ -137,13 +141,14 @@ extension MovieDetailsViewController: MovieDetailsViewInterface {
         videoPlayer.load(withVideoId: videoId, playerVars: playerConfigurations)
     }
     
-    func loadLanguage(releaseDate: String, runtime: String, description: String, watchNow: String, warningExternalLinks: String, theMovieDbCredits: String) {
+    func loadLanguage(releaseDate: String, runtime: String, description: String, watchNow: String, warningExternalLinks: String, theMovieDbCredits: String, trailerMessage: String) {
         self.releaseDateTitle.text = releaseDate
         self.runtimeTitle.text = runtime
         self.descriptionTitleLable.text = description
         self.watchNowButton.setTitle(watchNow, for: .normal)
         self.warningRedirectExternalLink.text = warningExternalLinks
         self.theMovieDbCredits.text = theMovieDbCredits
+        self.trailerMessageLabel.text = trailerMessage
     }
     
     func layoutIfNeeded() {

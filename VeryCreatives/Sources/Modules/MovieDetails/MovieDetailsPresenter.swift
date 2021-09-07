@@ -23,6 +23,7 @@ final class MovieDetailsPresenter {
         static let watchNowButton = MovieDetailsViewControllerStrings.watchNowButton.localized()
         static let warningRedirectExternalLink = MovieDetailsViewControllerStrings.warningRedirectExternalLink.localized()
         static let theMovieDbCredits = MovieDetailsViewControllerStrings.theMovieDbCredits.localized()
+        static let trailerMessage = MovieDetailsViewControllerStrings.trailerMessage.localized()
     }
     
     private enum Constants {
@@ -47,7 +48,9 @@ final class MovieDetailsPresenter {
     
     private var movieVideos: MovieVideo? {
         didSet {
+            if NetworkStatus.shared.isInternetAvailable() {
             view?.getVideoId(getTrailerVideoId(movieVideos))
+            }
         }
     }
     
@@ -90,7 +93,8 @@ final class MovieDetailsPresenter {
                            description: Strings.descriptionTitleLable,
                            watchNow: Strings.watchNowButton,
                            warningExternalLinks: Strings.warningRedirectExternalLink,
-                           theMovieDbCredits: Strings.theMovieDbCredits)
+                           theMovieDbCredits: Strings.theMovieDbCredits,
+                           trailerMessage: Strings.trailerMessage)
     }
     
     private func getTrailerVideoId(_ movieVideo: MovieVideo?) -> String {

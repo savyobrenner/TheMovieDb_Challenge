@@ -17,6 +17,10 @@ final class HomeScreenViewController: UIViewController {
     @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var optionsSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var errorView: UIView!
+    @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var tryAgainButton: UIButton!
+    
     
     // MARK: - Class properties
     
@@ -47,6 +51,11 @@ final class HomeScreenViewController: UIViewController {
         let validator = sender.selectedSegmentIndex == 0 ? true : false
         presenter.sortMovies(isPopularMovies: validator)
     }
+    
+    @IBAction func tryAgainAction(_ sender: UIButton) {
+        presenter.tryAgainAction()
+    }
+    
 
     // MARK: - Class Methods
     
@@ -54,7 +63,15 @@ final class HomeScreenViewController: UIViewController {
 
 // MARK: - Extensions
 extension HomeScreenViewController: HomeScreenViewInterface {
+    func showErrorScreen(text: String, buttonTitle: String) {
+        showLoading(hide: true)
+        errorView.isHidden = false
+        tryAgainButton.setTitle(buttonTitle, for: .normal)
+        errorLabel.text = text
+    }
+    
     func showLoading(hide: Bool) {
+        errorView.isHidden = true
         self.fullScreenLoading(hide: hide)
     }
     

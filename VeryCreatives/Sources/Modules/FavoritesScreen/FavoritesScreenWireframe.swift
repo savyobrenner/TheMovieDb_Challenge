@@ -25,6 +25,10 @@ final class FavoritesScreenWireframe: BaseWireframe {
   }
     
   // MARK: - Private Routing
+    private func goToDetail(_ favoriteMovie: FavoriteMovie?) {
+        let viewController = MovieDetailsWireframe.configureModule(contentID: 0, favoriteData: true, favoriteMovie: favoriteMovie)
+        self.present(viewController, animated: true)
+    }
 
 }
 
@@ -32,9 +36,9 @@ final class FavoritesScreenWireframe: BaseWireframe {
 
 extension FavoritesScreenWireframe: FavoritesScreenWireframeInterface {
   func navigate(to option: FavoritesScreenNavigationOption) {
-    // switch option {
-    // case <#pattern#>:
-    //   <#code#>      
-    // }
+     switch option {
+     case .goToMovieDetail(let favoriteMovie):
+       goToDetail(favoriteMovie)
+     }
   }
 }

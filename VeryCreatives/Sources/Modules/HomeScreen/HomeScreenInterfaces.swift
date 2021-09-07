@@ -20,9 +20,11 @@ protocol HomeScreenWireframeInterface: WireframeInterface {
 protocol HomeScreenViewInterface: ViewInterface {
     func showLoading(hide: Bool)
     func reloadData()
+    func showErrorScreen(text: String, buttonTitle: String)
 }
 
 protocol HomeScreenPresenterInterface: PresenterInterface {
+    func tryAgainAction()
     func setupWelcomeHeader(_ title: UILabel, _ subtitle: UILabel, _ icon: UIImageView)
     func setupSegmentedControl(_ segmentedControl: UISegmentedControl)
     func sortMovies(isPopularMovies: Bool)

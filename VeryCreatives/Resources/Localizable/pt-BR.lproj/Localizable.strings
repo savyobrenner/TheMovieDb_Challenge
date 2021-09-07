@@ -15,6 +15,9 @@
 "HomeScreenViewControllerStrings_welcomeTitle" = "Olá, %@";
 "HomeScreenViewControllerStrings_popularMoviesTitle" = "Filmes Populares";
 "HomeScreenViewControllerStrings_topRatedMoviesTitle" = "Filmes bem avaliados";
+"HomeScreenViewControllerStrings_buttonTitle" = "Tente novamente";
+"HomeScreenViewControllerStrings_genericErrorText" = "Algo de errado aconteceu, tente novamente";
+"HomeScreenViewControllerStrings_networkNotAvailableText" = "Sem conexão com a internet";
 
 // MARK: - MOVIEDETAILSVIEWCONTROLLERSTRINGS
 "MovieDetailsViewControllerStrings_releaseDateTitle" = "Data de Lançamento:";
@@ -23,6 +26,7 @@
 "MovieDetailsViewControllerStrings_watchNowButton" = "Onde Assistir";
 "MovieDetailsViewControllerStrings_warningRedirectExternalLink" = "(Irá redirecionar para um link externo)";
 "MovieDetailsViewControllerStrings_theMovieDbCredits" = "Todas as informações são providas por TheMovieDB.";
+"MovieDetailsViewControllerStrings_trailerMessage" = "Trailer não está disponível offline";
 
 // MARK: - FAVORITESSCREENVIEWCONTROLLERSTRINGS
 "FavoritesScreenViewControllerStrings_tile" = "Favoritos";

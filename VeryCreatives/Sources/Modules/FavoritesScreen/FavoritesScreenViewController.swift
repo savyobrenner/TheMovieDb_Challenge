@@ -28,6 +28,7 @@ final class FavoritesScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.viewDidLoad()
         self.viewConfiguration()
     }
     
@@ -56,6 +57,10 @@ final class FavoritesScreenViewController: UIViewController {
 extension FavoritesScreenViewController: FavoritesScreenViewInterface {
     func reloadData() {
         collectionView.reloadData()
+    }
+    
+    func showLoading(hide: Bool) {
+        self.fullScreenLoading(hide: hide)
     }
     
     func updateEmptyView(_ hasFavorites: Bool, text: String) {

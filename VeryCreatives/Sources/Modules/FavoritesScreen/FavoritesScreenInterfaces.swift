@@ -9,13 +9,16 @@
 
 import UIKit
 
-enum FavoritesScreenNavigationOption { }
+enum FavoritesScreenNavigationOption {
+    case goToMovieDetail(favoriteMovie: FavoriteMovie)
+}
 
 protocol FavoritesScreenWireframeInterface: WireframeInterface {
     func navigate(to option: FavoritesScreenNavigationOption)
 }
 
 protocol FavoritesScreenViewInterface: ViewInterface {
+    func showLoading(hide: Bool)
     func updateEmptyView(_ hasFavorites: Bool, text: String)
     func reloadData()
 }

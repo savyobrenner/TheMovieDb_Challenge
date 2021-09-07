@@ -17,9 +17,12 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeScreenViewController" customModule="VeryCreatives" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="L5x-VW-KIa" id="e1G-4T-bri"/>
+                <outlet property="errorLabel" destination="HoL-So-nij" id="kjz-Ib-r7v"/>
+                <outlet property="errorView" destination="UQC-1E-ytm" id="Rp3-fo-8nK"/>
                 <outlet property="icon" destination="1y9-V3-5xf" id="mLo-qk-TH9"/>
                 <outlet property="optionsSegmentedControl" destination="IpD-XC-l4s" id="9Xu-wR-Bhe"/>
                 <outlet property="subtitleLabel" destination="AHS-QF-L4A" id="zFa-r6-E4S"/>
+                <outlet property="tryAgainButton" destination="05P-kH-Zp8" id="Zty-bI-dj1"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="welcomeLabel" destination="uXO-W4-HbN" id="Jmc-sf-kqR"/>
             </connections>
@@ -120,11 +123,49 @@
                         <action selector="sortMovies:" destination="-1" eventType="valueChanged" id="AnC-ac-TAS"/>
                     </connections>
                 </segmentedControl>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UQC-1E-ytm">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🤧" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ji-yO-b09">
+                            <rect key="frame" x="142" y="376" width="130" height="144"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="120"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something went wrong, try again" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HoL-So-nij">
+                            <rect key="frame" x="20" y="540" width="374" height="57.5"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="24"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05P-kH-Zp8">
+                            <rect key="frame" x="168.5" y="637.5" width="77" height="35"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                            <state key="normal" title="Try again"/>
+                            <connections>
+                                <action selector="tryAgainAction:" destination="-1" eventType="touchUpInside" id="3FI-lG-S4K"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="2Ji-yO-b09" firstAttribute="centerY" secondItem="UQC-1E-ytm" secondAttribute="centerY" id="6f8-ul-mm8"/>
+                        <constraint firstItem="HoL-So-nij" firstAttribute="centerX" secondItem="2Ji-yO-b09" secondAttribute="centerX" id="N7u-0K-7Zf"/>
+                        <constraint firstItem="HoL-So-nij" firstAttribute="leading" secondItem="UQC-1E-ytm" secondAttribute="leading" constant="20" id="XcZ-Oh-5fJ"/>
+                        <constraint firstItem="05P-kH-Zp8" firstAttribute="centerX" secondItem="HoL-So-nij" secondAttribute="centerX" id="ZDy-VW-neO"/>
+                        <constraint firstItem="05P-kH-Zp8" firstAttribute="top" secondItem="HoL-So-nij" secondAttribute="bottom" constant="40" id="mY7-Ze-ROc"/>
+                        <constraint firstAttribute="trailing" secondItem="HoL-So-nij" secondAttribute="trailing" constant="20" id="pUd-yq-Dz5"/>
+                        <constraint firstItem="2Ji-yO-b09" firstAttribute="centerX" secondItem="UQC-1E-ytm" secondAttribute="centerX" id="wPM-5t-ysu"/>
+                        <constraint firstItem="HoL-So-nij" firstAttribute="top" secondItem="2Ji-yO-b09" secondAttribute="bottom" constant="20" id="xtZ-yV-j4r"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="s64-SJ-djE"/>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="L5x-VW-KIa" firstAttribute="leading" secondItem="s64-SJ-djE" secondAttribute="leading" id="26S-IB-0eO"/>
+                <constraint firstItem="UQC-1E-ytm" firstAttribute="leading" secondItem="s64-SJ-djE" secondAttribute="leading" id="5Wb-5A-5aX"/>
                 <constraint firstItem="IpD-XC-l4s" firstAttribute="leading" secondItem="s64-SJ-djE" secondAttribute="leading" constant="40" id="8Tr-WB-fHA"/>
                 <constraint firstItem="L5x-VW-KIa" firstAttribute="top" secondItem="IpD-XC-l4s" secondAttribute="bottom" constant="10" id="GBq-Ef-8th"/>
                 <constraint firstItem="hly-ls-Blb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="OzW-RI-Ium"/>
@@ -132,10 +173,13 @@
                 <constraint firstItem="s64-SJ-djE" firstAttribute="trailing" secondItem="hly-ls-Blb" secondAttribute="trailing" id="XoR-eT-dXP"/>
                 <constraint firstItem="s64-SJ-djE" firstAttribute="trailing" secondItem="IpD-XC-l4s" secondAttribute="trailing" constant="40" id="aUF-II-FUk"/>
                 <constraint firstItem="s64-SJ-djE" firstAttribute="trailing" secondItem="L5x-VW-KIa" secondAttribute="trailing" id="buU-wB-bL4"/>
+                <constraint firstItem="UQC-1E-ytm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="c6P-f5-g7M"/>
                 <constraint firstItem="s64-SJ-djE" firstAttribute="bottom" secondItem="L5x-VW-KIa" secondAttribute="bottom" id="tAY-o5-iYq"/>
+                <constraint firstItem="UQC-1E-ytm" firstAttribute="trailing" secondItem="s64-SJ-djE" secondAttribute="trailing" id="tOf-BH-zH9"/>
+                <constraint firstAttribute="bottom" secondItem="UQC-1E-ytm" secondAttribute="bottom" id="uwJ-0O-hnz"/>
                 <constraint firstItem="IpD-XC-l4s" firstAttribute="top" secondItem="hly-ls-Blb" secondAttribute="bottom" constant="59" id="xRZ-4o-lBj"/>
             </constraints>
-            <point key="canvasLocation" x="-538" y="-36"/>
+            <point key="canvasLocation" x="-539.13043478260875" y="-36.160714285714285"/>
         </view>
     </objects>
     <resources>

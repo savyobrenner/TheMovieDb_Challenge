@@ -26,6 +26,9 @@ enum HomeScreenViewControllerStrings: String, Localizable {
     case welcomeTitle = "HomeScreenViewControllerStrings_welcomeTitle"
     case popularMoviesTitle = "HomeScreenViewControllerStrings_popularMoviesTitle"
     case topRatedMoviesTitle = "HomeScreenViewControllerStrings_topRatedMoviesTitle"
+    case buttonTitle = "HomeScreenViewControllerStrings_buttonTitle"
+    case genericErrorText = "HomeScreenViewControllerStrings_genericErrorText"
+    case networkNotAvailableText = "HomeScreenViewControllerStrings_networkNotAvailableText"
 }
 
 enum MovieDetailsViewControllerStrings: String, Localizable {
@@ -35,6 +38,7 @@ enum MovieDetailsViewControllerStrings: String, Localizable {
     case watchNowButton = "MovieDetailsViewControllerStrings_watchNowButton"
     case warningRedirectExternalLink = "MovieDetailsViewControllerStrings_warningRedirectExternalLink"
     case theMovieDbCredits = "MovieDetailsViewControllerStrings_theMovieDbCredits"
+    case trailerMessage = "MovieDetailsViewControllerStrings_trailerMessage"
 }
 
 enum FavoritesScreenViewControllerStrings: String, Localizable {

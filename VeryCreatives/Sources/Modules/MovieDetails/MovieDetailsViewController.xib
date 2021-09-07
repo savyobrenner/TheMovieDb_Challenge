@@ -34,6 +34,7 @@
                 <outlet property="scrollViewHeight" destination="3xi-cz-seb" id="Isf-3T-XT9"/>
                 <outlet property="theMovieDbCredits" destination="PFB-JJ-gV1" id="U0T-At-aGu"/>
                 <outlet property="titleLabel" destination="dFS-8z-YBf" id="yOQ-IW-Cs6"/>
+                <outlet property="trailerMessageLabel" destination="feS-13-dDH" id="wT4-QJ-cNe"/>
                 <outlet property="videoPlayer" destination="F2q-7O-tMX" id="miu-vA-0ZL"/>
                 <outlet property="view" destination="a19-qC-CqY" id="gxL-ew-gvF"/>
                 <outlet property="votingRate" destination="kBj-Fn-74P" id="yON-VZ-mYy"/>
@@ -261,9 +262,21 @@
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F2q-7O-tMX" customClass="YTPlayerView">
                                     <rect key="frame" x="0.0" y="413.5" width="414" height="233"/>
+                                    <subviews>
+                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trailer is not available offline" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="feS-13-dDH">
+                                            <rect key="frame" x="20" y="105" width="374" height="23"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="F2q-7O-tMX" secondAttribute="height" multiplier="16:9" id="9vb-Es-PXa"/>
+                                        <constraint firstItem="feS-13-dDH" firstAttribute="centerX" secondItem="F2q-7O-tMX" secondAttribute="centerX" id="I8W-Fb-GwS"/>
+                                        <constraint firstItem="feS-13-dDH" firstAttribute="centerY" secondItem="F2q-7O-tMX" secondAttribute="centerY" id="NSW-FA-KoE"/>
+                                        <constraint firstAttribute="trailing" secondItem="feS-13-dDH" secondAttribute="trailing" constant="20" id="gQF-zI-Tc6"/>
+                                        <constraint firstItem="feS-13-dDH" firstAttribute="leading" secondItem="F2q-7O-tMX" secondAttribute="leading" constant="20" id="iA6-kH-tsM"/>
                                     </constraints>
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEP-Pd-1Pr" customClass="RoundButton" customModule="VeryCreatives" customModuleProvider="target">
