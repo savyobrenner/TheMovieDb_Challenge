@@ -15,9 +15,9 @@
 "HomeScreenViewControllerStrings_welcomeTitle" = "Hola, %@";
 "HomeScreenViewControllerStrings_popularMoviesTitle" = "Películas Populares";
 "HomeScreenViewControllerStrings_topRatedMoviesTitle" = "Películas Mejor Calificadas";
-"HomeScreenViewControllerStrings_buttonTitle" = "Tente novamente";
-"HomeScreenViewControllerStrings_genericErrorText" = "Algo de errado aconteceu, tente novamente";
-"HomeScreenViewControllerStrings_networkNotAvailableText" = "Sem conexão com a internet";
+"HomeScreenViewControllerStrings_buttonTitle" = "Intentar otra vez";
+"HomeScreenViewControllerStrings_genericErrorText" = "Algo salió mal, intenta de nuevo";
+"HomeScreenViewControllerStrings_networkNotAvailableText" = "No hay Internet disponible";
 
 // MARK: - MOVIEDETAILSVIEWCONTROLLERSTRINGS
 "MovieDetailsViewControllerStrings_releaseDateTitle" = "Fecha de Lanzamiento:";
