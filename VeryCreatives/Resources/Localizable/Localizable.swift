@@ -4,6 +4,7 @@
 //  Copyright © 2020 Brenner. All rights reserved.
 //
 
+//Localizable Helper
 import Foundation
 
 protocol Localizable: RawRepresentable {

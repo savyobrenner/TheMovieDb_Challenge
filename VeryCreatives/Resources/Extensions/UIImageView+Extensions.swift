@@ -35,7 +35,7 @@ extension UIImageView {
         let colorSpace = CGColorSpaceCreateDeviceRGB()
         let locations:[CGFloat] = [0.0, 1.0]
 
-        let bottom = UIColor.topBackgroundColor?.cgColor
+        let bottom = UIColor.black.cgColor
         let top = UIColor.clear.cgColor
 
         let colors = [top, bottom] as CFArray

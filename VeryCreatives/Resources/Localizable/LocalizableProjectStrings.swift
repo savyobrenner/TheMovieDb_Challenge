@@ -1,7 +1,7 @@
 //
 //  LocalizableProjectStrings.swift
-//  Created by Brenner on 19/10/20.
-//  Copyright © 2020 Brenner. All rights reserved.
+//  Created by Brenner on 06/09/21.
+//  Copyright © 2021 Brenner. All rights reserved.
 //
 
 import Foundation
@@ -19,4 +19,8 @@ enum BaseViewControllerStrings: String, Localizable {
 enum TabBarControllerStrings: String, Localizable {
     case homeTitle = "TabBarControllerStrings_ homeTitle"
     case favoritesTitle = "TabBarControllerStrings_ favoritesTitle"
+}
+
+enum HomeScreenViewControllerStrings: String, Localizable {
+    case headerSubtitle = "HomeScreenViewControllerStrings_headerSubtitle"
 }

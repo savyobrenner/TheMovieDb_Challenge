@@ -34,16 +34,19 @@ final class HomeScreenWireframe: BaseWireframe {
   }
     
   // MARK: - Private Routing
-
+    private func goToDetail(_ contentID: Int) {
+        let viewController = MovieDetailWireframe.configureModule(contentID: contentID)
+        self.present(viewController, animated: true)
+    }
 }
 
 // MARK: - Extensions
 
 extension HomeScreenWireframe: HomeScreenWireframeInterface {
   func navigate(to option: HomeScreenNavigationOption) {
-    // switch option {
-    // case <#pattern#>:
-    //   <#code#>      
-    // }
+     switch option {
+     case .goToDetail(let contentID):
+       goToDetail(contentID)
+     }
   }
 }

@@ -9,3 +9,6 @@
 // MARK: - TABBARCONTROLLERSTRINGS
 "TabBarControllerStrings_ homeTitle" = "Home";
 "TabBarControllerStrings_ favoritesTitle" = "Favorites";
+
+//MARK: - HOMESCREENVIEWCONTROLLERSTRINGS
+"HomeScreenViewControllerStrings_headerSubtitle" = "Welcome to our movie app :)";

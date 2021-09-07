@@ -20,8 +20,6 @@ enum EndPoint {
     case getGenresMoviesList
     case getMovieDetails(contentID: Int)
     case getMovieVideos(contentID: Int)
-    case getMovieCredits(contentID: Int)
-    case getMovieSimilars(contentID: Int)
     case watchNowLink(contentID: Int)
 }
 
@@ -98,10 +96,6 @@ extension EndPoint {
             return "/movie/\(contentID)"
         case .getMovieVideos(let contentID):
             return "/movie/\(contentID)/videos"
-        case .getMovieCredits(let contentID):
-            return "/movie/\(contentID)/credits"
-        case .getMovieSimilars(let contentID):
-            return "/movie/\(contentID)/similar"
         case .watchNowLink(let contentID):
             return "/movie/\(contentID)"
         }

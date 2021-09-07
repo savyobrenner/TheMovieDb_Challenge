@@ -9,7 +9,9 @@
 
 import UIKit
 
-enum HomeScreenNavigationOption { }
+enum HomeScreenNavigationOption {
+    case goToDetail(contentID: Int)
+}
 
 protocol HomeScreenWireframeInterface: WireframeInterface {
     func navigate(to option: HomeScreenNavigationOption)

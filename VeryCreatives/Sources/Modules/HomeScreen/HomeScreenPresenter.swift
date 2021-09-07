@@ -19,7 +19,7 @@ final class HomeScreenPresenter {
         
     private enum Strings {
         static let staticName = "VeryCreatives!"
-        static let subtitle = "Welcome to our movie app :)"
+        static let subtitle = HomeScreenViewControllerStrings.headerSubtitle.localized()
         static let cellIdentifier = "MovieCell"
     }
     
@@ -34,12 +34,15 @@ final class HomeScreenPresenter {
     
     private var popularMovies: Movie? {
         didSet {
-            view?.reloadData()
-            view?.showLoading(hide: true)
+            checkIfAllRequestsIsDone()
         }
     }
     
-    private var topRatedMovies: Movie?
+    private var topRatedMovies: Movie? {
+        didSet {
+            checkIfAllRequestsIsDone()
+        }
+    }
     
     // MARK: - Lifecycle
     init(wireframe: HomeScreenWireframeInterface, view: HomeScreenViewInterface, interactor: HomeScreenInteractorProtocol) {
@@ -63,6 +66,13 @@ final class HomeScreenPresenter {
     private func configureWelcomeLabel(_ label: UILabel) {
         label.setBoldFontRange(changeText: Strings.staticName, size: Constants.welcomeSize)
     }
+    
+    private func checkIfAllRequestsIsDone() {
+        if popularMovies != nil, topRatedMovies != nil {
+            view?.reloadData()
+            view?.showLoading(hide: true)
+        }
+    }
 }
 
 // MARK: - Presenter Extension
@@ -85,7 +95,8 @@ extension HomeScreenPresenter: HomeScreenPresenterInterface {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // requires implementation
+        guard let contentID = popularMovies?.results?[indexPath.row].id else { return }
+        wireframe.navigate(to: .goToDetail(contentID: contentID))
     }
     
     func numberOfItemsInSection(_ collectionView: UICollectionView, section: Int) -> Int {
