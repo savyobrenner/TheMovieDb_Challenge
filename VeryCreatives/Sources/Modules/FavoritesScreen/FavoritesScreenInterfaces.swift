@@ -15,7 +15,10 @@ protocol FavoritesScreenWireframeInterface: WireframeInterface {
     func navigate(to option: FavoritesScreenNavigationOption)
 }
 
-protocol FavoritesScreenViewInterface: ViewInterface { }
+protocol FavoritesScreenViewInterface: ViewInterface {
+    func updateEmptyView(_ hasFavorites: Bool, text: String)
+    func reloadData()
+}
 
 protocol FavoritesScreenPresenterInterface: PresenterInterface {
     func setupFavoritesHeader(_ title: UILabel, _ icon: UIImageView)

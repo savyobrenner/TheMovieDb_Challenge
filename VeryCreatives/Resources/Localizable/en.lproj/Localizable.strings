@@ -26,3 +26,4 @@
 
 // MARK: - FAVORITESSCREENVIEWCONTROLLERSTRINGS
 "FavoritesScreenViewControllerStrings_tile" = "Favorites";
+"FavoritesScreenViewControllerStrings_emptyStateText" = "You don't have favorite movies yet";

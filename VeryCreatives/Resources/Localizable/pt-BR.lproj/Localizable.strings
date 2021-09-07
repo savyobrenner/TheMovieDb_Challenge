@@ -26,3 +26,4 @@
 
 // MARK: - FAVORITESSCREENVIEWCONTROLLERSTRINGS
 "FavoritesScreenViewControllerStrings_tile" = "Favoritos";
+"FavoritesScreenViewControllerStrings_emptyStateText" = "Você ainda não tem favoritos";

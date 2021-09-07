@@ -15,26 +15,35 @@ final class FavoritesScreenViewController: UIViewController {
     @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var favoritesTitle: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var emptyStateView: UIView!
+    @IBOutlet weak var emptyStateLabel: UILabel!
     
     
     // MARK: - Class properties
     
     // MARK: - Public properties
-    
     var presenter: FavoritesScreenPresenterInterface!
     
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.viewDidLoad()
         self.viewConfiguration()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        presenter.viewDidAppear(animated: animated)
     }
     
     // MARK: - Class Configurations
     
     private func viewConfiguration() {
         presenter.setupFavoritesHeader(favoritesTitle, icon)
+        
+        presenter.configure(collectionView)
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
     }
     
     // MARK: - UIActions
@@ -44,5 +53,31 @@ final class FavoritesScreenViewController: UIViewController {
 }
 
 // MARK: - Extensions
+extension FavoritesScreenViewController: FavoritesScreenViewInterface {
+    func reloadData() {
+        collectionView.reloadData()
+    }
+    
+    func updateEmptyView(_ hasFavorites: Bool, text: String) {
+        emptyStateView.isHidden = hasFavorites
+        emptyStateLabel.text = text
+    }
+}
 
-extension FavoritesScreenViewController: FavoritesScreenViewInterface { }
+extension FavoritesScreenViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return presenter.numberOfItemsInSection(collectionView, section: section)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return presenter.cellForItemAt(collectionView, indexPath: indexPath)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter.collectionView(collectionView, didSelectItemAt: indexPath)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return presenter.collectionView(collectionView, layout: collectionViewLayout, sizeForItemAt: indexPath)
+    }
+}

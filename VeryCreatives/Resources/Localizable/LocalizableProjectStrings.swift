@@ -39,5 +39,6 @@ enum MovieDetailsViewControllerStrings: String, Localizable {
 
 enum FavoritesScreenViewControllerStrings: String, Localizable {
     case title = "FavoritesScreenViewControllerStrings_tile"
+    case emptyStateText = "FavoritesScreenViewControllerStrings_emptyStateText"
 }
 

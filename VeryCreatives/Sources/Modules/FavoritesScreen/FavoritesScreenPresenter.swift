@@ -20,6 +20,7 @@ final class FavoritesScreenPresenter {
     private enum Strings {
         static let cellIdentifier = "MovieCell"
         static let title = FavoritesScreenViewControllerStrings.title.localized()
+        static let emptyStateText = FavoritesScreenViewControllerStrings.emptyStateText.localized()
     }
     
     private enum Constants {
@@ -29,7 +30,11 @@ final class FavoritesScreenPresenter {
         static let heightDivisionFactor:CGFloat = 3.0
     }
     
-    private var movies: Movie?
+    private var movies: [MovieDetails]? {
+        didSet {
+            view?.reloadData()
+        }
+    }
     // MARK: - Lifecycle
     
     init(wireframe: FavoritesScreenWireframeInterface, view: FavoritesScreenViewInterface, interactor: FavoritesScreenInteractorProtocol) {
@@ -38,14 +43,22 @@ final class FavoritesScreenPresenter {
         self.interactor = interactor
     }
     
-    func viewDidLoad() {
-        
+    func viewDidAppear(animated: Bool) {
+        view?.updateEmptyView(hasFavorites(), text: Strings.emptyStateText)
     }
     
     private func configureIcon(_ imageView: UIImageView) {
         imageView.layer.borderColor = UIColor.white.cgColor
         imageView.layer.borderWidth = Constants.iconBordWidth
         imageView.circle()
+    }
+    
+    private func hasFavorites() -> Bool {
+        if let favorites = UserDefaults.standard.getMovieDetailsObject(), !favorites.isEmpty {
+            self.movies = favorites
+            return true
+        }
+        return false
     }
 }
 
@@ -62,14 +75,14 @@ extension FavoritesScreenPresenter: FavoritesScreenPresenterInterface {
     }
     
     func numberOfItemsInSection(_ collectionView: UICollectionView, section: Int) -> Int {
-        return movies?.results?.count ?? 0
+        return movies?.count ?? 0
     }
     
     func cellForItemAt(_ collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Strings.cellIdentifier, for: indexPath) as? MovieCell else {
             return UICollectionViewCell()
         }
-        let movie = movies?.results?[indexPath.row]
+        let movie = movies?[indexPath.row]
         cell.setup(movie: movie)
         
         return cell
