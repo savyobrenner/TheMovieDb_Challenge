@@ -37,3 +37,7 @@ enum MovieDetailsViewControllerStrings: String, Localizable {
     case theMovieDbCredits = "MovieDetailsViewControllerStrings_theMovieDbCredits"
 }
 
+enum FavoritesScreenViewControllerStrings: String, Localizable {
+    case title = "FavoritesScreenViewControllerStrings_tile"
+}
+

@@ -12,6 +12,10 @@ import UIKit
 final class FavoritesScreenViewController: UIViewController {
     
     // MARK: - Outlets
+    @IBOutlet weak var icon: UIImageView!
+    @IBOutlet weak var favoritesTitle: UILabel!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     
     // MARK: - Class properties
     
@@ -23,12 +27,15 @@ final class FavoritesScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.viewDidLoad()
         self.viewConfiguration()
     }
     
     // MARK: - Class Configurations
     
-    private func viewConfiguration() { }
+    private func viewConfiguration() {
+        presenter.setupFavoritesHeader(favoritesTitle, icon)
+    }
     
     // MARK: - UIActions
     

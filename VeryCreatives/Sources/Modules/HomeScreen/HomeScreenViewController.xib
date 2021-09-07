@@ -125,7 +125,6 @@
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="L5x-VW-KIa" firstAttribute="leading" secondItem="s64-SJ-djE" secondAttribute="leading" id="26S-IB-0eO"/>
-                <constraint firstItem="L5x-VW-KIa" firstAttribute="top" secondItem="hly-ls-Blb" secondAttribute="bottom" constant="100" id="6t8-Js-JG5"/>
                 <constraint firstItem="IpD-XC-l4s" firstAttribute="leading" secondItem="s64-SJ-djE" secondAttribute="leading" constant="40" id="8Tr-WB-fHA"/>
                 <constraint firstItem="L5x-VW-KIa" firstAttribute="top" secondItem="IpD-XC-l4s" secondAttribute="bottom" constant="10" id="GBq-Ef-8th"/>
                 <constraint firstItem="hly-ls-Blb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="OzW-RI-Ium"/>
@@ -134,6 +133,7 @@
                 <constraint firstItem="s64-SJ-djE" firstAttribute="trailing" secondItem="IpD-XC-l4s" secondAttribute="trailing" constant="40" id="aUF-II-FUk"/>
                 <constraint firstItem="s64-SJ-djE" firstAttribute="trailing" secondItem="L5x-VW-KIa" secondAttribute="trailing" id="buU-wB-bL4"/>
                 <constraint firstItem="s64-SJ-djE" firstAttribute="bottom" secondItem="L5x-VW-KIa" secondAttribute="bottom" id="tAY-o5-iYq"/>
+                <constraint firstItem="IpD-XC-l4s" firstAttribute="top" secondItem="hly-ls-Blb" secondAttribute="bottom" constant="59" id="xRZ-4o-lBj"/>
             </constraints>
             <point key="canvasLocation" x="-538" y="-36"/>
         </view>

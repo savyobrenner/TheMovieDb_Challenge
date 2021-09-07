@@ -18,9 +18,18 @@ final class FavoritesScreenPresenter {
     private let wireframe: FavoritesScreenWireframeInterface
         
     private enum Strings {
-        static let title = ""
+        static let cellIdentifier = "MovieCell"
+        static let title = FavoritesScreenViewControllerStrings.title.localized()
     }
     
+    private enum Constants {
+        static let iconBordWidth: CGFloat = 1.0
+        static let widthCompensation: CGFloat = 20.0
+        static let widthDivisionFactor: CGFloat = 2.0
+        static let heightDivisionFactor:CGFloat = 3.0
+    }
+    
+    private var movies: Movie?
     // MARK: - Lifecycle
     
     init(wireframe: FavoritesScreenWireframeInterface, view: FavoritesScreenViewInterface, interactor: FavoritesScreenInteractorProtocol) {
@@ -28,8 +37,58 @@ final class FavoritesScreenPresenter {
         self.view = view
         self.interactor = interactor
     }
+    
+    func viewDidLoad() {
+        
+    }
+    
+    private func configureIcon(_ imageView: UIImageView) {
+        imageView.layer.borderColor = UIColor.white.cgColor
+        imageView.layer.borderWidth = Constants.iconBordWidth
+        imageView.circle()
+    }
 }
 
 // MARK: - Extensions
 
-extension FavoritesScreenPresenter: FavoritesScreenPresenterInterface { }
+extension FavoritesScreenPresenter: FavoritesScreenPresenterInterface {
+    func configure(_ collectionView: UICollectionView) {
+        let nib = UINib(nibName: Strings.cellIdentifier, bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: Strings.cellIdentifier)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //TODO
+    }
+    
+    func numberOfItemsInSection(_ collectionView: UICollectionView, section: Int) -> Int {
+        return movies?.results?.count ?? 0
+    }
+    
+    func cellForItemAt(_ collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Strings.cellIdentifier, for: indexPath) as? MovieCell else {
+            return UICollectionViewCell()
+        }
+        let movie = movies?.results?[indexPath.row]
+        cell.setup(movie: movie)
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        // Define cell width
+        let screenWidth = UIScreen.main.bounds.width
+        let widthDesired = CGFloat(screenWidth / Constants.widthDivisionFactor - Constants.widthCompensation)
+        
+        // Define cell height
+        let screenHeight = UIScreen.main.bounds.height
+        let heightDesired = CGFloat(screenHeight / Constants.heightDivisionFactor)
+        
+        return CGSize(width: widthDesired, height: heightDesired)
+    }
+    
+    func setupFavoritesHeader(_ title: UILabel, _ icon: UIImageView) {
+        configureIcon(icon)
+        title.text = Strings.title
+    }
+}

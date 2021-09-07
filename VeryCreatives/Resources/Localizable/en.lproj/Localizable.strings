@@ -23,3 +23,6 @@
 "MovieDetailsViewControllerStrings_watchNowButton" = "Ways to Watch";
 "MovieDetailsViewControllerStrings_warningRedirectExternalLink" = "(Redirect to an external link)";
 "MovieDetailsViewControllerStrings_theMovieDbCredits" = "All informations is powered by TheMovieDB.";
+
+// MARK: - FAVORITESSCREENVIEWCONTROLLERSTRINGS
+"FavoritesScreenViewControllerStrings_tile" = "Favorites";

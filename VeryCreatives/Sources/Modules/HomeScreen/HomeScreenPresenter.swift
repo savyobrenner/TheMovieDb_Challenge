@@ -29,7 +29,6 @@ final class HomeScreenPresenter {
     private enum Constants {
         static let welcomeSize: CGFloat = 24.0
         static let iconBordWidth: CGFloat = 1.0
-        static let staticHeight: CGFloat = 350.0
         static let widthCompensation: CGFloat = 20.0
         static let widthDivisionFactor: CGFloat = 2.0
         static let heightDivisionFactor:CGFloat = 3.0

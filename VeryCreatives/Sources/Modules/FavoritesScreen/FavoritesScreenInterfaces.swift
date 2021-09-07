@@ -17,6 +17,13 @@ protocol FavoritesScreenWireframeInterface: WireframeInterface {
 
 protocol FavoritesScreenViewInterface: ViewInterface { }
 
-protocol FavoritesScreenPresenterInterface: PresenterInterface { }
+protocol FavoritesScreenPresenterInterface: PresenterInterface {
+    func setupFavoritesHeader(_ title: UILabel, _ icon: UIImageView)
+    func configure(_ collectionView: UICollectionView)
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+    func numberOfItemsInSection(_ collectionView: UICollectionView, section: Int) -> Int
+    func cellForItemAt(_ collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize 
+}
 
 protocol FavoritesScreenInteractorProtocol: InteractorInterface { }

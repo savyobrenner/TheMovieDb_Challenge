@@ -23,3 +23,6 @@
 "MovieDetailsViewControllerStrings_watchNowButton" = "Donde Mirar";
 "MovieDetailsViewControllerStrings_warningRedirectExternalLink" = "(Redirigirá a un enlace externo)";
 "MovieDetailsViewControllerStrings_theMovieDbCredits" = "Toda la información es proporcionada por TheMovieDB.";
+
+// MARK: - FAVORITESSCREENVIEWCONTROLLERSTRINGS
+"FavoritesScreenViewControllerStrings_tile" = "Favoritos";
