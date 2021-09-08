@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeScreenViewController" customModule="VeryCreatives" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="L5x-VW-KIa" id="e1G-4T-bri"/>
+                <outlet property="errorLabel" destination="HoL-So-nij" id="kjz-Ib-r7v"/>
+                <outlet property="errorView" destination="UQC-1E-ytm" id="Rp3-fo-8nK"/>
+                <outlet property="icon" destination="1y9-V3-5xf" id="mLo-qk-TH9"/>
+                <outlet property="optionsSegmentedControl" destination="IpD-XC-l4s" id="9Xu-wR-Bhe"/>
+                <outlet property="subtitleLabel" destination="AHS-QF-L4A" id="zFa-r6-E4S"/>
+                <outlet property="tryAgainButton" destination="05P-kH-Zp8" id="Zty-bI-dj1"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="welcomeLabel" destination="uXO-W4-HbN" id="Jmc-sf-kqR"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hly-ls-Blb">
+                    <rect key="frame" x="0.0" y="44" width="414" height="80"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXO-W4-HbN">
+                            <rect key="frame" x="30" y="30" width="221" height="28"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <attributedString key="attributedText">
+                                <fragment content="Hello, ">
+                                    <attributes>
+                                        <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="24" name="Montserrat-Bold"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="VeryCreatives!">
+                                    <attributes>
+                                        <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="24" name="Montserrat-Regular"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="veryCreativesIcon" translatesAutoresizingMaskIntoConstraints="NO" id="1y9-V3-5xf">
+                            <rect key="frame" x="324" y="25" width="60" height="60"/>
+                            <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="1y9-V3-5xf" secondAttribute="height" multiplier="1:1" id="I44-0f-t0I"/>
+                                <constraint firstAttribute="height" constant="60" id="qxd-m1-ulx" customClass="NSLayoutHelper" customModule="LayoutHelper">
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="iPhone8">
+                                            <real key="value" value="60"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </constraint>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHS-QF-L4A">
+                            <rect key="frame" x="30" y="68" width="54" height="16"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
+                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="1y9-V3-5xf" secondAttribute="trailing" constant="30" id="HQE-yS-5UJ"/>
+                        <constraint firstItem="uXO-W4-HbN" firstAttribute="leading" secondItem="hly-ls-Blb" secondAttribute="leading" constant="30" id="Jwq-m1-l3N"/>
+                        <constraint firstAttribute="height" constant="80" id="Od7-ea-6Ul" customClass="NSLayoutHelper" customModule="LayoutHelper">
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="iPhone8">
+                                    <real key="value" value="60"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="iPhone8Plus">
+                                    <real key="value" value="60"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="iPhoneSE2G">
+                                    <real key="value" value="60"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="iPhone12Mini">
+                                    <real key="value" value="60"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </constraint>
+                        <constraint firstItem="AHS-QF-L4A" firstAttribute="leading" secondItem="hly-ls-Blb" secondAttribute="leading" constant="30" id="fyp-Og-SBV"/>
+                        <constraint firstItem="uXO-W4-HbN" firstAttribute="top" secondItem="hly-ls-Blb" secondAttribute="top" constant="30" id="iMx-DA-EV9"/>
+                        <constraint firstItem="1y9-V3-5xf" firstAttribute="top" secondItem="hly-ls-Blb" secondAttribute="top" constant="25" id="mmJ-44-Bwt"/>
+                        <constraint firstItem="AHS-QF-L4A" firstAttribute="top" secondItem="uXO-W4-HbN" secondAttribute="bottom" constant="10" id="mnW-ry-hQF"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="L5x-VW-KIa">
+                    <rect key="frame" x="0.0" y="224" width="414" height="638"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="qE4-jY-Ivi">
+                        <size key="itemSize" width="180" height="350"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IpD-XC-l4s">
+                    <rect key="frame" x="40" y="183" width="334" height="32"/>
+                    <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                    <segments>
+                        <segment title="Popular Movies"/>
+                        <segment title="Top Rated Movies"/>
+                    </segments>
+                    <color key="selectedSegmentTintColor" name="yellowBrand"/>
+                    <connections>
+                        <action selector="sortMovies:" destination="-1" eventType="valueChanged" id="AnC-ac-TAS"/>
+                    </connections>
+                </segmentedControl>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UQC-1E-ytm">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🤧" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ji-yO-b09">
+                            <rect key="frame" x="142" y="376" width="130" height="144"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="120"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something went wrong, try again" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HoL-So-nij">
+                            <rect key="frame" x="20" y="540" width="374" height="57.5"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="24"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05P-kH-Zp8">
+                            <rect key="frame" x="168.5" y="637.5" width="77" height="35"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                            <state key="normal" title="Try again"/>
+                            <connections>
+                                <action selector="tryAgainAction:" destination="-1" eventType="touchUpInside" id="3FI-lG-S4K"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="2Ji-yO-b09" firstAttribute="centerY" secondItem="UQC-1E-ytm" secondAttribute="centerY" id="6f8-ul-mm8"/>
+                        <constraint firstItem="HoL-So-nij" firstAttribute="centerX" secondItem="2Ji-yO-b09" secondAttribute="centerX" id="N7u-0K-7Zf"/>
+                        <constraint firstItem="HoL-So-nij" firstAttribute="leading" secondItem="UQC-1E-ytm" secondAttribute="leading" constant="20" id="XcZ-Oh-5fJ"/>
+                        <constraint firstItem="05P-kH-Zp8" firstAttribute="centerX" secondItem="HoL-So-nij" secondAttribute="centerX" id="ZDy-VW-neO"/>
+                        <constraint firstItem="05P-kH-Zp8" firstAttribute="top" secondItem="HoL-So-nij" secondAttribute="bottom" constant="40" id="mY7-Ze-ROc"/>
+                        <constraint firstAttribute="trailing" secondItem="HoL-So-nij" secondAttribute="trailing" constant="20" id="pUd-yq-Dz5"/>
+                        <constraint firstItem="2Ji-yO-b09" firstAttribute="centerX" secondItem="UQC-1E-ytm" secondAttribute="centerX" id="wPM-5t-ysu"/>
+                        <constraint firstItem="HoL-So-nij" firstAttribute="top" secondItem="2Ji-yO-b09" secondAttribute="bottom" constant="20" id="xtZ-yV-j4r"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="s64-SJ-djE"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="L5x-VW-KIa" firstAttribute="leading" secondItem="s64-SJ-djE" secondAttribute="leading" id="26S-IB-0eO"/>
+                <constraint firstItem="UQC-1E-ytm" firstAttribute="leading" secondItem="s64-SJ-djE" secondAttribute="leading" id="5Wb-5A-5aX"/>
+                <constraint firstItem="IpD-XC-l4s" firstAttribute="leading" secondItem="s64-SJ-djE" secondAttribute="leading" constant="40" id="8Tr-WB-fHA"/>
+                <constraint firstItem="L5x-VW-KIa" firstAttribute="top" secondItem="IpD-XC-l4s" secondAttribute="bottom" constant="10" id="GBq-Ef-8th"/>
+                <constraint firstItem="hly-ls-Blb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="OzW-RI-Ium"/>
+                <constraint firstItem="hly-ls-Blb" firstAttribute="top" secondItem="s64-SJ-djE" secondAttribute="top" id="Sas-v9-g6M"/>
+                <constraint firstItem="s64-SJ-djE" firstAttribute="trailing" secondItem="hly-ls-Blb" secondAttribute="trailing" id="XoR-eT-dXP"/>
+                <constraint firstItem="s64-SJ-djE" firstAttribute="trailing" secondItem="IpD-XC-l4s" secondAttribute="trailing" constant="40" id="aUF-II-FUk"/>
+                <constraint firstItem="s64-SJ-djE" firstAttribute="trailing" secondItem="L5x-VW-KIa" secondAttribute="trailing" id="buU-wB-bL4"/>
+                <constraint firstItem="UQC-1E-ytm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="c6P-f5-g7M"/>
+                <constraint firstItem="s64-SJ-djE" firstAttribute="bottom" secondItem="L5x-VW-KIa" secondAttribute="bottom" id="tAY-o5-iYq"/>
+                <constraint firstItem="UQC-1E-ytm" firstAttribute="trailing" secondItem="s64-SJ-djE" secondAttribute="trailing" id="tOf-BH-zH9"/>
+                <constraint firstAttribute="bottom" secondItem="UQC-1E-ytm" secondAttribute="bottom" id="uwJ-0O-hnz"/>
+                <constraint firstItem="IpD-XC-l4s" firstAttribute="top" secondItem="hly-ls-Blb" secondAttribute="bottom" constant="59" id="xRZ-4o-lBj"/>
+            </constraints>
+            <point key="canvasLocation" x="-539.13043478260875" y="-36.160714285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="veryCreativesIcon" width="225" height="225"/>
+        <namedColor name="yellowBrand">
+            <color red="0.99199998378753662" green="0.79600000381469727" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

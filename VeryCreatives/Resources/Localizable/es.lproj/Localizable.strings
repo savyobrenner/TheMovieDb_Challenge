@@ -1,0 +1,33 @@
+// MARK: - ERROR MESSAGES
+"ErrorMessages_noConnection" = "Sin conexión a Internet.";
+"ErrorMessages_genericError" = "No se puede completar esta acción.";
+
+// MARK: - BASEVIEWCONTROLLERSTRINGS
+"BaseViewControllerStrings_title" = "¡Atención!";
+"BaseViewControllerStrings_btn" = "OK";
+
+// MARK: - TABBARCONTROLLERSTRINGS
+"TabBarControllerStrings_ homeTitle" = "Inicio";
+"TabBarControllerStrings_ favoritesTitle" = "Favoritos";
+
+//MARK: - HOMESCREENVIEWCONTROLLERSTRINGS
+"HomeScreenViewControllerStrings_headerSubtitle" = "Bienvenido a nuestra aplicación :)";
+"HomeScreenViewControllerStrings_welcomeTitle" = "Hola, %@";
+"HomeScreenViewControllerStrings_popularMoviesTitle" = "Películas Populares";
+"HomeScreenViewControllerStrings_topRatedMoviesTitle" = "Películas Mejor Calificadas";
+"HomeScreenViewControllerStrings_buttonTitle" = "Intentar otra vez";
+"HomeScreenViewControllerStrings_genericErrorText" = "Algo salió mal, intenta de nuevo";
+"HomeScreenViewControllerStrings_networkNotAvailableText" = "No hay Internet disponible";
+
+// MARK: - MOVIEDETAILSVIEWCONTROLLERSTRINGS
+"MovieDetailsViewControllerStrings_releaseDateTitle" = "Fecha de Lanzamiento:";
+"MovieDetailsViewControllerStrings_runtimeTitle" = "Duración:";
+"MovieDetailsViewControllerStrings_descriptionTitleLable" = "Descripción";
+"MovieDetailsViewControllerStrings_watchNowButton" = "Donde Mirar";
+"MovieDetailsViewControllerStrings_warningRedirectExternalLink" = "(Redirigirá a un enlace externo)";
+"MovieDetailsViewControllerStrings_theMovieDbCredits" = "Toda la información es proporcionada por TheMovieDB.";
+"MovieDetailsViewControllerStrings_trailerMessage" = "El tráiler no está disponible sin conexión";
+
+// MARK: - FAVORITESSCREENVIEWCONTROLLERSTRINGS
+"FavoritesScreenViewControllerStrings_tile" = "Favoritos";
+"FavoritesScreenViewControllerStrings_emptyStateText" = "Aún no tienes películas favoritas";

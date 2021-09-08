@@ -1,0 +1,33 @@
+// MARK: - ERROR MESSAGES
+"ErrorMessages_noConnection" = "No internet connection.";
+"ErrorMessages_genericError" = "Could not successfully complete this action.";
+
+// MARK: - BASEVIEWCONTROLLERSTRINGS
+"BaseViewControllerStrings_title" = "Warning!";
+"BaseViewControllerStrings_btn" = "OK";
+
+// MARK: - TABBARCONTROLLERSTRINGS
+"TabBarControllerStrings_ homeTitle" = "Home";
+"TabBarControllerStrings_ favoritesTitle" = "Favorites";
+
+//MARK: - HOMESCREENVIEWCONTROLLERSTRINGS
+"HomeScreenViewControllerStrings_headerSubtitle" = "Welcome to our movie app :)";
+"HomeScreenViewControllerStrings_welcomeTitle" = "Hello, %@";
+"HomeScreenViewControllerStrings_popularMoviesTitle" = "Popular Movies";
+"HomeScreenViewControllerStrings_topRatedMoviesTitle" = "Top Rated Movies";
+"HomeScreenViewControllerStrings_buttonTitle" = "Try again";
+"HomeScreenViewControllerStrings_genericErrorText" = "Something went wrong, try again";
+"HomeScreenViewControllerStrings_networkNotAvailableText" = "No internet connection";
+
+// MARK: - MOVIEDETAILSVIEWCONTROLLERSTRINGS
+"MovieDetailsViewControllerStrings_releaseDateTitle" = "Release Date:";
+"MovieDetailsViewControllerStrings_runtimeTitle" = "Runtime:";
+"MovieDetailsViewControllerStrings_descriptionTitleLable" = "Description";
+"MovieDetailsViewControllerStrings_watchNowButton" = "Ways to Watch";
+"MovieDetailsViewControllerStrings_warningRedirectExternalLink" = "(Redirect to an external link)";
+"MovieDetailsViewControllerStrings_theMovieDbCredits" = "All informations is powered by TheMovieDB.";
+"MovieDetailsViewControllerStrings_trailerMessage" = "Trailer is not available offline";
+
+// MARK: - FAVORITESSCREENVIEWCONTROLLERSTRINGS
+"FavoritesScreenViewControllerStrings_tile" = "Favorites";
+"FavoritesScreenViewControllerStrings_emptyStateText" = "You don't have favorite movies yet";
