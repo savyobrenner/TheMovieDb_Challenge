@@ -7,6 +7,13 @@ An iOS app challenge using TheMovieDB developer API.
 2. Open .xcworkspace file.
 3. Run.
 
+##### If the first launch appears "No Scheme", follow these steps:
+4. Select the "No Scheme".
+5. Go to the "New Scheme" option.
+6. Check if the suggested target is "VeryCreatives"
+7. Confirm.
+8. Run.
+
 ## Features
 1. Popular Movies List Feature.
 
