@@ -63,6 +63,7 @@ final class FavoritesScreenPresenter {
             self.movies = favorites
             return true
         }
+        view?.showLoading(hide: false)
         return false
     }
 }
