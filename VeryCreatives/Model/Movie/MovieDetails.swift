@@ -7,10 +7,6 @@
 
 import Foundation
 
-protocol MovieDetailsProtocol {
-  func isEqualTo(_ other: MovieDetails) -> Bool
-}
-
 struct MovieDetails: Codable, Equatable {
     static func == (lhs: MovieDetails, rhs: MovieDetails) -> Bool {
         return lhs.id == rhs.id
