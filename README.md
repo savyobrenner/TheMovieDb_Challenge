@@ -47,7 +47,7 @@ An iOS app challenge using TheMovieDB developer API.
 |:----------------:|:-----------------:|:-------------------:|:------------------:|
 |![splash-screen][]| ![home-screen][]  | ![details-screen][] |![favorites-screen][]|
 
-[splash-screen]: https://gitlab.com/savyobrenner/verycreatives_challenge/-/raw/main/sources/IMG_6582.PNG
-[home-screen]: https://gitlab.com/savyobrenner/verycreatives_challenge/-/raw/main/sources/IMG_6583.PNG
-[details-screen]: https://gitlab.com/savyobrenner/verycreatives_challenge/-/raw/main/sources/IMG_6586.PNG
-[favorites-screen]: https://gitlab.com/savyobrenner/verycreatives_challenge/-/raw/c495419cccb74ec31d0bb40073f2faa3111c0574/sources/IMG_6585.PNG
+[splash-screen]: https://github.com/savyobrenner/TheMovieDb_Challenge/blob/main/sources/IMG_6582.PNG?raw=true
+[home-screen]: https://github.com/savyobrenner/TheMovieDb_Challenge/blob/main/sources/IMG_6583.PNG?raw=true
+[details-screen]: https://github.com/savyobrenner/TheMovieDb_Challenge/blob/main/sources/IMG_6586.PNG?raw=true
+[favorites-screen]: https://github.com/savyobrenner/TheMovieDb_Challenge/blob/main/sources/IMG_6585.PNG?raw=true
