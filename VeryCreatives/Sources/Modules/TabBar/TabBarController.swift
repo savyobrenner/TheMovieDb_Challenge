@@ -21,7 +21,7 @@ class TabBarController: UITabBarController {
     }
     
     private func initialConfiguration() {
-        self.tabBar.tintColor = .yellowBrand
+        self.tabBar.tintColor = .colorBrand
         self.tabBar.barTintColor = .darkBrand
         DispatchQueue.main.async {
             self.navigationController?.navigationBar.isHidden = true

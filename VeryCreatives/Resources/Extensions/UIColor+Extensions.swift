@@ -9,7 +9,7 @@ import UIKit
 extension UIColor {
     
     static let darkBrand = UIColor(named:"darkBrand")
-    static let yellowBrand = UIColor(named: "yellowBrand")
+    static let colorBrand = UIColor(named: "colorBrand")
     static let topBackgroundColor = UIColor(named: "topBackgroundColor")
     static let midBackgroundColor = UIColor(named: "midBackgroundColor")
     static let bottomBackgroundColor = UIColor(named: "bottomBackgroundColor")

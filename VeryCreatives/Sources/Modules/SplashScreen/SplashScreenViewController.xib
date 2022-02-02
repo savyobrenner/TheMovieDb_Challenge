@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,21 +19,21 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="XfF-J2-2Km">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VeryCreatives " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1HO-aG-2Nz">
-                    <rect key="frame" x="102" y="589.5" width="210.5" height="37"/>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UDACITY CAPSTONE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1HO-aG-2Nz">
+                    <rect key="frame" x="53.5" y="689.5" width="307" height="37"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="textColor" name="colorBrand"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="udacity_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="XfF-J2-2Km">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="XfF-J2-2Km" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="6v0-Gx-olN"/>
                 <constraint firstAttribute="trailing" secondItem="XfF-J2-2Km" secondAttribute="trailing" id="C1d-rp-ODV"/>
-                <constraint firstItem="1HO-aG-2Nz" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="160" id="DRY-YC-AH8"/>
+                <constraint firstItem="1HO-aG-2Nz" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="260" id="DRY-YC-AH8"/>
                 <constraint firstItem="XfF-J2-2Km" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="KQe-3V-zfZ"/>
                 <constraint firstAttribute="bottom" secondItem="XfF-J2-2Km" secondAttribute="bottom" id="dqf-Ea-ru2"/>
                 <constraint firstItem="1HO-aG-2Nz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ely-aJ-TQe"/>
@@ -40,6 +42,9 @@
         </view>
     </objects>
     <resources>
-        <image name="LaunchScreen" width="1080" height="1920"/>
+        <image name="udacity_Logo" width="800" height="800"/>
+        <namedColor name="colorBrand">
+            <color red="0.050980392156862744" green="0.68235294117647061" blue="0.82745098039215681" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

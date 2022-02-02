@@ -18,7 +18,7 @@ final class HomeScreenPresenter {
     private let wireframe: HomeScreenWireframeInterface
         
     private enum Strings {
-        static let staticName = "VeryCreatives!"
+        static let staticName = "Udacity!"
         static let cellIdentifier = "MovieCell"
         static let welcomeTitle = HomeScreenViewControllerStrings.welcomeTitle.localized().replacingOccurrences(of: "%@", with: Strings.staticName)
         static let subtitle = HomeScreenViewControllerStrings.headerSubtitle.localized()
