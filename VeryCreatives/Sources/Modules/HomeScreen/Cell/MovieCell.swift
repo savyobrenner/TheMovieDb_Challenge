@@ -21,7 +21,7 @@ class MovieCell: UICollectionViewCell {
         
     func setup(movie: MovieResult?) {
         guard let movie = movie else { return }
-            let rate = movie.voteAverage?.rounded()
+            let rate = movie.voteAverage
             coverImageView.setImage(path: movie.posterPath ?? "", isAPIImage: true)
             stars.updateStars(rate?.formatRating() ?? 0)
         movieTitle.text = movie.title
@@ -29,7 +29,7 @@ class MovieCell: UICollectionViewCell {
     
     func setup(movie: MovieDetails?) {
         guard let movie = movie, let imageViewData = UserDefaults.standard.loadImage(movie.posterPath) else { return }
-        let rate = movie.voteAverage?.rounded()
+        let rate = movie.voteAverage
         coverImageView.image = UIImage(data: imageViewData)
         stars.updateStars(rate?.formatRating() ?? 0)
         movieTitle.text = movie.title

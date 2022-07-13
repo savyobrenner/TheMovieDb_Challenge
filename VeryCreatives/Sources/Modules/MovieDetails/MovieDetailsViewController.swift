@@ -111,7 +111,7 @@ extension MovieDetailsViewController: MovieDetailsViewInterface {
     func loadInformations(movie: MovieDetails, isFavoriteMovie: Bool) {
         guard let rate = movie.voteAverage, let coverImagePath = movie.backdropPath else { return }
         
-        self.starsImageView.updateStars(rate.rounded().formatRating())
+        self.starsImageView.updateStars(rate.formatRating())
         
         if isFavoriteMovie {
             guard let imageViewData = UserDefaults.standard.loadImage(coverImagePath) else { return }
