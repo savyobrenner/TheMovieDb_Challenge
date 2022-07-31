@@ -89,6 +89,73 @@
 		29FF13FD26E6743C009F8585 /* ResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF13F826E6743C009F8585 /* ResponseHandler.swift */; };
 		29FF13FE26E6743C009F8585 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF13F926E6743C009F8585 /* RequestHandler.swift */; };
 		510F3514E8A26FDE47161352 /* Pods_VeryCreatives.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CACFBB1717C61DE7A68B472 /* Pods_VeryCreatives.framework */; };
+		F2C046CFD67603E556F5E3FB /* Pods_VeryCreatives.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CACFBB1717C61DE7A68B472 /* Pods_VeryCreatives.framework */; };
+		F800333A28974D9E00D1485C /* ViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF13E826E6733E009F8585 /* ViewInterface.swift */; };
+		F8F512F628974C90008ADE05 /* FavoritesScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710C326E6921A00793EA1 /* FavoritesScreenViewController.swift */; };
+		F8F512F728974C90008ADE05 /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710E326E6A4C300793EA1 /* MovieResponse.swift */; };
+		F8F512F828974C90008ADE05 /* FavoritesScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710C226E6921A00793EA1 /* FavoritesScreenPresenter.swift */; };
+		F8F512F928974C90008ADE05 /* SplashScreenInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF13DB26E672DF009F8585 /* SplashScreenInterfaces.swift */; };
+		F8F512FA28974C90008ADE05 /* SplashScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF13DE26E672DF009F8585 /* SplashScreenInteractor.swift */; };
+		F8F512FB28974C90008ADE05 /* PresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF13EB26E6733E009F8585 /* PresenterInterface.swift */; };
+		F8F512FC28974C90008ADE05 /* MovieVideosRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C377226E79B140012E6F3 /* MovieVideosRequest.swift */; };
+		F8F512FD28974C90008ADE05 /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF13EC26E6733E009F8585 /* BaseWireframe.swift */; };
+		F8F512FE28974C90008ADE05 /* FavoritesScreenWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710C626E6921A00793EA1 /* FavoritesScreenWireframe.swift */; };
+		F8F512FF28974C90008ADE05 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710EF26E6CD1500793EA1 /* RoundView.swift */; };
+		F8F5130028974C90008ADE05 /* TopRatedMoviesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710F526E792C100793EA1 /* TopRatedMoviesRequest.swift */; };
+		F8F5130128974C90008ADE05 /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710E526E6C2FD00793EA1 /* UILabel+Extensions.swift */; };
+		F8F5130228974C90008ADE05 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710F326E6CECB00793EA1 /* Double+Extensions.swift */; };
+		F8F5130328974C90008ADE05 /* HomeScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710B426E67B9300793EA1 /* HomeScreenInteractor.swift */; };
+		F8F5130428974C90008ADE05 /* UI+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710E726E6C37400793EA1 /* UI+Extensions.swift */; };
+		F8F5130528974C90008ADE05 /* PopularMoviesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710E126E6A4A700793EA1 /* PopularMoviesRequest.swift */; };
+		F8F5130728974C90008ADE05 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710B326E67B9300793EA1 /* HomeScreenViewController.swift */; };
+		F8F5130828974C90008ADE05 /* LocalizableProjectStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2997109A26E6769F00793EA1 /* LocalizableProjectStrings.swift */; };
+		F8F5130928974C90008ADE05 /* SplashScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF13DC26E672DF009F8585 /* SplashScreenPresenter.swift */; };
+		F8F5130A28974C90008ADE05 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710CE26E6939E00793EA1 /* UIColor+Extensions.swift */; };
+		F8F5130B28974C90008ADE05 /* MovieDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C377626E79B4D0012E6F3 /* MovieDetailResponse.swift */; };
+		F8F5130C28974C90008ADE05 /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296A0ECF26E7E35A003172EB /* UserDefaults+Extensions.swift */; };
+		F8F5130D28974C90008ADE05 /* MovieDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C376026E799620012E6F3 /* MovieDetailsInteractor.swift */; };
+		F8F5130E28974C90008ADE05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF13C126E66015009F8585 /* AppDelegate.swift */; };
+		F8F5130F28974C90008ADE05 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710EA26E6CC6300793EA1 /* MovieCell.swift */; };
+		F8F5131028974C90008ADE05 /* MovieGenreListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C377026E79B020012E6F3 /* MovieGenreListRequest.swift */; };
+		F8F5131128974C90008ADE05 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C375F26E799620012E6F3 /* MovieDetailsViewController.swift */; };
+		F8F5131228974C90008ADE05 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710DD26E6A44700793EA1 /* Movie.swift */; };
+		F8F5131328974C90008ADE05 /* FavoriteMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 290F6C9826E81993002BEA9E /* FavoriteMovie.swift */; };
+		F8F5131428974C90008ADE05 /* SplashScreenWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF13E026E672DF009F8585 /* SplashScreenWireframe.swift */; };
+		F8F5131528974C90008ADE05 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C0D9B026E7A9B5006A3733 /* String+Extensions.swift */; };
+		F8F5131628974C90008ADE05 /* FavoritesScreenInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710C126E6921A00793EA1 /* FavoritesScreenInterfaces.swift */; };
+		F8F5131728974C90008ADE05 /* NetworkStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF13F326E6743C009F8585 /* NetworkStatus.swift */; };
+		F8F5131828974C90008ADE05 /* FavoritesScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710C426E6921A00793EA1 /* FavoritesScreenInteractor.swift */; };
+		F8F5131928974C90008ADE05 /* GenreResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C377426E79B2F0012E6F3 /* GenreResponse.swift */; };
+		F8F5131A28974C90008ADE05 /* HomeScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710B226E67B9300793EA1 /* HomeScreenPresenter.swift */; };
+		F8F5131B28974C90008ADE05 /* InteractorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF13E926E6733E009F8585 /* InteractorInterface.swift */; };
+		F8F5131C28974C90008ADE05 /* DomainInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF13EA26E6733E009F8585 /* DomainInterface.swift */; };
+		F8F5131D28974C90008ADE05 /* HomeScreenWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710B626E67B9300793EA1 /* HomeScreenWireframe.swift */; };
+		F8F5131E28974C90008ADE05 /* NetworkInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF13F526E6743C009F8585 /* NetworkInteractor.swift */; };
+		F8F5131F28974C90008ADE05 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2997109B26E6769F00793EA1 /* Localizable.swift */; };
+		F8F5132028974C90008ADE05 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710BE26E68E5A00793EA1 /* TabBarController.swift */; };
+		F8F5132128974C90008ADE05 /* MovieDetailsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C0D9B626E7ADF2006A3733 /* MovieDetailsProvider.swift */; };
+		F8F5132228974C90008ADE05 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF13F626E6743C009F8585 /* NetworkManager.swift */; };
+		F8F5132328974C90008ADE05 /* HomeScreenDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710D626E6A30900793EA1 /* HomeScreenDomain.swift */; };
+		F8F5132428974C90008ADE05 /* HomeScreenProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710DA26E6A39000793EA1 /* HomeScreenProvider.swift */; };
+		F8F5132528974C90008ADE05 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710D226E69F0200793EA1 /* APIConfig.swift */; };
+		F8F5132628974C90008ADE05 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710F126E6CDC000793EA1 /* UIImageView+Extensions.swift */; };
+		F8F5132728974C90008ADE05 /* MovieVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C376E26E79A9C0012E6F3 /* MovieVideo.swift */; };
+		F8F5132828974C90008ADE05 /* ResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF13F826E6743C009F8585 /* ResponseHandler.swift */; };
+		F8F5132928974C90008ADE05 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF13DD26E672DF009F8585 /* SplashScreenViewController.swift */; };
+		F8F5132A28974C90008ADE05 /* MovieDetailsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C0D9B826E7AE28006A3733 /* MovieDetailsRequest.swift */; };
+		F8F5132B28974C90008ADE05 /* MovieDetailsInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C375D26E799620012E6F3 /* MovieDetailsInterfaces.swift */; };
+		F8F5132C28974C90008ADE05 /* GenresList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C376C26E799E00012E6F3 /* GenresList.swift */; };
+		F8F5132D28974C90008ADE05 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF13C326E66015009F8585 /* SceneDelegate.swift */; };
+		F8F5132E28974C90008ADE05 /* HomeScreenInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299710B126E67B9300793EA1 /* HomeScreenInterfaces.swift */; };
+		F8F5132F28974C90008ADE05 /* MovieDetailsDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C0D9B326E7AD92006A3733 /* MovieDetailsDomain.swift */; };
+		F8F5133028974C90008ADE05 /* MovieDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C375E26E799620012E6F3 /* MovieDetailsPresenter.swift */; };
+		F8F5133128974C90008ADE05 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF13F926E6743C009F8585 /* RequestHandler.swift */; };
+		F8F5133228974C90008ADE05 /* MovieDetailsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C376226E799620012E6F3 /* MovieDetailsWireframe.swift */; };
+		F8F5133328974C90008ADE05 /* MovieVideosResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297C377826E79B5F0012E6F3 /* MovieVideosResponse.swift */; };
+		F8F5133428974C90008ADE05 /* MovieDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296A0ECD26E7E162003172EB /* MovieDetails.swift */; };
+		F8F5133B28974C90008ADE05 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 299710AE26E676F900793EA1 /* Localizable.strings */; };
+		F8F5133F28974C90008ADE05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29FF13CA26E66016009F8585 /* Assets.xcassets */; };
+		F8F5134928974D33008ADE05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8F5134828974D33008ADE05 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -189,9 +256,12 @@
 		29FF13F626E6743C009F8585 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		29FF13F826E6743C009F8585 /* ResponseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseHandler.swift; sourceTree = "<group>"; };
 		29FF13F926E6743C009F8585 /* RequestHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
-		62A9F4936E5F1E9441927B2C /* Pods-VeryCreatives.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeryCreatives.release.xcconfig"; path = "Target Support Files/Pods-VeryCreatives/Pods-VeryCreatives.release.xcconfig"; sourceTree = "<group>"; };
+		725EA5403DEAD48A6F34FBA7 /* Pods-VeryCreatives.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeryCreatives.release.xcconfig"; path = "Target Support Files/Pods-VeryCreatives/Pods-VeryCreatives.release.xcconfig"; sourceTree = "<group>"; };
 		7CACFBB1717C61DE7A68B472 /* Pods_VeryCreatives.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VeryCreatives.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		878F623478D93EB60135AD33 /* Pods-VeryCreatives.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeryCreatives.debug.xcconfig"; path = "Target Support Files/Pods-VeryCreatives/Pods-VeryCreatives.debug.xcconfig"; sourceTree = "<group>"; };
+		CEF9E9DBC8BDFEBED8D992E2 /* Pods-VeryCreatives.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeryCreatives.debug.xcconfig"; path = "Target Support Files/Pods-VeryCreatives/Pods-VeryCreatives.debug.xcconfig"; sourceTree = "<group>"; };
+		F8F5134428974C90008ADE05 /* VeryCreatives - TV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VeryCreatives - TV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8F5134528974C90008ADE05 /* VeryCreativesTV-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "VeryCreativesTV-Info.plist"; path = "/Users/savyobrenner/Documents/Mobile-development/iOS_apps/WorkChallenges/VeryCreatives/TheMovieDb_Challenge/VeryCreativesTV-Info.plist"; sourceTree = "<absolute>"; };
+		F8F5134828974D33008ADE05 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +277,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				510F3514E8A26FDE47161352 /* Pods_VeryCreatives.framework in Frameworks */,
+				F2C046CFD67603E556F5E3FB /* Pods_VeryCreatives.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8F5133528974C90008ADE05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +596,7 @@
 			children = (
 				29FF13BE26E66015009F8585 /* VeryCreatives.app */,
 				299B2C5226E83E77008D25D0 /* VeryCreativesTests.xctest */,
+				F8F5134428974C90008ADE05 /* VeryCreatives - TV.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -530,6 +609,7 @@
 				29FF13D626E67146009F8585 /* Resources */,
 				29FF13D526E67141009F8585 /* Sources */,
 				29FF13CF26E66016009F8585 /* Info.plist */,
+				F8F5134528974C90008ADE05 /* VeryCreativesTV-Info.plist */,
 			);
 			path = VeryCreatives;
 			sourceTree = "<group>";
@@ -570,7 +650,8 @@
 		29FF13D826E671F3009F8585 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				29FF13CC26E66016009F8585 /* LaunchScreen.storyboard */,
+				F8F5134728974D24008ADE05 /* Mobile */,
+				F8F5134628974D20008ADE05 /* TV */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -590,6 +671,7 @@
 		29FF13DA26E672AE009F8585 /* SplashScreen */ = {
 			isa = PBXGroup;
 			children = (
+				F8F5134A28974D52008ADE05 /* Views */,
 				29FF13DB26E672DF009F8585 /* SplashScreenInterfaces.swift */,
 				29FF13DC26E672DF009F8585 /* SplashScreenPresenter.swift */,
 				29FF13DD26E672DF009F8585 /* SplashScreenViewController.swift */,
@@ -653,10 +735,33 @@
 		867BCF4C153664B21D9851C7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				878F623478D93EB60135AD33 /* Pods-VeryCreatives.debug.xcconfig */,
-				62A9F4936E5F1E9441927B2C /* Pods-VeryCreatives.release.xcconfig */,
+				CEF9E9DBC8BDFEBED8D992E2 /* Pods-VeryCreatives.debug.xcconfig */,
+				725EA5403DEAD48A6F34FBA7 /* Pods-VeryCreatives.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F8F5134628974D20008ADE05 /* TV */ = {
+			isa = PBXGroup;
+			children = (
+				F8F5134828974D33008ADE05 /* LaunchScreen.storyboard */,
+			);
+			path = TV;
+			sourceTree = "<group>";
+		};
+		F8F5134728974D24008ADE05 /* Mobile */ = {
+			isa = PBXGroup;
+			children = (
+				29FF13CC26E66016009F8585 /* LaunchScreen.storyboard */,
+			);
+			path = Mobile;
+			sourceTree = "<group>";
+		};
+		F8F5134A28974D52008ADE05 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -699,6 +804,23 @@
 			productReference = 29FF13BE26E66015009F8585 /* VeryCreatives.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F8F512F328974C90008ADE05 /* VeryCreatives - TV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8F5134128974C90008ADE05 /* Build configuration list for PBXNativeTarget "VeryCreatives - TV" */;
+			buildPhases = (
+				F8F512F528974C90008ADE05 /* Sources */,
+				F8F5133528974C90008ADE05 /* Frameworks */,
+				F8F5133728974C90008ADE05 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "VeryCreatives - TV";
+			productName = VeryCreatives;
+			productReference = F8F5134428974C90008ADE05 /* VeryCreatives - TV.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -733,6 +855,7 @@
 			projectRoot = "";
 			targets = (
 				29FF13BD26E66015009F8585 /* VeryCreatives */,
+				F8F512F328974C90008ADE05 /* VeryCreatives - TV */,
 				299B2C5126E83E77008D25D0 /* VeryCreativesTests */,
 			);
 		};
@@ -761,6 +884,16 @@
 				299710BB26E67B9300793EA1 /* HomeScreenViewController.xib in Resources */,
 				29FF13CE26E66016009F8585 /* LaunchScreen.storyboard in Resources */,
 				29FF13CB26E66016009F8585 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8F5133728974C90008ADE05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8F5134928974D33008ADE05 /* LaunchScreen.storyboard in Resources */,
+				F8F5133B28974C90008ADE05 /* Localizable.strings in Resources */,
+				F8F5133F28974C90008ADE05 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -893,6 +1026,76 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F8F512F528974C90008ADE05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8F512F628974C90008ADE05 /* FavoritesScreenViewController.swift in Sources */,
+				F8F512F728974C90008ADE05 /* MovieResponse.swift in Sources */,
+				F8F512F828974C90008ADE05 /* FavoritesScreenPresenter.swift in Sources */,
+				F8F512F928974C90008ADE05 /* SplashScreenInterfaces.swift in Sources */,
+				F800333A28974D9E00D1485C /* ViewInterface.swift in Sources */,
+				F8F512FA28974C90008ADE05 /* SplashScreenInteractor.swift in Sources */,
+				F8F512FB28974C90008ADE05 /* PresenterInterface.swift in Sources */,
+				F8F512FC28974C90008ADE05 /* MovieVideosRequest.swift in Sources */,
+				F8F512FD28974C90008ADE05 /* BaseWireframe.swift in Sources */,
+				F8F512FE28974C90008ADE05 /* FavoritesScreenWireframe.swift in Sources */,
+				F8F512FF28974C90008ADE05 /* RoundView.swift in Sources */,
+				F8F5130028974C90008ADE05 /* TopRatedMoviesRequest.swift in Sources */,
+				F8F5130128974C90008ADE05 /* UILabel+Extensions.swift in Sources */,
+				F8F5130228974C90008ADE05 /* Double+Extensions.swift in Sources */,
+				F8F5130328974C90008ADE05 /* HomeScreenInteractor.swift in Sources */,
+				F8F5130428974C90008ADE05 /* UI+Extensions.swift in Sources */,
+				F8F5130528974C90008ADE05 /* PopularMoviesRequest.swift in Sources */,
+				F8F5130728974C90008ADE05 /* HomeScreenViewController.swift in Sources */,
+				F8F5130828974C90008ADE05 /* LocalizableProjectStrings.swift in Sources */,
+				F8F5130928974C90008ADE05 /* SplashScreenPresenter.swift in Sources */,
+				F8F5130A28974C90008ADE05 /* UIColor+Extensions.swift in Sources */,
+				F8F5130B28974C90008ADE05 /* MovieDetailResponse.swift in Sources */,
+				F8F5130C28974C90008ADE05 /* UserDefaults+Extensions.swift in Sources */,
+				F8F5130D28974C90008ADE05 /* MovieDetailsInteractor.swift in Sources */,
+				F8F5130E28974C90008ADE05 /* AppDelegate.swift in Sources */,
+				F8F5130F28974C90008ADE05 /* MovieCell.swift in Sources */,
+				F8F5131028974C90008ADE05 /* MovieGenreListRequest.swift in Sources */,
+				F8F5131128974C90008ADE05 /* MovieDetailsViewController.swift in Sources */,
+				F8F5131228974C90008ADE05 /* Movie.swift in Sources */,
+				F8F5131328974C90008ADE05 /* FavoriteMovie.swift in Sources */,
+				F8F5131428974C90008ADE05 /* SplashScreenWireframe.swift in Sources */,
+				F8F5131528974C90008ADE05 /* String+Extensions.swift in Sources */,
+				F8F5131628974C90008ADE05 /* FavoritesScreenInterfaces.swift in Sources */,
+				F8F5131728974C90008ADE05 /* NetworkStatus.swift in Sources */,
+				F8F5131828974C90008ADE05 /* FavoritesScreenInteractor.swift in Sources */,
+				F8F5131928974C90008ADE05 /* GenreResponse.swift in Sources */,
+				F8F5131A28974C90008ADE05 /* HomeScreenPresenter.swift in Sources */,
+				F8F5131B28974C90008ADE05 /* InteractorInterface.swift in Sources */,
+				F8F5131C28974C90008ADE05 /* DomainInterface.swift in Sources */,
+				F8F5131D28974C90008ADE05 /* HomeScreenWireframe.swift in Sources */,
+				F8F5131E28974C90008ADE05 /* NetworkInteractor.swift in Sources */,
+				F8F5131F28974C90008ADE05 /* Localizable.swift in Sources */,
+				F8F5132028974C90008ADE05 /* TabBarController.swift in Sources */,
+				F8F5132128974C90008ADE05 /* MovieDetailsProvider.swift in Sources */,
+				F8F5132228974C90008ADE05 /* NetworkManager.swift in Sources */,
+				F8F5132328974C90008ADE05 /* HomeScreenDomain.swift in Sources */,
+				F8F5132428974C90008ADE05 /* HomeScreenProvider.swift in Sources */,
+				F8F5132528974C90008ADE05 /* APIConfig.swift in Sources */,
+				F8F5132628974C90008ADE05 /* UIImageView+Extensions.swift in Sources */,
+				F8F5132728974C90008ADE05 /* MovieVideo.swift in Sources */,
+				F8F5132828974C90008ADE05 /* ResponseHandler.swift in Sources */,
+				F8F5132928974C90008ADE05 /* SplashScreenViewController.swift in Sources */,
+				F8F5132A28974C90008ADE05 /* MovieDetailsRequest.swift in Sources */,
+				F8F5132B28974C90008ADE05 /* MovieDetailsInterfaces.swift in Sources */,
+				F8F5132C28974C90008ADE05 /* GenresList.swift in Sources */,
+				F8F5132D28974C90008ADE05 /* SceneDelegate.swift in Sources */,
+				F8F5132E28974C90008ADE05 /* HomeScreenInterfaces.swift in Sources */,
+				F8F5132F28974C90008ADE05 /* MovieDetailsDomain.swift in Sources */,
+				F8F5133028974C90008ADE05 /* MovieDetailsPresenter.swift in Sources */,
+				F8F5133128974C90008ADE05 /* RequestHandler.swift in Sources */,
+				F8F5133228974C90008ADE05 /* MovieDetailsWireframe.swift in Sources */,
+				F8F5133328974C90008ADE05 /* MovieVideosResponse.swift in Sources */,
+				F8F5133428974C90008ADE05 /* MovieDetails.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -928,6 +1131,7 @@
 		299B2C5926E83E77008D25D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q2ND2U87N3;
@@ -948,6 +1152,7 @@
 		299B2C5A26E83E77008D25D0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q2ND2U87N3;
@@ -1083,7 +1288,7 @@
 		};
 		29FF13D326E66016009F8585 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 878F623478D93EB60135AD33 /* Pods-VeryCreatives.debug.xcconfig */;
+			baseConfigurationReference = CEF9E9DBC8BDFEBED8D992E2 /* Pods-VeryCreatives.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1096,14 +1301,18 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.brenner.VeryCreatives;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 16.0;
 			};
 			name = Debug;
 		};
 		29FF13D426E66016009F8585 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 62A9F4936E5F1E9441927B2C /* Pods-VeryCreatives.release.xcconfig */;
+			baseConfigurationReference = 725EA5403DEAD48A6F34FBA7 /* Pods-VeryCreatives.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1116,8 +1325,58 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.brenner.VeryCreatives;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 16.0;
+			};
+			name = Release;
+		};
+		F8F5134228974C90008ADE05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q2ND2U87N3;
+				INFOPLIST_FILE = "VeryCreativesTV-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.brenner.VeryCreatives;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 16.0;
+			};
+			name = Debug;
+		};
+		F8F5134328974C90008ADE05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q2ND2U87N3;
+				INFOPLIST_FILE = "VeryCreativesTV-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.brenner.VeryCreatives;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 16.0;
 			};
 			name = Release;
 		};
@@ -1147,6 +1406,15 @@
 			buildConfigurations = (
 				29FF13D326E66016009F8585 /* Debug */,
 				29FF13D426E66016009F8585 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8F5134128974C90008ADE05 /* Build configuration list for PBXNativeTarget "VeryCreatives - TV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8F5134228974C90008ADE05 /* Debug */,
+				F8F5134328974C90008ADE05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
